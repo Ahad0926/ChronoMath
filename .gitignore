@@ -1,0 +1,10 @@
+# Project files and folders
+.env
+.vscode
+.venv
+instance/
+
+# Python files and folders
+__pycache__/
+*pyc
+*.pyo
