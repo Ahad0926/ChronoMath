@@ -1,5 +1,6 @@
 # Project files and folders
 .env
+firestore_creds.json
 .vscode
 .venv
 instance/
