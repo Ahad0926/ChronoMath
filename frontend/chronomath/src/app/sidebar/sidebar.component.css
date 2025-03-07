@@ -1,0 +1,76 @@
+/* Ensure the list items span the full width */
+li {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: white;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+    width: 100%; /* Ensure items fit within the sidebar */
+    overflow: hidden; /* Prevent text overflow */
+  }
+  
+  /* Hover effect */
+  li:hover {
+    background-color: #f3f4f6;
+  }
+  
+  /* Ensure icons are visible and aligned */
+  ng-icon {
+    flex-shrink: 0; /* Prevent icons from being pushed out */
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+  }
+  
+  /* Text container to prevent overflow */
+  .text-container {
+    flex-grow: 1;
+    min-width: 0; /* Allows truncation to work properly */
+  }
+  
+  /* Title styling */
+  .item-title {
+    font-weight: 500;
+    color: #111827;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Description styling */
+  .item-description {
+    font-size: 0.875rem;
+    color: #6b7280;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  /* Ensure sidebar fits the screen */
+.w-64 {
+    width: 16rem;
+  }
+  
+  /* Ensures sidebar height is fixed and content inside scrolls */
+  .h-screen {
+    height: 100vh;
+  }
+  
+  /* Make each section's items scrollable */
+  .max-h-48 {
+    max-height: 12rem; /* Limit height of collapsible sections */
+    overflow-y: auto;
+  }
+  
+  /* Text styling */
+  .truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  /* Hover effect */
+  .hover\:bg-gray-100:hover {
+    background-color: #f3f4f6;
+  }
+  
