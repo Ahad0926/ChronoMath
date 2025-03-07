@@ -1,34 +1,33 @@
 .wave-container {
-    overflow: hidden;
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(transparent 60%, rgba(255, 255, 255, 0.3));
+  border-radius: 45%;
+  animation: wave 20s linear infinite;
+}
+
+.wave2 {
+  animation: wave 15s linear infinite;
+  opacity: 0.5;
+}
+
+.wave3 {
+  animation: wave 10s linear infinite;
+  opacity: 0.2;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0) rotate(0deg);
   }
-  
-  .wave {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 200%;
-    height: 100%;
-    background: linear-gradient(transparent 60%, rgba(255, 255, 255, 0.3));
-    border-radius: 45%;
-    animation: wave 20s linear infinite;
+  100% {
+    transform: translateX(-50%) rotate(360deg);
   }
-  
-  .wave2 {
-    animation: wave 15s linear infinite;
-    opacity: 0.5;
-  }
-  
-  .wave3 {
-    animation: wave 10s linear infinite;
-    opacity: 0.2;
-  }
-  
-  @keyframes wave {
-    0% {
-      transform: translateX(0) rotate(0deg);
-    }
-    100% {
-      transform: translateX(-50%) rotate(360deg);
-    }
-  }
-  
+}
