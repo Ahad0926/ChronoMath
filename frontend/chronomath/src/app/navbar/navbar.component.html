@@ -1,23 +1,18 @@
-<nav class="bg-white text-gray-900 shadow-md">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-16 items-center">
-        <!-- Left Side (Logo + Title) -->
-        <div class="flex items-center">
-          <a routerLink="/home" class="flex items-center space-x-3">
-            <img src="logo.png" class="h-10" alt="Chronomath Logo">
-            <span class="text-xl font-semibold">Chronomath</span>
-          </a>
-        </div>
-  
-        <!-- Right Side (Navigation Links) -->
-        <div class="hidden md:flex space-x-6 items-center">
-          <a routerLink="/timeline" class="text-gray-700 hover:text-blue-500">Explore</a>
-          <a routerLink="/login" class="text-gray-700 hover:text-blue-500">Login</a>
-          <a routerLink="/signup" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
-            Signup
-          </a>
-        </div>
-      </div>
+<nav class="bg-white text-gray-900 shadow-md fixed top-0 w-full h-16 z-50">
+  <div class="max-w-7xl mx-auto px-4 flex justify-between h-full items-center">
+    <!-- Left Side (Logo + Title) -->
+    <a routerLink="/home" class="flex items-center space-x-3">
+      <img src="logo.png" class="h-10" alt="Chronomath Logo">
+      <span class="text-xl font-semibold">Chronomath</span>
+    </a>
+
+    <!-- Right Side (Navigation Links) -->
+    <div class="hidden md:flex space-x-6 items-center">
+      <a routerLink="/timeline" class="text-gray-700 hover:text-blue-500">Explore</a>
+      <a routerLink="/login" class="text-gray-700 hover:text-blue-500">Login</a>
+      <a routerLink="/signup" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+        Signup
+      </a>
     </div>
-  </nav>
-  
+  </div>
+</nav>
