@@ -4,7 +4,19 @@
   
     <!-- Main Timeline Area -->
     <div class="flex-grow bg-gray-200 flex items-center justify-center">
-      <p class="text-gray-500">Timeline content will go here...</p>
+      <div class="relative w-full h-full">
+        <app-node
+          *ngFor="let node of nodes"
+          [title]="node.title"
+          [description]="node.description"
+          [positionX]="node.positionX"
+          [positionY]="node.positionY"
+          [status]="node.status"
+          [color]="node.color"
+          [icon]="node.icon"
+        ></app-node>
+      </div>
+      
     </div>
   </div>
   

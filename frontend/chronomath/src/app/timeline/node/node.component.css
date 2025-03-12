@@ -1,0 +1,11 @@
+div {
+    cursor: pointer;
+    text-align: left;
+    max-width: 200px;
+    user-select: none;
+  }
+  
+  div:focus {
+    outline: 2px solid black;
+  }
+  

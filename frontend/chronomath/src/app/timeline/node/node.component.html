@@ -1,0 +1,14 @@
+<div 
+  class="absolute w-48 p-3 rounded-lg shadow-lg border transition-transform duration-200"
+  [ngClass]="nodeClasses"
+  [ngStyle]="positionStyle"
+  role="button"
+  tabindex="0"
+  [attr.aria-label]="title + ' - ' + description"
+>
+  <div class="flex items-center space-x-2">
+    <ng-icon [name]="icon" class="w-6 h-6 text-gray-800"></ng-icon>
+    <h3 class="font-bold text-sm truncate">{{ title }}</h3>
+  </div>
+  <p class="text-xs text-gray-700 truncate">{{ description }}</p>
+</div>
