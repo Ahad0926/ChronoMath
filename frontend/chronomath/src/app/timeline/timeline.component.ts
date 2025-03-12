@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 import { CommonModule, NgFor } from '@angular/common';
 import { NodeComponent } from './node/node.component';
+import panzoom from '@panzoom/panzoom';
+
 
 @Component({
   selector: 'app-timeline',
@@ -10,7 +12,7 @@ import { NodeComponent } from './node/node.component';
   templateUrl: './timeline.component.html',
   styleUrl: './timeline.component.css',
 })
-export class TimelineComponent {
+export class TimelineComponent implements AfterViewInit {
   nodes = [
     {
       title: 'Ancient Greece',
@@ -40,4 +42,37 @@ export class TimelineComponent {
       icon: 'heroGlobeAlt',
     },
   ];
+
+
+  @ViewChild('timelineCanvas') timelineCanvas!: ElementRef;
+  @ViewChild('timelineParent') timelineParent!: ElementRef;
+  panzoomInstance: any;
+
+  ngAfterViewInit() {
+    const canvasElem = this.timelineCanvas.nativeElement;
+    const parentElem = this.timelineParent.nativeElement;
+  
+    // Setup panzoom on the canvas with canvas mode enabled
+    this.panzoomInstance = panzoom(canvasElem, {
+      canvas: true, // ✅ Moves in relation to parent, not window
+      maxZoom: 2.5,
+      minZoom: 0.5,
+      bounds: false, // Optional - disables bounds restricting panning
+      zoomDoubleClickSpeed: 1, // Disable zoom on double click
+    });
+  
+    // Bind zoomWithWheel to the parent element
+    parentElem.addEventListener('wheel', (event: WheelEvent) => {
+      // Directly call zoomWithWheel without shift key requirement
+      this.panzoomInstance.zoomWithWheel(event);
+    });
+  
+    // Optional: Disable right-click context menu
+    canvasElem.addEventListener('contextmenu', (e: MouseEvent) => {
+      e.preventDefault();
+    });
+  }
+  
+  
 }
+

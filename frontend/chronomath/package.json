@@ -20,6 +20,7 @@
     "@angular/router": "^19.1.0",
     "@ng-icons/core": "^30.4.0",
     "@ng-icons/heroicons": "^30.4.0",
+    "@panzoom/panzoom": "^4.6.0",
     "chronomath": "file:",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
