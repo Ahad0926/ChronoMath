@@ -3,6 +3,10 @@ import os
 import firebase_admin
 from firebase_admin import credentials, firestore
 import pyrebase
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 config = {
   "apiKey": os.getenv("FIREBASE_API_KEY"),
@@ -20,5 +24,4 @@ auth = pyrebase.initialize_app(config).auth()
 if not firebase_admin._apps:
   cred = credentials.Certificate("backend/chronomath/configs/firestore_creds.json")
   firebase_admin.initialize_app(cred)
-
 db = firestore.client()
