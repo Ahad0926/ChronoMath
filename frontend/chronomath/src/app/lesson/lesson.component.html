@@ -1,1 +1,105 @@
-<p>lesson works!</p>
+<!-- Outer container: full-screen height, white background -->
+<div class="min-h-screen bg-white px-6 py-8">
+    <!-- Inner wrapper for centering and max width -->
+    <div class="max-w-7xl mx-auto">
+  
+      <!-- Three-column layout on md+, one-column on smaller screens -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- LEFT COLUMN: Lesson text -->
+        <div class="bg-white rounded shadow p-6">
+          <h2 class="text-3xl font-bold text-gray-800">
+            Mathematics Through Time
+          </h2>
+          <h3 class="text-xl font-semibold text-gray-600 mt-1">
+            Exploring the Evolution of Numbers and Ideas
+          </h3>
+          <p class="mt-4 text-gray-800 leading-relaxed">
+            Mathematics has been a cornerstone of human civilization, shaping
+            everything from ancient trade to modern technology. By understanding its
+            historical evolution, we gain deeper insight into the discoveries that
+            built the mathematical world we know today.
+          </p>
+          <p class="mt-4 text-gray-800 leading-relaxed">
+            In Mesopotamia and Egypt, early civilizations used arithmetic for commerce
+            and architecture. The Greek Classical period brought rigorous logical proofs,
+            with Euclid’s <em>Elements</em> laying the foundation for geometry. The Islamic
+            Golden Age expanded on these ideas, developing algebra and trigonometry,
+            while the Renaissance introduced analytical geometry and calculus.
+          </p>
+          <p class="mt-4 text-gray-800 leading-relaxed">
+            Today, mathematics continues to evolve, influencing fields such as
+            cryptography, artificial intelligence, and quantum computing.
+          </p>
+        </div>
+  
+        <!-- CENTER COLUMN: The image (logoT.png) -->
+        <div class="flex items-center justify-center">
+          <img
+            src="lesson.png"
+            alt="Chronomath Logo"
+            class="w-full max-w-sm rounded shadow"
+          />
+        </div>
+  
+        <!-- RIGHT COLUMN: Matching activity -->
+        <div>
+          <h3 class="text-2xl font-bold text-gray-800">
+            Match the Era to its Mathematical Achievements
+          </h3>
+  
+          <!-- Example “cards” in green/red boxes. Adjust or replace as needed. -->
+          <div class="mt-6 space-y-4">
+            <div class="flex items-center space-x-2">
+              <div class="flex-1 bg-green-100 border border-green-300 p-3 rounded">
+                Islamic Golden Age
+              </div>
+              <div class="flex-1 bg-red-100 border border-red-300 p-3 rounded">
+                Rise of computational mathematics, cryptography, and AI
+              </div>
+            </div>
+            <div class="flex items-center space-x-2">
+              <div class="flex-1 bg-green-100 border border-green-300 p-3 rounded">
+                Renaissance &amp; Enlightenment
+              </div>
+              <div class="flex-1 bg-red-100 border border-red-300 p-3 rounded">
+                Birth of algebra, decimal notation, and early algorithms
+              </div>
+            </div>
+            <div class="flex items-center space-x-2">
+              <div class="flex-1 bg-green-100 border border-green-300 p-3 rounded">
+                20th Century &amp; Beyond
+              </div>
+              <div class="flex-1 bg-red-100 border border-red-300 p-3 rounded">
+                Expansion of logic, geometry, and rigorous proofs
+              </div>
+            </div>
+            <div class="flex items-center space-x-2">
+              <div class="flex-1 bg-green-100 border border-green-300 p-3 rounded">
+                Greek Classical Period
+              </div>
+              <div class="flex-1 bg-red-100 border border-red-300 p-3 rounded">
+                Introduction of calculus and advancements in analytical geometry
+              </div>
+            </div>
+            <div class="flex items-center space-x-2">
+              <div class="flex-1 bg-green-100 border border-green-300 p-3 rounded">
+                Mesopotamian &amp; Egyptian Mathematics
+              </div>
+              <div class="flex-1 bg-red-100 border border-red-300 p-3 rounded">
+                Early arithmetic used for trade, taxation, and architecture
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End of grid layout -->
+  
+      <!-- Bottom button: "Start your Quiz" -->
+      <div class="mt-8 flex justify-center">
+        <button class="w-72 bg-gray-800 text-white px-6 py-3 rounded shadow hover:bg-gray-900 transition">
+          Start your Quiz
+        </button>
+      </div>
+    </div>
+  </div>
+  
