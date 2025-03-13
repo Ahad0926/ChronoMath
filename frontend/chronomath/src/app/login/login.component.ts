@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { AuthService } from '../services/user.service';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +17,7 @@ export class LoginComponent {
   email: string = '';
   password: string = '';
 
-  constructor(private http: HttpClient, private router: Router, private authService: AuthService) {}
+  constructor(private http: HttpClient, private router: Router, private UserService: UserService) {}
 
   onSubmit() {
     // Create the request body
@@ -30,13 +30,9 @@ export class LoginComponent {
     this.http.post('http://localhost:4769/auth/login', loginData)
       .subscribe({
         next: (response: any) => {
-          console.log('Login successful:', response);
-
-          this.authService.setLoggedIn(true);
-          // Example: store token if returned by Flask
-          // localStorage.setItem('token', response.token);
-          // Navigate to another page or show success message
-          this.router.navigate(['/timeline'])
+          localStorage.setItem('authToken', response.token);
+          this.UserService.setLoggedIn(true);
+          this.router.navigate(['/timeline']);
         },
         error: (err) => {
           console.error('Login failed:', err);

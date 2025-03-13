@@ -78,7 +78,10 @@ def login():
         session['uuid'] = user["localId"]
         session['email'] = email
 
-        return jsonify({"Success": "User logged in"}), 200
+        return jsonify({
+            "Success": "User logged in",
+            "token": user['idToken']}), 200
+
     except Exception as e:
         return jsonify({"Error": str(e)}), 400
     
