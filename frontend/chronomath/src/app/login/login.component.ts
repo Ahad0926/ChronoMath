@@ -45,5 +45,22 @@ export class LoginComponent {
         }
       });
   }
+
+  onForgotPassword() {
+    // Use the same "email" model from your login form
+    const forgotData = { email: this.email };
+
+    this.http.post('http://localhost:4769/auth/forgot-password', forgotData)
+      .subscribe({
+        next: (res: any) => {
+          console.log('Password reset email sent:', res);
+          alert('Password reset email sent. Please check your inbox.');
+        },
+        error: (err) => {
+          console.error('Password reset failed:', err);
+          alert('Could not send password reset email. Please try again later.');
+        }
+      });
+  }
 }
 
