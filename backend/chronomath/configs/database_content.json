@@ -9,12 +9,14 @@
           "His primary focus was detailing how to deal with everyday issues regarding inheritance, commercial transactions, and the distribution of legacies, which oftentimes required calculations with unknown variables. As such, his goal was to codify a clear, step by step methodology for how to solve what is now known as linear and quadratic equations.",
           "The treatise itself contained accounts of solving for positive roots of polynomial equations, explaining what they are as an idea through more simple linear equations, up to the second degree. He also introduced the process of “reducing” and “balancing” equations, which is actually related to the definitions of “Al-Jabr” itself (Completion and Balancing), as well as moving subtracted terms on one side of an equation to the opposite side of the equal sign, also known as cancelling like terms on opposite sides of the equation.",
           "Al-Jabr was prominently the first piece of text to teach algebra for the sake of it, and being the etymological namesake of the english word derived from it (Al-Jabr into Algebra), has a profound importance in relation to standardized algebra today, particularly the application of solving for the unknown in a polynomial equation, specifically linear and quadratic equations.",
+
 		  "Defining the Basic Elements",
 		  "Al-Khwarizmi classified the components of an equation into three types:",
 		  "'Roots' (shay' in Arabic): The unknown quantity, corresponding to what we call x",
 		  "'Squares' (mal in Arabic): The square of the unknown (x^2)",
 		  "'Numbers': Constant terms",
 		  "By consistently referring to these three components, he set a precedent for the symbolic structure of algebraic equations, though he himself mostly used rhetorical algebra (writing out phrases in words rather than symbols).",
+
 		  "Six Standard Forms of Equations",
 		  "Al-Khwarizmi categorized quadratic (and simpler) equations into six types. The idea was that any solvable equation could be reduced to one of these forms:",
 		  "x^2 = ax",
@@ -24,14 +26,17 @@
 		  "ax + b = x^2",
 		  "x^2 + ax + b = 0",
 		  "In modern notation, some of these forms overlap (we often rewrite them in the single form x^2 + px + q = 0), but Al-Khwarizmi's systematic classification was revolutionary in standardization.",
+
 		  "Methods of “Completion” (al-jabr) and “Balancing” (al-muqābala)",
 		  "Completion (al-jabr): Involves adding equal terms to both sides of an equation to eliminate negative or fractional parts, thereby “completing” the square or the root. For instance, if the equation were x^2 + 10x = 39, completing the square might involve adding and subtracting 2525.",
 		  "Balancing (al-muqābala): Involves simplifying and reorganizing the equation by canceling out like terms on opposite sides. If an equation had x^2 + 10x + 21 on one side and 2x + 21 on the other, you would bring the terms together and “balance” them so all unknown terms appear on one side and constants on the other.",
 		  "Geometric Interpretations",
 		  "Al-Khwarizmi illustrated solutions to quadratic equations using geometric arguments. For instance, to solve x^2 + 10x = 39, he would represent x^2 as a square in a geometric diagram, then attach rectangular sections of area 10x10x and show how “completing the square” leads to a perfect square. These geometric interpretations lent intuitive and visual credibility to algebraic procedures.",
+
 		  "The Structure of Quadratic Equations",
 		  "A quadratic equation typically has the form ax^2 + bx + c = 0, a ≠ 0",
 		  "In many modern textbooks, these are simply referred to as the x^2-term, the x-term, and the constant.",
+
 		  "Common Ways to Solve Quadratic Equations",
 		  "Factoring: Look for two numbers that multiply to ac (if the equation is ax^2 + bx + c = 0) and add to b.",
 		  "Completing the Square (Al-Khwarizmi's “Completion”):",
@@ -43,9 +48,11 @@
 		  "Quadratic Formula:",
 		  "Graphical Interpretation:",
 		  "Less explicitly used in Al-Khwarizmi's time but helpful today. The solutions (if real) are the x-intercepts of the parabola y = ax^2 + bx + c.",
+
 		  "How Al-Khwarizmi's Work Became the Basis for Quadratic Equations",
 		  "Dissemination Through Islamic Lands and Latin Europe",
 		  "The treatise spread across the Islamic world through copies and commentaries. Around the 12th century, it reached Europe via Latin translations (commonly attributed to translators such as Gerard of Cremona). These translations introduced the systematic treatment of equations into Western mathematics.",
+
 		  "Influence on Later Mathematicians",
 		  "Symbolic Notation:",
 		  "While Al-Khwarizmi himself wrote in rhetorical style, his concepts of “roots,” “squares,” and “numbers” were instrumental in the future development of symbolic notation.",
@@ -53,6 +60,7 @@
 		  "The idea that any quadratic equation could be simplified to a standard form is still how we teach solving quadratics today (i.e., rewriting everything as ax^2 + bx + c = 0).",
 		  "Completing the Square:",
 		  "This technique, explicitly illustrated by Al-Khwarizmi, is taught in contemporary classrooms worldwide as a standard method for deriving the quadratic formula or for solving quadratics when factoring is not straightforward.",
+      
 		  "Legacy",
 		  "Al-Khwarizmi's systematic procedure of “completion and balancing” outlines many of the steps students learn for solving quadratic equations. His geometric demonstrations still appear in textbooks today to provide an intuitive rationale for the algebraic manipulations. Through the Latin West, his book influenced Renaissance mathematicians and eventually became a foundational reference in the evolution of modern algebra textbooks."
         ],
