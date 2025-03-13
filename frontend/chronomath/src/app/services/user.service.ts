@@ -31,11 +31,12 @@ export class UserService {
         if (!response.ok) {
           throw new Error('Logout failed');
         }
-        // On success, push 'false' to all subscribers
+        // Clear token + update status
+        localStorage.removeItem('authToken');
         this.loggedInSubject.next(false);
-        
       });
   }
+  
 
   // If you manually need to set the user as logged in (e.g., after a successful login fetch)
   setLoggedIn(value: boolean): void {
