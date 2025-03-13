@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify, request, session
-from configs.firebase import db, auth
+from configs.firebase_setup import db, auth
 from google.cloud.firestore_v1 import FieldFilter
 
 auth_bp = Blueprint("auth", __name__)

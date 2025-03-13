@@ -1,0 +1,97 @@
+{
+    "IslamicGoldenAge": {
+      "Description": "This is the islamid golden age period",
+      "Lessons": {
+        "Lesson1_Something": {
+          "Title": "The modern number system",
+          "Content": "The modern number system was developed by the Islamic Golden Age mathematicians.....",
+          "Completed": false
+        },
+        "Lesson2_Something": {
+          "Title": "Algebra",
+          "Content": "The Islamic Golden Age mathematicians made significant contributions to the field of algebra.....",
+          "Completed": false
+        }
+      },
+      "Questions": {
+        "Q1_Standard_Form": {
+          "Type": "mcq",
+          "Question": "Which of the following is the standard form of a quadratic equation?",
+          "Solution": "ax^2+bx+c=0",
+          "Choices": [
+            "ax+b=0",
+            "ax^2+bx+c=0",
+            "ax^3+bx=0",
+            "a+b=x^2"
+          ],
+          "Completed": false
+        },
+        "Q2_": {
+          "Type": "mcq",
+          "Question": "When solving a quadratic by completing the square, which step typically comes first?",
+          "Solution": "Divide by the leading coefficient (if a ≠ 1) and isolate x^2+bx on one side",
+          "Choices": [
+            "Take the square root of both sides",
+            "Write the equation in vertex form",
+            "Divide by the leading coefficient (if a ≠ 1) and isolate x^2+bx on one side",
+            "Multiply everything by -1"
+          ],
+          "Completed": false
+        },
+        "Q2_Correct_Factorization": {
+          "Type": "mcq",
+          "Question": "Given the quadratic equation x^2+6x+8=0, which of the following is a correct factorization?",
+          "Solution": "(x+2)(x+4)",
+          "Choices": [
+            "(x-2)(x-4)",
+            "(x+2)(x+4)",
+            "(x+3)(x+2)",
+            "Cannot be factored using integers"
+          ],
+          "Completed": false
+        }
+      }
+    },
+    "SAMPLE2_THIS_JUST_AREPEAT": {
+      "Description": "This is the islamid golden age period",
+      "Lessons": {},
+      "Questions": {
+        "Q1_Standard_Form": {
+          "Type": "mcq",
+          "Question": "Which of the following is the standard form of a quadratic equation?",
+          "Solution": "ax^2+bx+c=0",
+          "Choices": [
+            "ax+b=0",
+            "ax^2+bx+c=0",
+            "ax^3+bx=0",
+            "a+b=x^2"
+          ],
+          "Completed": false
+        },
+        "Q2_": {
+          "Type": "mcq",
+          "Question": "When solving a quadratic by completing the square, which step typically comes first?",
+          "Solution": "Divide by the leading coefficient (if a ≠ 1) and isolate x^2+bx on one side",
+          "Choices": [
+            "Take the square root of both sides",
+            "Write the equation in vertex form",
+            "Divide by the leading coefficient (if a ≠ 1) and isolate x^2+bx on one side",
+            "Multiply everything by -1"
+          ],
+          "Completed": false
+        },
+        "Q2_Correct_Factorization": {
+          "Type": "mcq",
+          "Question": "Given the quadratic equation x^2+6x+8=0, which of the following is a correct factorization?",
+          "Solution": "(x+2)(x+4)",
+          "Choices": [
+            "(x-2)(x-4)",
+            "(x+2)(x+4)",
+            "(x+3)(x+2)",
+            "Cannot be factored using integers"
+          ],
+          "Completed": false
+        }
+      }
+    }
+  }

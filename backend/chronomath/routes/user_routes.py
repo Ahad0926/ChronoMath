@@ -1,4 +1,4 @@
-from configs.firebase import db
+from configs.firebase_setup import db
 from flask import Blueprint, jsonify, session
 
 user_bp = Blueprint("user", __name__)

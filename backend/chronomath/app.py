@@ -1,11 +1,15 @@
 from flask import Flask
 from flask_cors import CORS
+from configs.database_import import populate_database
 import os
 
 # Initialize Flask app
 app = Flask(__name__)
 CORS(app)
 app.secret_key = os.getenv("FLASK_SECRET_KEY")
+
+# Populate database
+populate_database()
 
 # Import routes
 from routes.auth_routes import auth_bp
