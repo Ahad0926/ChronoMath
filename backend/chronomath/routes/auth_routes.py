@@ -42,12 +42,13 @@ def register():
         user_data.set({
             "email": email,
             "name": name,
-            "points": 0 
+            "points": 0,
+            "theme": "light"
         })
         
         # Add Collections from template to user
-        template = db.collection("Era")
-        user_lesson_collection = user_data.collection("Era")
+        template = db.collection("Courses")
+        user_lesson_collection = user_data.collection("Courses")
         copy_document(template, user_lesson_collection)
 
         # Create session
@@ -74,6 +75,7 @@ def login():
 
         # Create session
         session['token'] = user['idToken']
+        session['uuid'] = user["localId"]
         session['email'] = email
 
         return jsonify({"Success": "User logged in"}), 200
