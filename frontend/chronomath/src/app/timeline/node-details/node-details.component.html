@@ -1,0 +1,29 @@
+<div class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+  <div class="bg-white rounded-lg shadow-lg p-6 max-w-md w-full relative flex flex-col justify-between h-[400px]">
+
+    <!-- Close Button -->
+    <button 
+      (click)="onClose()" 
+      aria-label="Close Modal" 
+      class="absolute top-2 right-2 text-xl">
+      &times;
+    </button>
+
+    <!-- Modal Content -->
+    <div>
+      <h2 class="text-2xl font-bold mb-4">{{ title }}</h2>
+      <p>{{ description }}</p>
+    </div>
+
+    <!-- Start Lesson Button -->
+    <div class="flex justify-start">
+      <button
+        (click)="startLesson()"
+        class="mt-4 px-5 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition"
+      >
+        Start Lesson
+      </button>
+    </div>
+
+  </div>
+</div>

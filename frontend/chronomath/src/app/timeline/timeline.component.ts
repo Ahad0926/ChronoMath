@@ -3,16 +3,40 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
 import { CommonModule, NgFor } from '@angular/common';
 import { NodeComponent } from './node/node.component';
 import panzoom from '@panzoom/panzoom';
+import { NodeDetailsComponent } from './node-details/node-details.component';
 
 
 @Component({
   selector: 'app-timeline',
   standalone: true,
-  imports: [CommonModule, SidebarComponent, NgFor, NodeComponent],
+  imports: [CommonModule, SidebarComponent, NgFor, NodeComponent, NodeDetailsComponent],
   templateUrl: './timeline.component.html',
   styleUrl: './timeline.component.css',
 })
 export class TimelineComponent implements AfterViewInit {
+  showModal: boolean = false;
+  selectedNodeTitle: string = '';
+  selectedNodeDescription: string = '';
+
+  openModal(title: string, description: string) {
+  this.selectedNodeTitle = title;
+  this.selectedNodeDescription = description;
+  this.showModal = true;
+
+  // Disable panzoom interaction while modal is open
+  if (this.panzoomInstance) {
+    this.panzoomInstance.pause(); // Disables panning and zooming
+  }
+}
+
+closeModal() {
+  this.showModal = false;
+
+  // Re-enable panzoom interaction when modal closes
+  if (this.panzoomInstance) {
+    this.panzoomInstance.resume(); // Enables panning and zooming
+  }
+}
   nodes = [
     {
       title: 'Ancient Greece',

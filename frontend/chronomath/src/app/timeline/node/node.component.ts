@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { NgClass, NgStyle, CommonModule } from '@angular/common';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { heroAcademicCap, heroCalculator, heroGlobeAlt } from '@ng-icons/heroicons/outline';
@@ -20,6 +20,8 @@ export class NodeComponent {
   @Input() color: string = 'bg-yellow-300'; // Default color
   @Input() icon: string = 'heroAcademicCap'; // Default icon
 
+  @Output() nodeClick = new EventEmitter<void>();
+
   get nodeClasses(): string {
     return `${this.color} text-black border-2 rounded-lg px-4 py-2 shadow-lg`;
   }
@@ -29,4 +31,9 @@ export class NodeComponent {
       transform: `translate(${this.positionX}px, ${this.positionY}px)`,
     };
   }
+
+  handleClick() {
+    this.nodeClick.emit();
+  }
+  
 }

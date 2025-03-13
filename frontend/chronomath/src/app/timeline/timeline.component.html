@@ -14,11 +14,20 @@
           [description]="node.description"
           [positionX]="node.positionX"
           [positionY]="node.positionY"
-          [status]="node.status"
           [color]="node.color"
           [icon]="node.icon"
-        ></app-node>
+          (click)="openModal(node.title, node.description)">
+        </app-node>
       </div>
     </div>
+
+    <!-- 🟦 Move Modal Outside Panzoom Canvas -->
+    <app-details
+      *ngIf="showModal"
+      [title]="selectedNodeTitle"
+      [description]="selectedNodeDescription"
+      (closeModal)="closeModal()"
+      class="absolute inset-0 flex justify-center items-center z-50">
+    </app-details>
   </div>
 </div>

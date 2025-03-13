@@ -1,10 +1,11 @@
-<div 
-  class="absolute w-48 p-3 rounded-lg shadow-lg border transition-transform duration-200"
+<div
+  class="absolute w-48 p-3 rounded-lg shadow-lg border transition-transform duration-200 cursor-pointer"
   [ngClass]="nodeClasses"
   [ngStyle]="positionStyle"
   role="button"
   tabindex="0"
   [attr.aria-label]="title + ' - ' + description"
+  (click)="handleClick()"
 >
   <div class="flex items-center space-x-2">
     <ng-icon [name]="icon" class="w-6 h-6 text-gray-800"></ng-icon>
