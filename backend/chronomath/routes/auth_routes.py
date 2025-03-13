@@ -78,9 +78,14 @@ def login():
         session['uuid'] = user["localId"]
         session['email'] = email
 
+        name = db.collection("Users").document(session['uuid']).get().to_dict()['name']
+
         return jsonify({
             "Success": "User logged in",
-            "token": user['idToken']}), 200
+            "token": user['idToken'],
+            "email": email,
+            "name": name}), 200
+
 
     except Exception as e:
         return jsonify({"Error": str(e)}), 400
