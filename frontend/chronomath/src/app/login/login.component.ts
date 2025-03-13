@@ -20,40 +20,34 @@ export class LoginComponent {
   constructor(private http: HttpClient, private router: Router, private UserService: UserService) {}
 
   onSubmit() {
-    // Create the request body
     const loginData = {
       email: this.email,
       password: this.password
     };
-
-    // Send POST request to the Flask backend
+  
     this.http.post('http://localhost:4769/auth/login', loginData)
       .subscribe({
         next: (response: any) => {
           console.log('Login successful:', response);
-        
-          // Assume backend returns user info (update this if different)
-          const token = response.token;
-          const email = response.email; // or whatever your backend sends
-          const name = response.name;   // optional
-          
-          localStorage.setItem('authToken', token);
-          localStorage.setItem('userEmail', email);
-          localStorage.setItem('userName', name);
-        
+  
+          // Set token and email (already correct)
+          localStorage.setItem('authToken', response.token);
+          localStorage.setItem('userEmail', this.email);
+          localStorage.setItem('userName', response.name);
+  
+          // Mark as logged in
           this.UserService.setLoggedIn(true);
-        
-          console.log(`Logged In User Details: Email = ${email}, Name = ${name}`);
-          
+          console.log(`Logged in as:\n${response.email}\n${response.name}`);
+
+          // Navigate to timeline
           this.router.navigate(['/timeline']);
         },
         error: (err) => {
           console.error('Login failed:', err);
-          // Handle error (e.g., show error message to the user)
           alert('Login failed. Please check your credentials.');
         }
       });
-  }
+  }  
 
   onForgotPassword() {
     // Use the same "email" model from your login form

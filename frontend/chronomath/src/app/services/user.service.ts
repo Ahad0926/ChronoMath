@@ -52,4 +52,5 @@ export class UserService {
   setLoggedIn(value: boolean): void {
     this.loggedInSubject.next(value);
   }
+  
 }

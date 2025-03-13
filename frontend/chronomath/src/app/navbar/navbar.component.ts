@@ -1,7 +1,7 @@
 // navbar.component.ts
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { UserService } from '../services/user.service';
 
 @Component({
@@ -14,7 +14,7 @@ import { UserService } from '../services/user.service';
 export class NavbarComponent implements OnInit {
   isLoggedIn = false;
 
-  constructor(private UserService: UserService) {}
+  constructor(private UserService: UserService, private router: Router) {}
 
   ngOnInit(): void {
     // Whenever UserService updates "isLoggedIn$", we update our local isLoggedIn
@@ -31,8 +31,10 @@ export class NavbarComponent implements OnInit {
     
   }
 
-  // Call the logout method in UserService
   logout(): void {
-    this.UserService.logout().catch(error => console.error(error));
+    this.UserService.logout().then(() => {
+      console.log('NavbarComponent: User logged out');
+      this.router.navigate(['/']);
+    }).catch(error => console.error('NavbarComponent: Logout error', error));
   }
 }
