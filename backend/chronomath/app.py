@@ -18,5 +18,8 @@ app.register_blueprint(auth_bp, url_prefix="/auth")
 from routes.user_routes import user_bp
 app.register_blueprint(user_bp, url_prefix="/user")
 
+from routes.quiz_routes import quiz_bp
+app.register_blueprint(quiz_bp, url_prefix="/quiz")
+
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=4769, debug=True)
