@@ -1,97 +1,206 @@
 {
-    "IslamicGoldenAge": {
-      "Description": "This is the islamid golden age period",
-      "Lessons": {
-        "Lesson1_Something": {
-          "Title": "The modern number system",
-          "Content": "The modern number system was developed by the Islamic Golden Age mathematicians.....",
-          "Completed": false
-        },
-        "Lesson2_Something": {
-          "Title": "Algebra",
-          "Content": "The Islamic Golden Age mathematicians made significant contributions to the field of algebra.....",
-          "Completed": false
-        }
+  "IslamicGoldenAge": {
+    "Description": "This is the Islamic Golden Age period",
+    "Lessons": {
+      "Lesson1_Something": {
+        "Title": "The modern number system",
+        "Content": "The modern number system was developed by the Islamic Golden Age mathematicians.....",
+        "Completed": false
       },
-      "Questions": {
-        "Q1_Standard_Form": {
-          "Type": "mcq",
-          "Question": "Which of the following is the standard form of a quadratic equation?",
-          "Solution": "ax^2+bx+c=0",
-          "Choices": [
-            "ax+b=0",
-            "ax^2+bx+c=0",
-            "ax^3+bx=0",
-            "a+b=x^2"
-          ],
-          "Completed": false
-        },
-        "Q2_": {
-          "Type": "mcq",
-          "Question": "When solving a quadratic by completing the square, which step typically comes first?",
-          "Solution": "Divide by the leading coefficient (if a ≠ 1) and isolate x^2+bx on one side",
-          "Choices": [
-            "Take the square root of both sides",
-            "Write the equation in vertex form",
-            "Divide by the leading coefficient (if a ≠ 1) and isolate x^2+bx on one side",
-            "Multiply everything by -1"
-          ],
-          "Completed": false
-        },
-        "Q2_Correct_Factorization": {
-          "Type": "mcq",
-          "Question": "Given the quadratic equation x^2+6x+8=0, which of the following is a correct factorization?",
-          "Solution": "(x+2)(x+4)",
-          "Choices": [
-            "(x-2)(x-4)",
-            "(x+2)(x+4)",
-            "(x+3)(x+2)",
-            "Cannot be factored using integers"
-          ],
-          "Completed": false
-        }
+      "Lesson2_Something": {
+        "Title": "Algebra",
+        "Content": "The Islamic Golden Age mathematicians made significant contributions to the field of algebra.....",
+        "Completed": false
       }
     },
-    "SAMPLE2_THIS_JUST_AREPEAT": {
-      "Description": "This is the islamid golden age period",
-      "Lessons": {},
-      "Questions": {
-        "Q1_Standard_Form": {
-          "Type": "mcq",
-          "Question": "Which of the following is the standard form of a quadratic equation?",
-          "Solution": "ax^2+bx+c=0",
-          "Choices": [
-            "ax+b=0",
-            "ax^2+bx+c=0",
-            "ax^3+bx=0",
-            "a+b=x^2"
-          ],
-          "Completed": false
+    "Questions": {
+      "Q1_Standard_Form": {
+        "Type": "mcq",
+        "Question": "Which of the following is the standard form of a quadratic equation?",
+        "Solution": "ax^2+bx+c=0",
+        "Choices": [
+          "ax+b=0",
+          "ax^2+bx+c=0",
+          "ax^3+bx=0",
+          "a+b=x^2"
+        ],
+        "Completed": false
+      },
+      "Q2_First_Step": {
+        "Type": "mcq",
+        "Question": "When solving a quadratic by completing the square, which step typically comes first?",
+        "Solution": "Divide by the leading coefficient (if a ≠ 1) and isolate x^2+bx on one side",
+        "Choices": [
+          "Take the square root of both sides",
+          "Write the equation in vertex form",
+          "Divide by the leading coefficient (if a ≠ 1) and isolate x^2+bx on one side",
+          "Multiply everything by -1"
+        ],
+        "Completed": false
+      },
+      "Q2_Correct_Factorization": {
+        "Type": "mcq",
+        "Question": "Given the quadratic equation x^2+6x+8=0, which of the following is a correct factorization?",
+        "Solution": "(x+2)(x+4)",
+        "Choices": [
+          "(x-2)(x-4)",
+          "(x+2)(x+4)",
+          "(x+3)(x+2)",
+          "Cannot be factored using integers"
+        ],
+        "Completed": false
+      },
+
+      "Q4_Completion": {
+        "Type": "mcq",
+        "Question": "According to Al-Khwarizmi’s original approach, 'completion' (al-jabr) in solving x^2 + 10x = 39 means",
+        "Solution": "Adding enough to both sides so that the left side becomes a perfect square.",
+        "Choices": [
+          "Bringing all x^2 terms to one side.",
+          "Adding enough to both sides so that the left side becomes a perfect square.",
+          "Subtracting 39 from both sides to get x^2 + 10x - 39 = 0.",
+          "Factoring out common terms from both sides."
+        ],
+        "Completed": false
+      },
+      "Q5_Discriminant": {
+        "Type": "mcq",
+        "Question": "If the discriminant of a quadratic equation ax^2 + bx + c = 0 is negative (b^2 - 4ac < 0), the equation has",
+        "Solution": "No real roots, but two complex roots.",
+        "Choices": [
+          "Two distinct real roots",
+          "One real root (with multiplicity 2)",
+          "No real roots, but two complex roots.",
+          "Infinitely many real roots"
+        ],
+        "Completed": false
+      },
+
+      "Q6_MixAndMatch_CompleteSquare": {
+        "Type": "mix_and_match",
+        "Question": "Match each Quadratic Equation with its Completed Square Form.",
+        "Pairs": {
+          "A": "x^2 + 10x = 39",
+          "B": "x^2 + 6x + 5 = 0",
+          "C": "x^2 + 8x + 16 = 0",
+          "D": "x^2 + 2x - 3 = 0"
         },
-        "Q2_": {
-          "Type": "mcq",
-          "Question": "When solving a quadratic by completing the square, which step typically comes first?",
-          "Solution": "Divide by the leading coefficient (if a ≠ 1) and isolate x^2+bx on one side",
-          "Choices": [
-            "Take the square root of both sides",
-            "Write the equation in vertex form",
-            "Divide by the leading coefficient (if a ≠ 1) and isolate x^2+bx on one side",
-            "Multiply everything by -1"
-          ],
-          "Completed": false
+        "Matches": {
+          "1": "(x + 5)^2 = 64",
+          "2": "(x + 3)^2 = 4",
+          "3": "(x + 4)^2 = 0",
+          "4": "(x + 1)^2 = 4"
         },
-        "Q2_Correct_Factorization": {
-          "Type": "mcq",
-          "Question": "Given the quadratic equation x^2+6x+8=0, which of the following is a correct factorization?",
-          "Solution": "(x+2)(x+4)",
-          "Choices": [
-            "(x-2)(x-4)",
-            "(x+2)(x+4)",
-            "(x+3)(x+2)",
-            "Cannot be factored using integers"
-          ],
-          "Completed": false
-        }
+        "Solution": {
+          "A": "1",
+          "B": "2",
+          "C": "3",
+          "D": "4"
+        },
+        "Completed": false
+      },
+
+      "Q7_DragAndDrop_FactoringSteps": {
+        "Type": "drag_and_drop",
+        "Question": "Arrange the steps to factor x^2 + 7x + 12 = 0 in the correct order.",
+        "Steps": [
+          "List the factors of the constant term (12) that sum up to the linear coefficient (7).",
+          "Split the middle term using those factors.",
+          "Group the terms and factor out common factors.",
+          "Set each factor to 0 and solve for x."
+        ],
+        "Solution": [1, 2, 3, 4],
+        "Completed": false
+      },
+
+      "Q8_FillInBlank_1": {
+        "Type": "fill_in_blank",
+        "Question": "When solving x^2 + 4x - 5 = 0 by factoring, we look for two numbers that multiply to -5 and add up to _____.",
+        "Solution": "4",
+        "Choices": ["1", "2", "3", "4"],
+        "Completed": false
+      },
+      "Q8_FillInBlank_2": {
+        "Type": "fill_in_blank",
+        "Question": "The formula for the solutions of ax^2 + bx + c = 0 is x = (-b ± √(b^2 - 4ac)) / (2a). This is called the ____ Formula.",
+        "Solution": "Quadratic",
+        "Choices": ["Quadratic", "Linear", "Exponential", "None of the above"],
+        "Completed": false
+      },
+      "Q8_FillInBlank_3": {
+        "Type": "fill_in_blank",
+        "Question": "In Al-Khwarizmi’s treatise, equations involve squares (x^2), roots (x), and ____ (the constant term).",
+        "Solution": "numbers",
+        "Choices": ["numbers", "variables", "coefficients", "unknowns"],
+        "Completed": false
+      },
+
+      "Q9_ShortAnswer_AlMuqabala": {
+        "Type": "mcq",
+        "Question": "In the equation x^2 + 10x + 9 = 0, how would you apply 'balancing' (al-muqābala) after completing the square?",
+        "Solution": "Add the same term to both sides until one side becomes a perfect square and then rearrange to isolate that square.",
+        "Choices": [
+          "Multiply each side by 2 to balance them.",
+          "Add the same term to both sides until one side becomes a perfect square and then rearrange to isolate that square.",
+          "Factor directly without adding or subtracting any terms.",
+          "Immediately use the quadratic formula."
+        ],
+        "Completed": false
+      },
+      "Q10_ShortAnswer_CompleteSquare": {
+        "Type": "mcq",
+        "Question": "To solve x^2 + 8x = 20 by completing the square, which of the following short procedures is correct?",
+        "Solution": "Add 16 to both sides to form (x+4)^2 = 36, then take square roots.",
+        "Choices": [
+          "Subtract 20 from both sides, then factor as (x+4)(x+4)=0.",
+          "Subtract 20, multiply by 8, then complete the square.",
+          "Add 16 to both sides to form (x+4)^2=36, then take square roots.",
+          "Use the quadratic formula immediately."
+        ],
+        "Completed": false
+      }
+    }
+  },
+  "SAMPLE2_THIS_JUST_AREPEAT": {
+    "Description": "This is the islamid golden age period",
+    "Lessons": {},
+    "Questions": {
+      "Q1_Standard_Form": {
+        "Type": "mcq",
+        "Question": "Which of the following is the standard form of a quadratic equation?",
+        "Solution": "ax^2+bx+c=0",
+        "Choices": [
+          "ax+b=0",
+          "ax^2+bx+c=0",
+          "ax^3+bx=0",
+          "a+b=x^2"
+        ],
+        "Completed": false
+      },
+      "Q2_": {
+        "Type": "mcq",
+        "Question": "When solving a quadratic by completing the square, which step typically comes first?",
+        "Solution": "Divide by the leading coefficient (if a ≠ 1) and isolate x^2+bx on one side",
+        "Choices": [
+          "Take the square root of both sides",
+          "Write the equation in vertex form",
+          "Divide by the leading coefficient (if a ≠ 1) and isolate x^2+bx on one side",
+          "Multiply everything by -1"
+        ],
+        "Completed": false
+      },
+      "Q2_Correct_Factorization": {
+        "Type": "mcq",
+        "Question": "Given the quadratic equation x^2+6x+8=0, which of the following is a correct factorization?",
+        "Solution": "(x+2)(x+4)",
+        "Choices": [
+          "(x-2)(x-4)",
+          "(x+2)(x+4)",
+          "(x+3)(x+2)",
+          "Cannot be factored using integers"
+        ],
+        "Completed": false
       }
     }
   }
+}
