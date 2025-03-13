@@ -31,13 +31,14 @@ export class AuthService {
 
   // Call Flask /logout (POST) to clear session. If successful, set loggedIn to false
   logout(): Promise<void> {
-    return fetch('/logout', { method: 'POST' })
+    return fetch('http://localhost:4769/auth/logout', { method: 'POST' })
       .then(response => {
         if (!response.ok) {
           throw new Error('Logout failed');
         }
         // On success, push 'false' to all subscribers
         this.loggedInSubject.next(false);
+        
       });
   }
 

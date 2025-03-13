@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { AuthService } from '../services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -14,7 +15,7 @@ import { AuthService } from '../services/user.service';
 export class NavbarComponent implements OnInit {
   isLoggedIn = false;
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit(): void {
     // Whenever AuthService updates "isLoggedIn$", we update our local isLoggedIn
@@ -26,5 +27,6 @@ export class NavbarComponent implements OnInit {
   // Call the logout method in AuthService
   logout(): void {
     this.authService.logout().catch(error => console.error(error));
+    this.router.navigate(['/home'])
   }
 }
