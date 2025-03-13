@@ -25,7 +25,7 @@ export class LoginComponent {
     };
 
     // Send POST request to the Flask backend
-    this.http.post('http://localhost:4123/auth/login', loginData)
+    this.http.post('http://localhost:4769/auth/login', loginData)
       .subscribe({
         next: (response: any) => {
           console.log('Login successful:', response);
