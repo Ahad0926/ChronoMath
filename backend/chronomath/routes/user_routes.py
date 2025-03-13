@@ -22,3 +22,13 @@ def get_theme():
         return jsonify({"theme": theme}), 200
     except Exception as e:
         return jsonify({"Error": str(e)}), 400
+    
+@user_bp.route('/name', methods=["GET"])
+def get_name():
+    try:
+        uuid = session.get("uuid")
+        user = db.collection("Users").document(uuid).get()
+        name = user.to_dict()["name"]
+        return jsonify({"name": name}), 200
+    except Exception as e:
+        return jsonify({"Error": str(e)}), 400
