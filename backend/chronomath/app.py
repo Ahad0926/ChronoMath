@@ -24,5 +24,8 @@ app.register_blueprint(quiz_bp, url_prefix="/quiz")
 from routes.lesson_routes import lesson_bp
 app.register_blueprint(lesson_bp, url_prefix="/lesson")
 
+from routes.leaderboard_routes import leaderboard_bp
+app.register_blueprint(leaderboard_bp, url_prefix="/leaderboard")
+
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=4769, debug=True)
