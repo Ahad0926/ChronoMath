@@ -20,7 +20,15 @@ export class NavbarComponent implements OnInit {
     // Whenever UserService updates "isLoggedIn$", we update our local isLoggedIn
     this.UserService.isLoggedIn$.subscribe(status => {
       this.isLoggedIn = status;
+      console.log(`NavbarComponent detected login status change: ${status}`);
+    
+      if (status) {
+        const email = localStorage.getItem('userEmail');
+        const name = localStorage.getItem('userName');
+        console.log(`Navbar User Info: Email = ${email}, Name = ${name}`);
+      }
     });
+    
   }
 
   // Call the logout method in UserService

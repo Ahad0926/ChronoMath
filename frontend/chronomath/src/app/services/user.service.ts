@@ -13,32 +13,42 @@ export class UserService {
   isLoggedIn$ = this.loggedInSubject.asObservable();
 
   constructor() {
-    // Optionally do an initial check when the service is created
     this.checkLoginStatus();
   }
 
-  // Hit your Flask /isloggedin route to see if a session token exists
   checkLoginStatus(): void {
     const token = localStorage.getItem('authToken');
-    this.loggedInSubject.next(!!token);
+  
+    if (token) {
+      this.loggedInSubject.next(true);
+      console.log('checkLoginStatus: User is logged in.');
+  
+      const userEmail = localStorage.getItem('userEmail');
+      const userName = localStorage.getItem('userName');
+      console.log(`User details: Email = ${userEmail}, Name = ${userName}`);
+    } else {
+      this.loggedInSubject.next(false);
+      console.log('checkLoginStatus: User is NOT logged in.');
+    }
   }
   
-
-  // Call Flask /logout (POST) to clear session. If successful, set loggedIn to false
   logout(): Promise<void> {
     return fetch('http://localhost:4769/auth/logout', { method: 'POST' })
       .then(response => {
         if (!response.ok) {
           throw new Error('Logout failed');
         }
-        // Clear token + update status
+  
         localStorage.removeItem('authToken');
+        localStorage.removeItem('userEmail');
+        localStorage.removeItem('userName');
+  
         this.loggedInSubject.next(false);
+  
+        console.log('User has logged out. isLoggedIn = false');
       });
   }
   
-
-  // If you manually need to set the user as logged in (e.g., after a successful login fetch)
   setLoggedIn(value: boolean): void {
     this.loggedInSubject.next(value);
   }

@@ -80,7 +80,10 @@ def login():
 
         return jsonify({
             "Success": "User logged in",
-            "token": user['idToken']}), 200
+            "token": user['idToken'],
+            "email": email,
+            "name": "John Doe"}), 200
+
 
     except Exception as e:
         return jsonify({"Error": str(e)}), 400

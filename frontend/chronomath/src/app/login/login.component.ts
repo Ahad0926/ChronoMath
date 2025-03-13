@@ -30,8 +30,21 @@ export class LoginComponent {
     this.http.post('http://localhost:4769/auth/login', loginData)
       .subscribe({
         next: (response: any) => {
-          localStorage.setItem('authToken', response.token);
+          console.log('Login successful:', response);
+        
+          // Assume backend returns user info (update this if different)
+          const token = response.token;
+          const email = response.email; // or whatever your backend sends
+          const name = response.name;   // optional
+          
+          localStorage.setItem('authToken', token);
+          localStorage.setItem('userEmail', email);
+          localStorage.setItem('userName', name);
+        
           this.UserService.setLoggedIn(true);
+        
+          console.log(`Logged In User Details: Email = ${email}, Name = ${name}`);
+          
           this.router.navigate(['/timeline']);
         },
         error: (err) => {
