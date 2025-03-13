@@ -4,6 +4,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 
+import { AuthService } from '../services/user.service';
+
 @Component({
   selector: 'app-login',
   imports: [FormsModule, HttpClientModule],
@@ -15,7 +17,7 @@ export class LoginComponent {
   email: string = '';
   password: string = '';
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private http: HttpClient, private router: Router, private authService: AuthService) {}
 
   onSubmit() {
     // Create the request body
@@ -25,10 +27,12 @@ export class LoginComponent {
     };
 
     // Send POST request to the Flask backend
-    this.http.post('http://localhost:4123/auth/login', loginData)
+    this.http.post('http://localhost:4769/auth/login', loginData)
       .subscribe({
         next: (response: any) => {
           console.log('Login successful:', response);
+
+          this.authService.setLoggedIn(true);
           // Example: store token if returned by Flask
           // localStorage.setItem('token', response.token);
           // Navigate to another page or show success message
@@ -38,6 +42,23 @@ export class LoginComponent {
           console.error('Login failed:', err);
           // Handle error (e.g., show error message to the user)
           alert('Login failed. Please check your credentials.');
+        }
+      });
+  }
+
+  onForgotPassword() {
+    // Use the same "email" model from your login form
+    const forgotData = { email: this.email };
+
+    this.http.post('http://localhost:4769/auth/forgot-password', forgotData)
+      .subscribe({
+        next: (res: any) => {
+          console.log('Password reset email sent:', res);
+          alert('Password reset email sent. Please check your inbox.');
+        },
+        error: (err) => {
+          console.error('Password reset failed:', err);
+          alert('Could not send password reset email. Please try again later.');
         }
       });
   }
