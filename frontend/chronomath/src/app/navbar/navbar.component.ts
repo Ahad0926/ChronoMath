@@ -16,13 +16,20 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.checkLoginStatus();
+
+    console.log(this.isLoggedIn);
+    
   }
 
   // Check login status by calling /isloggedin
   checkLoginStatus(): void {
-    fetch('/isloggedin')
+    console.log("is logged in navbar");
+  
+    fetch('/isloggedin', { method: 'GET'})
       .then(response => response.json())
       .then(data => {
+        console.log('Login status response:', data); // ✅ LOG RESPONSE HERE
+  
         // The Flask route returns { logged_in: boolean, email?: string }
         this.isLoggedIn = data.logged_in;
       })

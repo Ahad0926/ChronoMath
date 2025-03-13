@@ -105,6 +105,8 @@ def forgot_password():
 @auth_bp.route('/isloggedin', methods=["GET"])
 def is_logged_in():
     if 'token' in session:
+        print("Yes")
         return jsonify({"logged_in": True, "email": session['email']}), 200
     else:
+        print("No")
         return jsonify({"logged_in": False}), 200
