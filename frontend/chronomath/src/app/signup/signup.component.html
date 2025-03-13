@@ -20,7 +20,7 @@
         </p>
   
         <!-- Sign-up form -->
-        <form class="mt-8 space-y-6">
+        <form class="mt-8 space-y-6" (ngSubmit)="onSubmit()">
           <!-- Name Field -->
           <div>
             <label
@@ -34,6 +34,7 @@
                 type="text"
                 id="name"
                 name="name"
+                [(ngModel)]="signupData.name"
                 required
                 class="block w-full px-4 py-2 text-sm text-gray-900 placeholder-gray-400
                        border border-gray-300 rounded-lg focus:outline-none
@@ -56,6 +57,7 @@
                 type="email"
                 id="email"
                 name="email"
+                [(ngModel)]="signupData.email"
                 required
                 class="block w-full px-4 py-2 text-sm text-gray-900 placeholder-gray-400
                        border border-gray-300 rounded-lg focus:outline-none
@@ -78,6 +80,7 @@
                 type="password"
                 id="password"
                 name="password"
+                [(ngModel)]="signupData.password"
                 required
                 class="block w-full px-4 py-2 text-sm text-gray-900 placeholder-gray-400
                        border border-gray-300 rounded-lg focus:outline-none
