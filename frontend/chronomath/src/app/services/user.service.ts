@@ -25,7 +25,8 @@ export class UserService {
   
       const userEmail = localStorage.getItem('userEmail');
       const userName = localStorage.getItem('userName');
-      console.log(`User details: Email = ${userEmail}, Name = ${userName}`);
+      const authToken = localStorage.getItem('authToken');
+      console.log(`User details:\n Email = ${userEmail}\n Name = ${userName}\n authToken = ${authToken}`);
     } else {
       this.loggedInSubject.next(false);
       console.log('checkLoginStatus: User is NOT logged in.');

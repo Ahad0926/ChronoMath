@@ -1,351 +1,128 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Lesson Quiz</title>
-  <!-- Tailwind CSS (CDN) -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.7/dist/tailwind.min.css"
-    rel="stylesheet"
-  />
-</head>
-<body class="h-screen overflow-y-auto bg-gray-100">
+<div class="flex h-screen" style="background-color: var(--bg-color); color: var(--text-color);">
 
-  <!-- Container for all content -->
-  <div class="max-w-7xl mx-auto py-8 px-4 space-y-6">
-
-    <!-- Title at the top -->
-    <h1 class="text-2xl font-bold text-gray-800">Lesson Quiz</h1>
-
-    <!-- Multiple Choice Section (6 Questions) -->
-    <section class="bg-white p-6 rounded-md shadow">
-      <h2 class="text-xl font-semibold text-gray-800 mb-4">Multiple Choice</h2>
-      <ol class="list-decimal pl-6 space-y-6">
-
-        <!-- Question 1 -->
-        <li>
-          <p class="text-gray-700 font-medium">
-            Which ancient civilizations are credited with some of the earliest
-            mathematical records?
-          </p>
-          <div class="mt-2 space-y-1">
-            <label class="flex items-center gap-2">
-              <input type="radio" name="q1" value="A" />
-              A) Mesopotamia and Egypt
-            </label>
-            <label class="flex items-center gap-2">
-              <input type="radio" name="q1" value="B" />
-              B) China and India
-            </label>
-            <label class="flex items-center gap-2">
-              <input type="radio" name="q1" value="C" />
-              C) Persia and Babylon
-            </label>
-            <label class="flex items-center gap-2">
-              <input type="radio" name="q1" value="D" />
-              D) Greece and Rome
-            </label>
-          </div>
-        </li>
-
-        <!-- Question 2 -->
-        <li>
-          <p class="text-gray-700 font-medium">
-            Which mathematician is credited with the invention of the concept of zero?
-          </p>
-          <div class="mt-2 space-y-1">
-            <label class="flex items-center gap-2">
-              <input type="radio" name="q2" value="A" />
-              A) Euclid
-            </label>
-            <label class="flex items-center gap-2">
-              <input type="radio" name="q2" value="B" />
-              B) Al-Khwarizmi
-            </label>
-            <label class="flex items-center gap-2">
-              <input type="radio" name="q2" value="C" />
-              C) Archimedes
-            </label>
-            <label class="flex items-center gap-2">
-              <input type="radio" name="q2" value="D" />
-              D) Pythagoras
-            </label>
-          </div>
-        </li>
-
-        <!-- Question 3 -->
-        <li>
-          <p class="text-gray-700 font-medium">
-            Which theorem is used to find the relationship among the sides of a right triangle?
-          </p>
-          <div class="mt-2 space-y-1">
-            <label class="flex items-center gap-2">
-              <input type="radio" name="q3" value="A" />
-              A) Pythagorean Theorem
-            </label>
-            <label class="flex items-center gap-2">
-              <input type="radio" name="q3" value="B" />
-              B) Fundamental Theorem of Algebra
-            </label>
-            <label class="flex items-center gap-2">
-              <input type="radio" name="q3" value="C" />
-              C) Fermat's Last Theorem
-            </label>
-            <label class="flex items-center gap-2">
-              <input type="radio" name="q3" value="D" />
-              D) None of the above
-            </label>
-          </div>
-        </li>
-
-        <!-- Question 4 -->
-        <li>
-          <p class="text-gray-700 font-medium">
-            Which civilization used a base-60 number system that still influences how we measure time?
-          </p>
-          <div class="mt-2 space-y-1">
-            <label class="flex items-center gap-2">
-              <input type="radio" name="q4" value="A" />
-              A) Babylonians
-            </label>
-            <label class="flex items-center gap-2">
-              <input type="radio" name="q4" value="B" />
-              B) Greeks
-            </label>
-            <label class="flex items-center gap-2">
-              <input type="radio" name="q4" value="C" />
-              C) Romans
-            </label>
-            <label class="flex items-center gap-2">
-              <input type="radio" name="q4" value="D" />
-              D) Mayans
-            </label>
-          </div>
-        </li>
-
-        <!-- Question 5 -->
-        <li>
-          <p class="text-gray-700 font-medium">
-            Which mathematician is often referred to as the “Father of Geometry”?
-          </p>
-          <div class="mt-2 space-y-1">
-            <label class="flex items-center gap-2">
-              <input type="radio" name="q5" value="A" />
-              A) Euclid
-            </label>
-            <label class="flex items-center gap-2">
-              <input type="radio" name="q5" value="B" />
-              B) Galileo
-            </label>
-            <label class="flex items-center gap-2">
-              <input type="radio" name="q5" value="C" />
-              C) Isaac Newton
-            </label>
-            <label class="flex items-center gap-2">
-              <input type="radio" name="q5" value="D" />
-              D) Al-Kindi
-            </label>
-          </div>
-        </li>
-
-        <!-- Question 6 -->
-        <li>
-          <p class="text-gray-700 font-medium">
-            Which mathematician formulated the Laws of Motion?
-          </p>
-          <div class="mt-2 space-y-1">
-            <label class="flex items-center gap-2">
-              <input type="radio" name="q6" value="A" />
-              A) Isaac Newton
-            </label>
-            <label class="flex items-center gap-2">
-              <input type="radio" name="q6" value="B" />
-              B) Albert Einstein
-            </label>
-            <label class="flex items-center gap-2">
-              <input type="radio" name="q6" value="C" />
-              C) Gottfried Wilhelm Leibniz
-            </label>
-            <label class="flex items-center gap-2">
-              <input type="radio" name="q6" value="D" />
-              D) Leonhard Euler
-            </label>
-          </div>
-        </li>
-      </ol>
-    </section>
-
-    <!-- True/False Section (4 Questions) -->
-    <section class="bg-white p-6 rounded-md shadow">
-      <h2 class="text-xl font-semibold text-gray-800 mb-4">True/False</h2>
-      <ol class="list-decimal pl-6 space-y-6">
-
-        <!-- T/F 1 -->
-        <li>
-          <p class="text-gray-700 font-medium">
-            True or False: Newton and Gottfried Wilhelm Leibniz independently
-            formulated calculus.
-          </p>
-          <div class="mt-2 flex items-center gap-4">
-            <label class="flex items-center gap-2">
-              <input type="radio" name="tf1" value="true" />
-              True
-            </label>
-            <label class="flex items-center gap-2">
-              <input type="radio" name="tf1" value="false" />
-              False
-            </label>
-          </div>
-        </li>
-
-        <!-- T/F 2 -->
-        <li>
-          <p class="text-gray-700 font-medium">
-            True or False: Modern mathematics relies primarily on geometry,
-            with little to no algebra or calculus.
-          </p>
-          <div class="mt-2 flex items-center gap-4">
-            <label class="flex items-center gap-2">
-              <input type="radio" name="tf2" value="true" />
-              True
-            </label>
-            <label class="flex items-center gap-2">
-              <input type="radio" name="tf2" value="false" />
-              False
-            </label>
-          </div>
-        </li>
-
-        <!-- T/F 3 -->
-        <li>
-          <p class="text-gray-700 font-medium">
-            True or False: The sum of the interior angles of a triangle is 180°.
-          </p>
-          <div class="mt-2 flex items-center gap-4">
-            <label class="flex items-center gap-2">
-              <input type="radio" name="tf3" value="true" />
-              True
-            </label>
-            <label class="flex items-center gap-2">
-              <input type="radio" name="tf3" value="false" />
-              False
-            </label>
-          </div>
-        </li>
-
-        <!-- T/F 4 -->
-        <li>
-          <p class="text-gray-700 font-medium">
-            True or False: Pi (<em>π</em>) is an irrational number.
-          </p>
-          <div class="mt-2 flex items-center gap-4">
-            <label class="flex items-center gap-2">
-              <input type="radio" name="tf4" value="true" />
-              True
-            </label>
-            <label class="flex items-center gap-2">
-              <input type="radio" name="tf4" value="false" />
-              False
-            </label>
-          </div>
-        </li>
-      </ol>
-    </section>
-
-    <!-- Bottom Section: Note Pad & Geometry Topics -->
-    <div class="flex flex-col md:flex-row gap-6">
-      <!-- Note Pad (smaller height) -->
-      <div class="md:w-2/3 bg-white p-6 rounded-md shadow">
-        <h3 class="text-lg font-semibold text-gray-800">Note Pad</h3>
-        <p class="text-sm text-gray-600 mt-2">
-          Jot down your thoughts or calculations here.
-        </p>
+    <!-- Sidebar: Notepad & Diagrams -->
+    <aside
+      class="w-80 p-4 space-y-6 shadow-md overflow-y-auto"
+      aria-label="Sidebar with notepad and diagrams"
+      style="background-color: var(--bg-color); color: var(--text-color);"
+    >
+  
+      <!-- Notepad -->
+      <div class="p-4 rounded shadow" style="background-color: var(--bg-color); color: var(--text-color);">
+        <h3 class="text-lg font-semibold">Note Pad</h3>
+        <p class="text-sm opacity-70 mt-1">Jot down your thoughts or calculations here.</p>
         <textarea
-          class="mt-4 w-full h-24 p-2 border border-gray-300 rounded-md
-                 focus:outline-none focus:ring-1 focus:ring-blue-500"
+          class="mt-4 w-full h-40 p-2 border rounded focus:outline-none focus:ring-1"
           placeholder="Write your notes here..."
+          aria-label="Notes area"
         ></textarea>
       </div>
-
-      <!-- Geometry Mini-Topics -->
-      <div class="md:w-1/3 flex flex-col gap-6">
+  
+      <!-- Diagrams Section -->
+      <div class="flex flex-col gap-6" aria-label="Diagrams Section">
+  
         <!-- Pythagorean Theorem -->
-        <div class="bg-white p-6 rounded-md shadow">
-          <h4 class="text-md font-semibold text-gray-800">Pythagorean Theorem</h4>
-          <p class="text-sm text-gray-600 mt-2">
-            In a right triangle, a² + b² = c².
-          </p>
-          <div class="mt-4 flex justify-center">
+        <div class="p-4 rounded shadow" style="background-color: var(--bg-color); color: var(--text-color);">
+          <h4 class="text-md font-semibold">Pythagorean Theorem</h4>
+          <p class="text-sm opacity-70 mt-1">In a right triangle, a² + b² = c².</p>
+          <div class="flex justify-center mt-4">
             <svg width="80" height="80" viewBox="0 0 100 100">
-              <polygon
-                points="10,90 90,90 90,10"
-                fill="#bfdbfe"
-                stroke="#3b82f6"
-                stroke-width="2"
-              />
+              <polygon points="10,90 90,90 90,10" fill="#bfdbfe" stroke="#3b82f6" stroke-width="2" />
             </svg>
           </div>
         </div>
-
+  
         <!-- Circle with Radius & Diameter -->
-        <div class="bg-white p-6 rounded-md shadow">
-          <h4 class="text-md font-semibold text-gray-800">
-            Circle: Radius &amp; Diameter
-          </h4>
-          <p class="text-sm text-gray-600 mt-2">
-            The diameter is twice the radius: d = 2r.
-          </p>
-          <div class="mt-4 flex justify-center">
+        <div class="p-4 rounded shadow" style="background-color: var(--bg-color); color: var(--text-color);">
+          <h4 class="text-md font-semibold">Circle: Radius &amp; Diameter</h4>
+          <p class="text-sm opacity-70 mt-1">The diameter is twice the radius: d = 2r.</p>
+          <div class="flex justify-center mt-4">
             <svg width="80" height="80" viewBox="0 0 100 100">
-              <circle
-                cx="50" cy="50" r="40"
-                fill="#bfdbfe"
-                stroke="#3b82f6"
-                stroke-width="2"
-              />
+              <circle cx="50" cy="50" r="40" fill="#bfdbfe" stroke="#3b82f6" stroke-width="2" />
             </svg>
           </div>
         </div>
-
+  
         <!-- Triangle with Angles -->
-        <div class="bg-white p-6 rounded-md shadow">
-          <h4 class="text-md font-semibold text-gray-800">Triangle with Angles</h4>
-          <p class="text-sm text-gray-600 mt-2">
-            The sum of interior angles of a triangle is 180°.
-          </p>
-          <div class="mt-4 flex justify-center">
+        <div class="p-4 rounded shadow" style="background-color: var(--bg-color); color: var(--text-color);">
+          <h4 class="text-md font-semibold">Triangle with Angles</h4>
+          <p class="text-sm opacity-70 mt-1">The sum of interior angles of a triangle is 180°.</p>
+          <div class="flex justify-center mt-4">
             <svg width="80" height="80" viewBox="0 0 100 100">
-              <polygon
-                points="50,10 90,90 10,90"
-                fill="#bfdbfe"
-                stroke="#3b82f6"
-                stroke-width="2"
-              />
+              <polygon points="50,10 90,90 10,90" fill="#bfdbfe" stroke="#3b82f6" stroke-width="2" />
             </svg>
           </div>
         </div>
+  
       </div>
-    </div>
-
-    <!-- Submit Button -->
-    <div class="mt-6 flex justify-center">
-      <button
-        type="button"
-        class="px-6 py-2 bg-blue-600 text-white rounded-md
-               hover:bg-blue-700 focus:outline-none focus:ring-2
-               focus:ring-blue-600"
-      >
-        Submit Quiz
-      </button>
-    </div>
-
-  <div>
-
-    <p>
-        \n
-    </p>
+    </aside>
+  
+    <!-- Main Content Area (Quiz) -->
+    <main class="flex-1 p-6 overflow-y-auto" aria-label="Quiz Section">
+      <div class="max-w-4xl mx-auto space-y-8">
+  
+        <!-- Quiz Title -->
+        <h1 class="text-2xl font-bold mb-4">Lesson Quiz</h1>
+  
+        <!-- Multiple Choice Section -->
+        <section aria-labelledby="multiple-choice-section" class="p-6 rounded shadow" style="background-color: var(--bg-color); color: var(--text-color);">
+          <h2 id="multiple-choice-section" class="text-xl font-semibold mb-4">Multiple Choice</h2>
+          <ol class="list-decimal space-y-6 pl-6">
+  
+            <!-- Example Question 1 -->
+            <li>
+              <p class="font-medium">Which ancient civilizations are credited with some of the earliest mathematical records?</p>
+              <div class="mt-2 space-y-1">
+                <label class="flex items-center gap-2">
+                  <input type="radio" name="q1" /> A) Mesopotamia and Egypt
+                </label>
+                <label class="flex items-center gap-2">
+                  <input type="radio" name="q1" /> B) China and India
+                </label>
+              </div>
+            </li>
+  
+            <!-- Add more questions here as needed... -->
+  
+          </ol>
+        </section>
+  
+        <!-- True/False Section -->
+        <section aria-labelledby="true-false-section" class="p-6 rounded shadow" style="background-color: var(--bg-color); color: var(--text-color);">
+          <h2 id="true-false-section" class="text-xl font-semibold mb-4">True/False</h2>
+          <ol class="list-decimal space-y-6 pl-6">
+  
+            <li>
+              <p class="font-medium">True or False: Newton and Leibniz independently formulated calculus.</p>
+              <div class="mt-2 flex gap-4">
+                <label class="flex items-center gap-2">
+                  <input type="radio" name="tf1" /> True
+                </label>
+                <label class="flex items-center gap-2">
+                  <input type="radio" name="tf1" /> False
+                </label>
+              </div>
+            </li>
+  
+            <!-- Add more T/F questions here... -->
+  
+          </ol>
+        </section>
+  
+        <!-- Submit Button -->
+        <div class="flex justify-center">
+          <button
+            type="button"
+            class="px-6 py-2 rounded focus:outline-none focus:ring-2"
+            style="background-color: var(--primary-color); color: var(--bg-color);"
+            aria-label="Submit Quiz"
+          >
+            Submit Quiz
+          </button>
+        </div>
+  
+      </div>
+    </main>
+  
   </div>
-
-  </div>
-</body>
-</html>
+  
