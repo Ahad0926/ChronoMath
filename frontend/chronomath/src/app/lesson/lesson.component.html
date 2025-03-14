@@ -1,105 +1,118 @@
-<!-- Outer container: full-screen height, white background -->
-<div class="min-h-screen bg-white px-6 py-8">
-    <!-- Inner wrapper for centering and max width -->
-    <div class="max-w-7xl mx-auto">
-  
-      <!-- Three-column layout on md+, one-column on smaller screens -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        
-        <!-- LEFT COLUMN: Lesson text -->
-        <div class="bg-white rounded shadow p-6">
-          <h2 class="text-3xl font-bold text-gray-800">
-            Mathematics Through Time
-          </h2>
-          <h3 class="text-xl font-semibold text-gray-600 mt-1">
-            Exploring the Evolution of Numbers and Ideas
-          </h3>
-          <p class="mt-4 text-gray-800 leading-relaxed">
-            Mathematics has been a cornerstone of human civilization, shaping
-            everything from ancient trade to modern technology. By understanding its
-            historical evolution, we gain deeper insight into the discoveries that
-            built the mathematical world we know today.
-          </p>
-          <p class="mt-4 text-gray-800 leading-relaxed">
-            In Mesopotamia and Egypt, early civilizations used arithmetic for commerce
-            and architecture. The Greek Classical period brought rigorous logical proofs,
-            with Euclid’s <em>Elements</em> laying the foundation for geometry. The Islamic
-            Golden Age expanded on these ideas, developing algebra and trigonometry,
-            while the Renaissance introduced analytical geometry and calculus.
-          </p>
-          <p class="mt-4 text-gray-800 leading-relaxed">
-            Today, mathematics continues to evolve, influencing fields such as
-            cryptography, artificial intelligence, and quantum computing.
-          </p>
-        </div>
-  
-        <!-- CENTER COLUMN: The image (logoT.png) -->
-        <div class="flex items-center justify-center">
-          <img
-            src="lesson.png"
-            alt="Chronomath Logo"
-            class="w-full max-w-sm rounded shadow"
-          />
-        </div>
-  
-        <!-- RIGHT COLUMN: Matching activity -->
-        <div>
-          <h3 class="text-2xl font-bold text-gray-800">
-            Match the Era to its Mathematical Achievements
-          </h3>
-  
-          <!-- Example “cards” in green/red boxes. Adjust or replace as needed. -->
-          <div class="mt-6 space-y-4">
-            <div class="flex items-center space-x-2">
-              <div class="flex-1 bg-green-100 border border-green-300 p-3 rounded">
-                Islamic Golden Age
-              </div>
-              <div class="flex-1 bg-red-100 border border-red-300 p-3 rounded">
-                Rise of computational mathematics, cryptography, and AI
-              </div>
-            </div>
-            <div class="flex items-center space-x-2">
-              <div class="flex-1 bg-green-100 border border-green-300 p-3 rounded">
-                Renaissance &amp; Enlightenment
-              </div>
-              <div class="flex-1 bg-red-100 border border-red-300 p-3 rounded">
-                Birth of algebra, decimal notation, and early algorithms
-              </div>
-            </div>
-            <div class="flex items-center space-x-2">
-              <div class="flex-1 bg-green-100 border border-green-300 p-3 rounded">
-                20th Century &amp; Beyond
-              </div>
-              <div class="flex-1 bg-red-100 border border-red-300 p-3 rounded">
-                Expansion of logic, geometry, and rigorous proofs
-              </div>
-            </div>
-            <div class="flex items-center space-x-2">
-              <div class="flex-1 bg-green-100 border border-green-300 p-3 rounded">
-                Greek Classical Period
-              </div>
-              <div class="flex-1 bg-red-100 border border-red-300 p-3 rounded">
-                Introduction of calculus and advancements in analytical geometry
-              </div>
-            </div>
-            <div class="flex items-center space-x-2">
-              <div class="flex-1 bg-green-100 border border-green-300 p-3 rounded">
-                Mesopotamian &amp; Egyptian Mathematics
-              </div>
-              <div class="flex-1 bg-red-100 border border-red-300 p-3 rounded">
-                Early arithmetic used for trade, taxation, and architecture
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> <!-- End of grid layout -->
-  
-      <!-- Bottom button: "Start your Quiz" -->
-      <div class="mt-8 flex justify-center">
-        <a href="/quiz" class="w-72 bg-blue-600 text-center text-white px-6 py-3 rounded shadow hover:bg-gray-700">
-          Start Quiz
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lesson 1: Introduction to Elementary Algebra</title>
+  <!-- Tailwind CSS (CDN) -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.7/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body class="h-screen overflow-y-auto bg-gray-100">
+
+  <!-- Full-page container using Flex -->
+  <div class="flex min-h-screen">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white shadow p-4">
+      <h2 class="text-lg font-bold mb-3">Algebra Lessons</h2>
+      <nav class="space-y-2">
+        <!-- Active link for Lesson 1 -->
+        <a
+          href="/lesson"
+          class="block px-3 py-2 rounded font-medium bg-blue-600 text-white"
+        >
+          Lesson 1: Introduction
         </a>
+        <a
+          href="/lesson2"
+          class="block px-3 py-2 rounded hover:bg-blue-50 text-gray-700 font-medium"
+        >
+          Lesson 2: Basic Elements &amp; Forms
+        </a>
+        <a
+          href="/lesson3"
+          class="block px-3 py-2 rounded hover:bg-blue-50 text-gray-700 font-medium"
+        >
+          Lesson 3: Completion &amp; Balancing
+        </a>
+        <a
+          href="/lesson4"
+          class="block px-3 py-2 rounded hover:bg-blue-50 text-gray-700 font-medium"
+        >
+          Lesson 4: Influence &amp; Legacy
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 p-6">
+      <div class="max-w-3xl mx-auto bg-white p-6 rounded shadow">
+        <h1 class="text-2xl font-bold mb-4">
+          Introduction to Elementary Algebra and Quadratic Equations
+        </h1>
+
+        <!-- Placeholder image for Lesson 1 -->
+        <img
+          src="lesson1.webp"
+          alt="Lesson 1 image"
+          class="block mx-auto w-80 h-100 mb-4 rounded"
+        />
+
+        <!-- LESSON 1 CONTENT -->
+        <p class="mb-4">
+          In 820 CE, under the Abbasid Caliphate during the Islamic Golden Age,
+          Muhammad ibn Musa al-Khwarizmi, known more commonly as simply Al-Khwarizmi,
+          published his treatise detailing various concepts in elementary algebra
+          known as
+          <em>al-Kitāb al-Mukhtaṣar fī Ḥisāb al-Jabr wal-Muqābalah</em>
+          (<strong>الكتاب المختصر في حساب الجبر والمقابلة</strong>),
+          translated as <em>The Compendious Book on Calculation by Completion and Balancing</em>,
+          more simply known as <strong>Al-Jabr</strong> (الجبر).
+        </p>
+
+        <p class="mb-4">
+          His primary focus was detailing how to deal with everyday issues regarding inheritance,
+          commercial transactions, and the distribution of legacies, which oftentimes required
+          calculations with unknown variables. As such, his goal was to codify a clear, step by step
+          methodology for how to solve what is now known as linear and quadratic equations.
+        </p>
+
+        <p class="mb-4">
+          The treatise itself contained accounts of solving for positive roots of polynomial equations,
+          explaining what they are as an idea through more simple linear equations, up to the second
+          degree. He also introduced the process of “reducing” and “balancing” equations, which is
+          actually related to the definitions of “Al-Jabr” itself (Completion and Balancing), as well as
+          moving subtracted terms on one side of an equation to the opposite side of the equal sign,
+          also known as cancelling like terms on opposite sides of the equation.
+        </p>
+
+        <p>
+          Al-Jabr was prominently the first piece of text to teach algebra for the sake of it, and being
+          the etymological namesake of the English word derived from it (Al-Jabr into Algebra), has a
+          profound importance in relation to standardized algebra today, particularly the application of
+          solving for the unknown in a polynomial equation, specifically linear and quadratic equations.
+        </p>
+        <!-- /LESSON 1 CONTENT -->
+
+        <!-- Next Lesson Button -->
+        <div class="mt-6 flex justify-end">
+          <a
+            href="/lesson2"
+            class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700
+                   focus:outline-none focus:ring-2 focus:ring-blue-600"
+          >
+            Next Lesson &rarr;
+          </a>
+        </div>
       </div>
-    </div>
+    </main>
+
   </div>
-  
+
+  <p>
+    \n
+  </p>
+</body>
+</html>

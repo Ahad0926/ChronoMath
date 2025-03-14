@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lesson 3: Methods of Completion, Balancing &amp; Quadratic Structure</title>
+  <!-- Tailwind CSS (CDN) -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.7/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body class="h-screen overflow-y-auto bg-gray-100">
+
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white shadow p-4">
+      <h2 class="text-lg font-bold mb-3">Algebra Lessons</h2>
+      <nav class="space-y-2">
+        <a
+          href="/lesson"
+          class="block px-3 py-2 rounded hover:bg-blue-50 text-gray-700 font-medium"
+        >
+          Lesson 1: Introduction
+        </a>
+        <a
+          href="/lesson2"
+          class="block px-3 py-2 rounded hover:bg-blue-50 text-gray-700 font-medium"
+        >
+          Lesson 2: Basic Elements &amp; Forms
+        </a>
+        <!-- Active link for Lesson 3 -->
+        <a
+          href="/lesson3"
+          class="block px-3 py-2 rounded font-medium bg-blue-600 text-white"
+        >
+          Lesson 3: Completion &amp; Balancing
+        </a>
+        <a
+          href="/lesson4"
+          class="block px-3 py-2 rounded hover:bg-blue-50 text-gray-700 font-medium"
+        >
+          Lesson 4: Influence &amp; Legacy
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-6">
+      <div class="max-w-3xl mx-auto bg-white p-6 rounded shadow">
+        <h1 class="text-2xl font-bold mb-4">
+          Methods of “Completion” &amp; “Balancing,” Geometric Interpretations,
+          and the Structure of Quadratic Equations
+        </h1>
+
+        <!-- Placeholder image for Lesson 3 -->
+        <img
+          src="lesson3.webp"
+          alt="Lesson 3 image"
+          class="block mx-auto w-80 h-100 mb-4 rounded"
+        />
+
+        <!-- LESSON 3 CONTENT -->
+        <h2 class="text-xl font-semibold mb-2">
+          Methods of “Completion” (al-jabr) and “Balancing” (al-muqābala)
+        </h2>
+        <p class="mb-4">
+          <strong>Completion (al-jabr)</strong>: Involves adding equal terms to both sides of
+          an equation to eliminate negative or fractional parts, thereby “completing” the square
+          or the root. For instance, if the equation were x^2 + 10x = 39, completing the square
+          might involve adding and subtracting 25.
+        </p>
+        <p class="mb-4">
+          <strong>Balancing (al-muqābala)</strong>: Involves simplifying and reorganizing the
+          equation by canceling out like terms on opposite sides. If an equation had x^2 + 10x + 21
+          on one side and 2x + 21 on the other, you would bring the terms together and “balance”
+          them so all unknown terms appear on one side and constants on the other.
+        </p>
+
+        <h2 class="text-xl font-semibold mb-2">Geometric Interpretations</h2>
+        <p class="mb-4">
+          Al-Khwarizmi illustrated solutions to quadratic equations using geometric arguments.
+          For instance, to solve x^2 + 10x = 39, he would represent x^2 as a square in a geometric
+          diagram, then attach rectangular sections of area 10x and show how “completing the square”
+          leads to a perfect square. These geometric interpretations lent intuitive and visual
+          credibility to algebraic procedures.
+        </p>
+
+        <h2 class="text-xl font-semibold mb-2">The Structure of Quadratic Equations</h2>
+        <p class="mb-4">
+          A quadratic equation typically has the form ax^2 + bx + c = 0, a ≠ 0.
+          In many modern textbooks, these are simply referred to as the x^2-term, the x-term,
+          and the constant.
+        </p>
+
+        <h2 class="text-xl font-semibold mb-2">Common Ways to Solve Quadratic Equations</h2>
+        <p class="mb-4">
+          <strong>Factoring:</strong> Look for two numbers that multiply to ac (if the equation
+          is ax^2 + bx + c = 0) and add to b.
+        </p>
+        <p class="mb-4">
+          <strong>Completing the Square (Al-Khwarizmi's “Completion”):</strong><br />
+          1. Make the coefficient of x^2 equal to 1 (if a ≠ 1, divide the equation by a).<br />
+          2. Rewrite x^2 + bx so that you can form a perfect square by adding (b/2)^2.<br />
+          3. Balance the equation by adding this value to both sides.<br />
+          4. Factor the left-hand side into a perfect square (x + b/2)^2.<br />
+          5. Solve by taking square roots.
+        </p>
+        <p class="mb-4">
+          <strong>Quadratic Formula:</strong><br />
+          <code>x = [-b ± √(b^2 - 4ac)] / (2a)</code>
+        </p>
+
+        <img
+        src="lesson31.webp"
+        alt="Lesson 3 image"
+        class="block mx-auto w-80 h-100 mb-4 rounded"
+        />
+        <p>
+          <strong>Graphical Interpretation:</strong><br />
+          Less explicitly used in Al-Khwarizmi's time but helpful today. The solutions (if real)
+          are the x-intercepts of the parabola y = ax^2 + bx + c.
+        </p>
+        <!-- /LESSON 3 CONTENT -->
+
+        <img
+        src="lesson32.gif"
+        alt="Lesson 3 image"
+        class="block mx-auto w-80 h-100 mb-4 rounded"
+        />
+
+        <!-- Next Lesson Button -->
+        <div class="mt-6 flex justify-end">
+          <a
+            href="/lesson4"
+            class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700
+                   focus:outline-none focus:ring-2 focus:ring-blue-600"
+          >
+            Next Lesson &rarr;
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <p>
+    \n
+  </p>
+
+</body>
+</html>

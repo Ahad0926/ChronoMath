@@ -18,3 +18,50 @@ app-root {
 router-outlet + * {
   margin-top: 4rem; /* Adjust based on navbar height */
 }
+
+:root {
+  --bg-color: #f8fafc;
+  --text-color: #1f2937;
+  --primary-color: #1e3a8a;
+  --secondary-color: #60a5fa;
+}
+
+/* LIGHT */
+.theme-light {
+  --bg-color: #f8fafc;
+  --text-color: #1f2937;
+  --primary-color: #1e3a8a;
+  --secondary-color: #60a5fa;
+}
+
+/* DARK */
+.theme-dark {
+  --bg-color: #111827;
+  --text-color: #f9fafb;
+  --primary-color: #2563eb;
+  --secondary-color: #4f46e5;
+}
+
+/* DEUTERANOPIA */
+.theme-deuteranopia {
+  --bg-color: #f5f5dc;
+  --text-color: #333333;
+  --primary-color: #2e7d32;
+  --secondary-color: #1565c0;
+}
+
+/* PROTANOPIA */
+.theme-protanopia {
+  --bg-color: #fdf6e3;
+  --text-color: #000000;
+  --primary-color: #e69f00;
+  --secondary-color: #56b4e9;
+}
+
+/* TRITANOPIA */
+.theme-tritanopia {
+  --bg-color: #eceff1;
+  --text-color: #212121;
+  --primary-color: #1e88e5;
+  --secondary-color: #ffb300;
+}
