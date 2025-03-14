@@ -37,36 +37,99 @@ closeModal() {
     this.panzoomInstance.resume(); // Enables panning and zooming
   }
 }
-  nodes = [
-    {
-      title: 'Ancient Greece',
-      description: 'Travel back to Ancient Greece and explore how Euclid’s Elements shaped the foundations of geometry, logic, and proof that we still rely on today.',
-      positionX: 100,
-      positionY: 150,
-      status: 'completed',
-      color: 'bg-blue-300',
-      icon: 'heroAcademicCap',
-    },
-    {
-      title: 'Islamic Golden Age',
-      description: 'Step into the Islamic Golden Age and see how Al-Khwarizmi laid the groundwork for algebra. Learn how his simple, practical methods for solving equations changed the way we think about math—shaping ideas that are still used today!',
-      positionX: 300,
-      positionY: 250,
-      status: 'in-progress',
-      color: 'bg-yellow-300',
-      icon: 'heroCalculator',
+nodes = [
+  {
+    title: 'Ancient Egypt (3000 BCE)',
+    description: 'Introduction of basic geometry used for land measurement and pyramid construction.',
+    positionX: 100,
+    positionY: 400,
+    status: 'complete',
+    color: 'bg-blue-300',
+    icon: 'heroLandmark',
+  },
+  {
+    title: 'Ancient Greece (300 BCE)',
+    description: 'Euclid’s Elements: Foundation of modern geometry.',
+    positionX: 500,
+    positionY: 100,
+    status: 'complete',
+    color: 'bg-blue-300',
+    icon: 'heroScale',
+  },
+  {
+    title: 'The Pythagorean Theorem',
+    description: 'Exploring Pythagorean proof and applications in right-angled triangles.',
+    positionX: 900,
+    positionY: 300,
+    status: 'complete',
+    color: 'bg-yellow-300',
+    icon: 'heroPythagoras',
+  },
+  {
+    title: 'Islamic Golden Age',
+    description: 'Al-Khwarizmi’s work introduces systematic solutions of linear and quadratic equations.',
+    positionX: 700,
+    positionY: 700,
+    status: 'in-progress',
+    color: 'bg-yellow-300',
+    icon: 'heroCalculator',
+  },
+  {
+    title: 'Renaissance Europe (1600 CE)',
+    description: 'René Descartes bridges algebra and geometry, inventing Analytical Geometry.',
+    positionX: 1200,
+    positionY: 500,
+    status: 'locked',
+    color: 'bg-blue-300',
+    icon: 'heroPenTool',
+  },
+  {
+    title: '18th Century Calculus',
+    description: 'Newton and Leibniz formalize the principles of differential and integral calculus.',
+    positionX: 1500,
+    positionY: 800,
+    status: 'locked',
+    color: 'bg-yellow-300',
+    icon: 'heroFunction',
+  },
+  {
+    title: 'Euler’s Identity',
+    description: 'Connecting fundamental constants in a single elegant equation.',
+    positionX: 1300,
+    positionY: 1100,
+    status: 'locked',
+    color: 'bg-yellow-300',
+    icon: 'heroSparkles',
+  },
+  {
+    title: 'Gödel’s Incompleteness Theorems',
+    description: 'Limits of formal systems in mathematics.',
+    positionX: 800,
+    positionY: 1200,
+    status: 'locked',
+    color: 'bg-yellow-300',
+    icon: 'heroExclamation',
+  },
+  {
+    title: 'Present Day',
+    description: 'Algorithms, cryptography, and machine learning innovations.',
+    positionX: 400,
+    positionY: 1000,
+    status: 'locked',
+    color: 'bg-blue-300',
+    icon: 'heroCpu',
+  },
+  {
+    title: 'The Birth of Game Theory',
+    description: 'Von Neumann’s strategic decision-making models.',
+    positionX: 1100,
+    positionY: 1400,
+    status: 'locked',
+    color: 'bg-yellow-300',
+    icon: 'heroPresentationChart',
+  }
+];
 
-    },
-    {
-      title: 'Present Day',
-      description: 'See how modern math solves real-world problems today—from cryptography and coding to predicting the future with data and algorithms.',
-      positionX: 500,
-      positionY: 350,
-      status: 'locked',
-      color: 'bg-gray-300',
-      icon: 'heroGlobeAlt',
-    },
-  ];
 
 
   @ViewChild('timelineCanvas') timelineCanvas!: ElementRef;
