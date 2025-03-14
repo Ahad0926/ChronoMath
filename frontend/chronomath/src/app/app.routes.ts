@@ -16,7 +16,7 @@ import { Lesson4Component } from './lesson4/lesson4.component';
 export const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
-    { path: 'timeline', component: TimelineComponent, canActivate: [AuthGuard] },
+    { path: 'timeline', component: TimelineComponent},
     { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
     { path: 'lesson', component: LessonComponent, canActivate: [AuthGuard] },
     { path: 'login', component: LoginComponent, canActivate: [RedirectIfLoggedInGuard] },

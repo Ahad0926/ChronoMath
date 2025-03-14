@@ -10,6 +10,7 @@
 
   <!-- Main Content Container -->
   <div class="relative z-10 w-full max-w-5xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between">
+
     <!-- Left Section -->
     <div class="md:w-1/2 md:pr-8 mb-8 md:mb-0">
       <h1 class="text-4xl md:text-5xl font-bold mb-3" style="color: var(--primary-color);">
@@ -18,24 +19,30 @@
       <p class="text-lg mb-4">
         Discover the Past, Master the Math—journey through the minds of history’s greatest mathematicians and experience their "Eureka!" moments firsthand with interactive lessons that unveil the stories behind groundbreaking mathematical discoveries.
       </p>
+
       <div class="flex flex-col space-y-3">
-        <a routerLink="/login"
+        <!-- Explore button (always shown) -->
+        <a routerLink="/timeline"
            class="px-6 py-3 font-medium rounded-lg transition hover:shadow-lg active:scale-95 text-center"
-           style="background-color: var(--secondary-color); color: var(--text-color); border: 1px solid var(--secondary-color);">
-          Log In
-        </a>
-        <a routerLink="/signup"
-           class="px-6 py-3 border-2 font-medium rounded-lg transition hover:shadow-lg active:scale-95 text-center"
-           style="border-color: var(--primary-color); color: var(--primary-color);">
-          Sign Up
+           style="background-color: var(--primary-color); color: var(--bg-color); border: 1px solid var(--secondary-color);">
+          Explore
         </a>
 
-        <a routerLink="/login" class="flex items-center justify-center text-sm mt-2 hover:underline"
-           style="color: var(--text-color);">
-          <div class="border-t w-16" style="border-color: var(--secondary-color);"></div>
-          <p class="mx-3 font-medium">Forgot your password?</p>
-          <div class="border-t w-16" style="border-color: var(--secondary-color);"></div>
-        </a>
+        <!-- Show only when NOT logged in -->
+        <ng-container *ngIf="!isLoggedIn">
+          <a routerLink="/signup"
+             class="px-6 py-3 border-2 font-medium rounded-lg transition hover:shadow-lg active:scale-95 text-center"
+             style="border-color: var(--primary-color); color: var(--primary-color);">
+            Sign Up
+          </a>
+
+          <a routerLink="/login" class="flex items-center justify-center text-sm mt-2 hover:underline"
+             style="color: var(--text-color);">
+            <div class="border-t w-16" style="border-color: var(--secondary-color);"></div>
+            <p class="mx-3 font-medium">Already have an Account?</p>
+            <div class="border-t w-16" style="border-color: var(--secondary-color);"></div>
+          </a>
+        </ng-container>
       </div>
     </div>
 
@@ -43,5 +50,6 @@
     <div class="hidden md:block md:w-1/2">
       <img src="logoT.png" alt="Chronomath Logo" class="h-auto w-full max-w-sm mx-auto" />
     </div>
+
   </div>
 </div>
