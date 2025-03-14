@@ -6,7 +6,7 @@ import { UserService } from '../services/user.service';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink, AsyncPipe, CommonModule],
+  imports: [RouterLink, CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
