@@ -1,4 +1,3 @@
-// navbar.component.ts
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
@@ -14,24 +13,24 @@ import { ThemeService } from '../services/theme.service';
 })
 export class NavbarComponent implements OnInit {
   isLoggedIn = false;
+  userName: string = '';
   showThemeDropdown = false;
+  showUserDropdown = false;
 
-  constructor(private UserService: UserService, private router: Router, private themeService: ThemeService) {}
-
+  constructor(
+    private UserService: UserService,
+    private router: Router,
+    private themeService: ThemeService
+  ) {}
 
   ngOnInit(): void {
-    // Whenever UserService updates "isLoggedIn$", we update our local isLoggedIn
     this.UserService.isLoggedIn$.subscribe(status => {
       this.isLoggedIn = status;
-      console.log(`NavbarComponent detected login status change: ${status}`);
-    
       if (status) {
-        const email = localStorage.getItem('userEmail');
-        const name = localStorage.getItem('userName');
-        console.log(`Navbar User Info: Email = ${email}, Name = ${name}`);
+        this.userName = localStorage.getItem('userName') || 'User';
+        console.log(`NavbarComponent detected login: Name = ${this.userName}`);
       }
     });
-    
   }
 
   logout(): void {
@@ -43,10 +42,21 @@ export class NavbarComponent implements OnInit {
 
   toggleThemeDropdown(): void {
     this.showThemeDropdown = !this.showThemeDropdown;
+    this.showUserDropdown = false; // Close user menu when opening theme menu
+  }
+
+  toggleUserDropdown(): void {
+    this.showUserDropdown = !this.showUserDropdown;
+    this.showThemeDropdown = false; // Close theme menu when opening user menu
   }
 
   setTheme(theme: string): void {
     this.themeService.applyTheme(theme);
     this.showThemeDropdown = false;
+  }
+
+  goToProfile(): void {
+    this.router.navigate(['/profile']);
+    this.showUserDropdown = false;
   }
 }
