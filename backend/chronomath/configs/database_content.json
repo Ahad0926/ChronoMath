@@ -2,78 +2,21 @@
   "IslamicGoldenAge": {
     "Description": "This is the Islamic Golden Age period",
     "Lessons": {
-      "Lesson1_Intro_to_Quadratic_Equations": {
-        "Title": "Introduction to Elementary Algebra and Quadratic Equations",
-        "Content": [
-          "In 820 CE, under the Abbasid Caliphate during the Islamic Golden Age, Muhammad ibn Musa al-Khwarizmi, known more commonly as simply Al-Khwarizmi published his treatise detailing various concepts in elementary algebra known as al-Kitāb al-Mukhtaṣar fī Ḥisāb al-Jabr wal-Muqābalah (الكتاب المختصر في حساب الجبر والمقابلة), translated as The Compendious Book on Calculation by Completion and Balancing, more simply known as Al-Jabr (الجبر).",
-          "His primary focus was detailing how to deal with everyday issues regarding inheritance, commercial transactions, and the distribution of legacies, which oftentimes required calculations with unknown variables. As such, his goal was to codify a clear, step by step methodology for how to solve what is now known as linear and quadratic equations.",
-          "The treatise itself contained accounts of solving for positive roots of polynomial equations, explaining what they are as an idea through more simple linear equations, up to the second degree. He also introduced the process of “reducing” and “balancing” equations, which is actually related to the definitions of “Al-Jabr” itself (Completion and Balancing), as well as moving subtracted terms on one side of an equation to the opposite side of the equal sign, also known as cancelling like terms on opposite sides of the equation.",
-          "Al-Jabr was prominently the first piece of text to teach algebra for the sake of it, and being the etymological namesake of the english word derived from it (Al-Jabr into Algebra), has a profound importance in relation to standardized algebra today, particularly the application of solving for the unknown in a polynomial equation, specifically linear and quadratic equations.",
-
-		  "Defining the Basic Elements",
-		  "Al-Khwarizmi classified the components of an equation into three types:",
-		  "'Roots' (shay' in Arabic): The unknown quantity, corresponding to what we call x",
-		  "'Squares' (mal in Arabic): The square of the unknown (x^2)",
-		  "'Numbers': Constant terms",
-		  "By consistently referring to these three components, he set a precedent for the symbolic structure of algebraic equations, though he himself mostly used rhetorical algebra (writing out phrases in words rather than symbols).",
-
-		  "Six Standard Forms of Equations",
-		  "Al-Khwarizmi categorized quadratic (and simpler) equations into six types. The idea was that any solvable equation could be reduced to one of these forms:",
-		  "x^2 = ax",
-		  "x^2 = b",
-		  "x^2 + ax = b",
-		  "x^2 + b = ax",
-		  "ax + b = x^2",
-		  "x^2 + ax + b = 0",
-		  "In modern notation, some of these forms overlap (we often rewrite them in the single form x^2 + px + q = 0), but Al-Khwarizmi's systematic classification was revolutionary in standardization.",
-
-		  "Methods of “Completion” (al-jabr) and “Balancing” (al-muqābala)",
-		  "Completion (al-jabr): Involves adding equal terms to both sides of an equation to eliminate negative or fractional parts, thereby “completing” the square or the root. For instance, if the equation were x^2 + 10x = 39, completing the square might involve adding and subtracting 2525.",
-		  "Balancing (al-muqābala): Involves simplifying and reorganizing the equation by canceling out like terms on opposite sides. If an equation had x^2 + 10x + 21 on one side and 2x + 21 on the other, you would bring the terms together and “balance” them so all unknown terms appear on one side and constants on the other.",
-		  "Geometric Interpretations",
-		  "Al-Khwarizmi illustrated solutions to quadratic equations using geometric arguments. For instance, to solve x^2 + 10x = 39, he would represent x^2 as a square in a geometric diagram, then attach rectangular sections of area 10x10x and show how “completing the square” leads to a perfect square. These geometric interpretations lent intuitive and visual credibility to algebraic procedures.",
-
-		  "The Structure of Quadratic Equations",
-		  "A quadratic equation typically has the form ax^2 + bx + c = 0, a ≠ 0",
-		  "In many modern textbooks, these are simply referred to as the x^2-term, the x-term, and the constant.",
-
-		  "Common Ways to Solve Quadratic Equations",
-		  "Factoring: Look for two numbers that multiply to ac (if the equation is ax^2 + bx + c = 0) and add to b.",
-		  "Completing the Square (Al-Khwarizmi's “Completion”):",
-		  "Make the coefficient of x^2 equal to 1 (if a ≠ 1, divide the equation by a).",
-		  "Rewrite x^2 + bx so that you can form a perfect square by adding (b/2)^2",
-		  "Balance the equation by adding this value to both sides.",
-		  "Factor the left-hand side into a perfect square (x + b/2)^2",
-		  "Solve by taking square roots.",
-		  "Quadratic Formula:",
-		  "Graphical Interpretation:",
-		  "Less explicitly used in Al-Khwarizmi's time but helpful today. The solutions (if real) are the x-intercepts of the parabola y = ax^2 + bx + c.",
-
-		  "How Al-Khwarizmi's Work Became the Basis for Quadratic Equations",
-		  "Dissemination Through Islamic Lands and Latin Europe",
-		  "The treatise spread across the Islamic world through copies and commentaries. Around the 12th century, it reached Europe via Latin translations (commonly attributed to translators such as Gerard of Cremona). These translations introduced the systematic treatment of equations into Western mathematics.",
-
-		  "Influence on Later Mathematicians",
-		  "Symbolic Notation:",
-		  "While Al-Khwarizmi himself wrote in rhetorical style, his concepts of “roots,” “squares,” and “numbers” were instrumental in the future development of symbolic notation.",
-		  "Standard Form:",
-		  "The idea that any quadratic equation could be simplified to a standard form is still how we teach solving quadratics today (i.e., rewriting everything as ax^2 + bx + c = 0).",
-		  "Completing the Square:",
-		  "This technique, explicitly illustrated by Al-Khwarizmi, is taught in contemporary classrooms worldwide as a standard method for deriving the quadratic formula or for solving quadratics when factoring is not straightforward.",
-      
-		  "Legacy",
-		  "Al-Khwarizmi's systematic procedure of “completion and balancing” outlines many of the steps students learn for solving quadratic equations. His geometric demonstrations still appear in textbooks today to provide an intuitive rationale for the algebraic manipulations. Through the Latin West, his book influenced Renaissance mathematicians and eventually became a foundational reference in the evolution of modern algebra textbooks."
-        ],
+      "L1": {
         "Completed": false
       },
-      "Lesson2_Something": {
-        "Title": "Algebra",
-        "Content": "The Islamic Golden Age mathematicians made significant contributions to the field of algebra.....",
+      "L2": {
+        "Completed": false
+      },
+      "L3": {
+        "Completed": false
+      },
+      "L4": {
         "Completed": false
       }
     },
     "Questions": {
-      "Q1_Standard_Form": {
+      "Q1": {
         "Type": "mcq",
         "Question": "Which of the following is the standard form of a quadratic equation?",
         "Solution": "ax^2+bx+c=0",
@@ -85,7 +28,7 @@
         ],
         "Completed": false
       },
-      "Q2_First_Step": {
+      "Q2": {
         "Type": "mcq",
         "Question": "When solving a quadratic by completing the square, which step typically comes first?",
         "Solution": "Divide by the leading coefficient (if a ≠ 1) and isolate x^2+bx on one side",
@@ -97,7 +40,7 @@
         ],
         "Completed": false
       },
-      "Q2_Correct_Factorization": {
+      "Q3": {
         "Type": "mcq",
         "Question": "Given the quadratic equation x^2+6x+8=0, which of the following is a correct factorization?",
         "Solution": "(x+2)(x+4)",
@@ -109,8 +52,7 @@
         ],
         "Completed": false
       },
-
-      "Q4_Completion": {
+      "Q4": {
         "Type": "mcq",
         "Question": "According to Al-Khwarizmi’s original approach, 'completion' (al-jabr) in solving x^2 + 10x = 39 means",
         "Solution": "Adding enough to both sides so that the left side becomes a perfect square.",
@@ -122,7 +64,7 @@
         ],
         "Completed": false
       },
-      "Q5_Discriminant": {
+      "Q5": {
         "Type": "mcq",
         "Question": "If the discriminant of a quadratic equation ax^2 + bx + c = 0 is negative (b^2 - 4ac < 0), the equation has",
         "Solution": "No real roots, but two complex roots.",
@@ -134,8 +76,7 @@
         ],
         "Completed": false
       },
-
-      "Q6_MixAndMatch_CompleteSquare": {
+      "Q6": {
         "Type": "mix_and_match",
         "Question": "Match each Quadratic Equation with its Completed Square Form.",
         "Pairs": {
@@ -158,8 +99,7 @@
         },
         "Completed": false
       },
-
-      "Q7_DragAndDrop_FactoringSteps": {
+      "Q7": {
         "Type": "drag_and_drop",
         "Question": "Arrange the steps to factor x^2 + 7x + 12 = 0 in the correct order.",
         "Steps": [
@@ -168,33 +108,51 @@
           "Group the terms and factor out common factors.",
           "Set each factor to 0 and solve for x."
         ],
-        "Solution": [1, 2, 3, 4],
+        "Solution": [
+          1,
+          2,
+          3,
+          4
+        ],
         "Completed": false
       },
-
-      "Q8_FillInBlank_1": {
+      "Q8": {
         "Type": "fill_in_blank",
         "Question": "When solving x^2 + 4x - 5 = 0 by factoring, we look for two numbers that multiply to -5 and add up to _____.",
         "Solution": "4",
-        "Choices": ["1", "2", "3", "4"],
+        "Choices": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
         "Completed": false
       },
-      "Q8_FillInBlank_2": {
+      "Q9": {
         "Type": "fill_in_blank",
         "Question": "The formula for the solutions of ax^2 + bx + c = 0 is x = (-b ± √(b^2 - 4ac)) / (2a). This is called the ____ Formula.",
         "Solution": "Quadratic",
-        "Choices": ["Quadratic", "Linear", "Exponential", "None of the above"],
+        "Choices": [
+          "Quadratic",
+          "Linear",
+          "Exponential",
+          "None of the above"
+        ],
         "Completed": false
       },
-      "Q8_FillInBlank_3": {
+      "Q10": {
         "Type": "fill_in_blank",
         "Question": "In Al-Khwarizmi’s treatise, equations involve squares (x^2), roots (x), and ____ (the constant term).",
         "Solution": "numbers",
-        "Choices": ["numbers", "variables", "coefficients", "unknowns"],
+        "Choices": [
+          "numbers",
+          "variables",
+          "coefficients",
+          "unknowns"
+        ],
         "Completed": false
       },
-
-      "Q9_ShortAnswer_AlMuqabala": {
+      "Q11": {
         "Type": "mcq",
         "Question": "In the equation x^2 + 10x + 9 = 0, how would you apply 'balancing' (al-muqābala) after completing the square?",
         "Solution": "Add the same term to both sides until one side becomes a perfect square and then rearrange to isolate that square.",
@@ -206,7 +164,7 @@
         ],
         "Completed": false
       },
-      "Q10_ShortAnswer_CompleteSquare": {
+      "Q12": {
         "Type": "mcq",
         "Question": "To solve x^2 + 8x = 20 by completing the square, which of the following short procedures is correct?",
         "Solution": "Add 16 to both sides to form (x+4)^2 = 36, then take square roots.",
@@ -215,48 +173,6 @@
           "Subtract 20, multiply by 8, then complete the square.",
           "Add 16 to both sides to form (x+4)^2=36, then take square roots.",
           "Use the quadratic formula immediately."
-        ],
-        "Completed": false
-      }
-    }
-  },
-  "SAMPLE2_THIS_JUST_AREPEAT": {
-    "Description": "This is the islamid golden age period",
-    "Lessons": {},
-    "Questions": {
-      "Q1_Standard_Form": {
-        "Type": "mcq",
-        "Question": "Which of the following is the standard form of a quadratic equation?",
-        "Solution": "ax^2+bx+c=0",
-        "Choices": [
-          "ax+b=0",
-          "ax^2+bx+c=0",
-          "ax^3+bx=0",
-          "a+b=x^2"
-        ],
-        "Completed": false
-      },
-      "Q2_": {
-        "Type": "mcq",
-        "Question": "When solving a quadratic by completing the square, which step typically comes first?",
-        "Solution": "Divide by the leading coefficient (if a ≠ 1) and isolate x^2+bx on one side",
-        "Choices": [
-          "Take the square root of both sides",
-          "Write the equation in vertex form",
-          "Divide by the leading coefficient (if a ≠ 1) and isolate x^2+bx on one side",
-          "Multiply everything by -1"
-        ],
-        "Completed": false
-      },
-      "Q2_Correct_Factorization": {
-        "Type": "mcq",
-        "Question": "Given the quadratic equation x^2+6x+8=0, which of the following is a correct factorization?",
-        "Solution": "(x+2)(x+4)",
-        "Choices": [
-          "(x-2)(x-4)",
-          "(x+2)(x+4)",
-          "(x+3)(x+2)",
-          "Cannot be factored using integers"
         ],
         "Completed": false
       }
