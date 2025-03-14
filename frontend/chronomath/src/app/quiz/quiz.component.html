@@ -1,128 +1,218 @@
-<div class="flex h-screen" style="background-color: var(--bg-color); color: var(--text-color);">
+<div class="flex h-screen pb-20" style="background-color: var(--bg-color); color: var(--text-color);">
+  <!-- Sidebar -->
+  <app-quiz-sidebar class="w-80 border-r border-primary"></app-quiz-sidebar>
 
-    <!-- Sidebar: Notepad & Diagrams -->
-    <aside
-      class="w-80 p-4 space-y-6 shadow-md overflow-y-auto"
-      aria-label="Sidebar with notepad and diagrams"
-      style="background-color: var(--bg-color); color: var(--text-color);"
-    >
-  
-      <!-- Notepad -->
-      <div class="p-4 rounded shadow" style="background-color: var(--bg-color); color: var(--text-color);">
-        <h3 class="text-lg font-semibold">Note Pad</h3>
-        <p class="text-sm opacity-70 mt-1">Jot down your thoughts or calculations here.</p>
-        <textarea
-          class="mt-4 w-full h-40 p-2 border rounded focus:outline-none focus:ring-1"
-          placeholder="Write your notes here..."
-          aria-label="Notes area"
-        ></textarea>
-      </div>
-  
-      <!-- Diagrams Section -->
-      <div class="flex flex-col gap-6" aria-label="Diagrams Section">
-  
-        <!-- Pythagorean Theorem -->
-        <div class="p-4 rounded shadow" style="background-color: var(--bg-color); color: var(--text-color);">
-          <h4 class="text-md font-semibold">Pythagorean Theorem</h4>
-          <p class="text-sm opacity-70 mt-1">In a right triangle, a² + b² = c².</p>
-          <div class="flex justify-center mt-4">
-            <svg width="80" height="80" viewBox="0 0 100 100">
-              <polygon points="10,90 90,90 90,10" fill="#bfdbfe" stroke="#3b82f6" stroke-width="2" />
-            </svg>
+  <!-- Main Quiz Content -->
+  <main class="flex-1 overflow-y-auto p-8" aria-label="Quiz Content">
+    <div class="max-w-4xl mx-auto space-y-8">
+      <!-- Quiz Header -->
+      <header class="mb-6">
+        <h1 class="text-3xl font-bold" style="color: var(--text-color)">Islamic Golden Age Quiz</h1>
+        <p class="mt-2 text-sm opacity-80">Test your knowledge on quadratic equations and Al-Khwarizmi’s methods.</p>
+      </header>
+
+      <!-- Scrollable Questions -->
+      <section class="space-y-8">
+
+        <!-- Question 1 -->
+        <div class="p-6 rounded border border-primary shadow-sm" style="background-color: var(--bg-color); position: relative;">
+          <!-- Title with "1 point" moved to top right -->
+          <div class="flex justify-between items-center mb-2">
+            <h2 class="text-lg font-semibold">Question 1</h2>
+            <span class="text-sm opacity-70">1 point</span>
+          </div>
+        
+          <!-- Question prompt -->
+          <p class="mb-4">Which of the following is the standard form of a quadratic equation?</p>
+        
+          <!-- 2x2 Grid of buttons -->
+          <div class="grid grid-cols-2 gap-4">
+            <button
+              class="w-full px-4 py-3 rounded border border-primary shadow-sm focus:outline-none focus:ring-2 hover:opacity-90 transition"
+              style="background-color: var(--secondary-color); color: var(--text-color);"
+              aria-label="ax + b = 0"
+            >
+              ax + b = 0
+            </button>
+        
+            <button
+              class="w-full px-4 py-3 rounded border border-primary shadow-sm focus:outline-none focus:ring-2 hover:opacity-90 transition"
+              style="background-color: var(--secondary-color); color: var(--text-color);"
+              aria-label="ax^2 + bx + c = 0"
+            >
+              ax² + bx + c = 0
+            </button>
+        
+            <button
+              class="w-full px-4 py-3 rounded border border-primary shadow-sm focus:outline-none focus:ring-2 hover:opacity-90 transition"
+              style="background-color: var(--secondary-color); color: var(--text-color);"
+              aria-label="ax^3 + bx = 0"
+            >
+              ax³ + bx = 0
+            </button>
+        
+            <button
+              class="w-full px-4 py-3 rounded border border-primary shadow-sm focus:outline-none focus:ring-2 hover:opacity-90 transition"
+              style="background-color: var(--secondary-color); color: var(--text-color);"
+              aria-label="a + b = x^2"
+            >
+              a + b = x²
+            </button>
           </div>
         </div>
-  
-        <!-- Circle with Radius & Diameter -->
-        <div class="p-4 rounded shadow" style="background-color: var(--bg-color); color: var(--text-color);">
-          <h4 class="text-md font-semibold">Circle: Radius &amp; Diameter</h4>
-          <p class="text-sm opacity-70 mt-1">The diameter is twice the radius: d = 2r.</p>
-          <div class="flex justify-center mt-4">
-            <svg width="80" height="80" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="40" fill="#bfdbfe" stroke="#3b82f6" stroke-width="2" />
-            </svg>
+
+        <!-- Question 2 -->
+        <div class="p-6 rounded border border-primary shadow-sm" style="background-color: var(--bg-color); position: relative;">
+          <!-- Title with "1 point" in the top right -->
+          <div class="flex justify-between items-center mb-2">
+            <h2 class="text-lg font-semibold">Question 2</h2>
+            <span class="text-sm opacity-70">1 point</span>
+          </div>
+        
+          <!-- Question prompt -->
+          <p class="mb-4">When solving a quadratic by completing the square, which step typically comes first?</p>
+        
+          <!-- Answer options -->
+          <div class="space-y-2">
+            <label class="flex items-center gap-2">
+              <input type="radio" name="q2" /> Take the square root of both sides
+            </label>
+            <label class="flex items-center gap-2">
+              <input type="radio" name="q2" /> Write the equation in vertex form
+            </label>
+            <label class="flex items-center gap-2">
+              <input type="radio" name="q2" /> Divide by the leading coefficient (if a ≠ 1) and isolate x² + bx on one side
+            </label>
+            <label class="flex items-center gap-2">
+              <input type="radio" name="q2" /> Multiply everything by -1
+            </label>
           </div>
         </div>
-  
-        <!-- Triangle with Angles -->
-        <div class="p-4 rounded shadow" style="background-color: var(--bg-color); color: var(--text-color);">
-          <h4 class="text-md font-semibold">Triangle with Angles</h4>
-          <p class="text-sm opacity-70 mt-1">The sum of interior angles of a triangle is 180°.</p>
-          <div class="flex justify-center mt-4">
-            <svg width="80" height="80" viewBox="0 0 100 100">
-              <polygon points="50,10 90,90 10,90" fill="#bfdbfe" stroke="#3b82f6" stroke-width="2" />
-            </svg>
+
+        <!-- Question 3 -->
+        <div class="p-6 rounded border border-primary shadow-sm" style="background-color: var(--bg-color); position: relative;">
+          <!-- Title with "1 point" in the top right -->
+          <div class="flex justify-between items-center mb-2">
+            <h2 class="text-lg font-semibold">Question 3</h2>
+            <span class="text-sm opacity-70">1 point</span>
+          </div>
+        
+          <!-- Question prompt -->
+          <p class="mb-4">Given the quadratic equation x² + 6x + 8 = 0, which of the following is a correct factorization?</p>
+        
+          <!-- 2x2 Grid of buttons -->
+          <div class="grid grid-cols-2 gap-4">
+            <button
+              class="w-full px-4 py-3 rounded border border-primary shadow-sm focus:outline-none focus:ring-2 hover:opacity-90 transition"
+              style="background-color: var(--secondary-color); color: var(--text-color);"
+              aria-label="(x - 2)(x - 4)"
+            >
+              (x - 2)(x - 4)
+            </button>
+          
+            <button
+              class="w-full px-4 py-3 rounded border border-primary shadow-sm focus:outline-none focus:ring-2 hover:opacity-90 transition"
+              style="background-color: var(--secondary-color); color: var(--text-color);"
+              aria-label="(x + 2)(x + 4)"
+            >
+              (x + 2)(x + 4)
+            </button>
+          
+            <button
+              class="w-full px-4 py-3 rounded border border-primary shadow-sm focus:outline-none focus:ring-2 hover:opacity-90 transition"
+              style="background-color: var(--secondary-color); color: var(--text-color);"
+              aria-label="(x + 3)(x + 2)"
+            >
+              (x + 3)(x + 2)
+            </button>
+          
+            <button
+              class="w-full px-4 py-3 rounded border border-primary shadow-sm focus:outline-none focus:ring-2 hover:opacity-90 transition"
+              style="background-color: var(--secondary-color); color: var(--text-color);"
+              aria-label="Cannot be factored using integers"
+            >
+              Cannot be factored using integers
+            </button>
           </div>
         </div>
-  
-      </div>
-    </aside>
-  
-    <!-- Main Content Area (Quiz) -->
-    <main class="flex-1 p-6 overflow-y-auto" aria-label="Quiz Section">
-      <div class="max-w-4xl mx-auto space-y-8">
-  
-        <!-- Quiz Title -->
-        <h1 class="text-2xl font-bold mb-4">Lesson Quiz</h1>
-  
-        <!-- Multiple Choice Section -->
-        <section aria-labelledby="multiple-choice-section" class="p-6 rounded shadow" style="background-color: var(--bg-color); color: var(--text-color);">
-          <h2 id="multiple-choice-section" class="text-xl font-semibold mb-4">Multiple Choice</h2>
-          <ol class="list-decimal space-y-6 pl-6">
-  
-            <!-- Example Question 1 -->
-            <li>
-              <p class="font-medium">Which ancient civilizations are credited with some of the earliest mathematical records?</p>
-              <div class="mt-2 space-y-1">
-                <label class="flex items-center gap-2">
-                  <input type="radio" name="q1" /> A) Mesopotamia and Egypt
-                </label>
-                <label class="flex items-center gap-2">
-                  <input type="radio" name="q1" /> B) China and India
-                </label>
-              </div>
-            </li>
-  
-            <!-- Add more questions here as needed... -->
-  
-          </ol>
-        </section>
-  
-        <!-- True/False Section -->
-        <section aria-labelledby="true-false-section" class="p-6 rounded shadow" style="background-color: var(--bg-color); color: var(--text-color);">
-          <h2 id="true-false-section" class="text-xl font-semibold mb-4">True/False</h2>
-          <ol class="list-decimal space-y-6 pl-6">
-  
-            <li>
-              <p class="font-medium">True or False: Newton and Leibniz independently formulated calculus.</p>
-              <div class="mt-2 flex gap-4">
-                <label class="flex items-center gap-2">
-                  <input type="radio" name="tf1" /> True
-                </label>
-                <label class="flex items-center gap-2">
-                  <input type="radio" name="tf1" /> False
-                </label>
-              </div>
-            </li>
-  
-            <!-- Add more T/F questions here... -->
-  
-          </ol>
-        </section>
-  
+
+        <!-- Question 4 -->
+        <div class="p-6 rounded border border-primary shadow-sm" style="background-color: var(--bg-color); position: relative;">
+          <div class="flex justify-between items-center mb-2">
+            <h2 class="text-lg font-semibold">Question 4</h2>
+            <span class="text-sm opacity-70">1 point</span>
+          </div>
+        
+          <p class="mb-4">According to Al-Khwarizmi’s original approach, "completion" (al-jabr) in solving x² + 10x = 39 means</p>
+        
+          <div class="space-y-2">
+            <label class="flex items-center gap-2"><input type="radio" name="q4" /> Bringing all x² terms to one side.</label>
+            <label class="flex items-center gap-2"><input type="radio" name="q4" /> Adding enough to both sides so that the left side becomes a perfect square.</label>
+            <label class="flex items-center gap-2"><input type="radio" name="q4" /> Subtracting 39 from both sides to get x² + 10x - 39 = 0.</label>
+            <label class="flex items-center gap-2"><input type="radio" name="q4" /> Factoring out common terms from both sides.</label>
+          </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="p-6 rounded border border-primary shadow-sm" style="background-color: var(--bg-color); position: relative;">
+          <div class="flex justify-between items-center mb-2">
+            <h2 class="text-lg font-semibold">Question 5</h2>
+            <span class="text-sm opacity-70">1 point</span>
+          </div>
+        
+          <p class="mb-4">If the discriminant of a quadratic equation ax² + bx + c = 0 is negative (b² - 4ac &lt; 0), the equation has</p>
+        
+          <div class="space-y-2">
+            <label class="flex items-center gap-2"><input type="radio" name="q5" /> Two distinct real roots</label>
+            <label class="flex items-center gap-2"><input type="radio" name="q5" /> One real root (with multiplicity 2)</label>
+            <label class="flex items-center gap-2"><input type="radio" name="q5" /> No real roots, but two complex roots.</label>
+            <label class="flex items-center gap-2"><input type="radio" name="q5" /> Infinitely many real roots</label>
+          </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="p-6 rounded border border-primary shadow-sm" style="background-color: var(--bg-color); position: relative;">
+          <div class="flex justify-between items-center mb-2">
+            <h2 class="text-lg font-semibold">Question 6</h2>
+            <span class="text-sm opacity-70">1 point</span>
+          </div>
+        
+          <p class="mb-4">In the equation x² + 10x + 9 = 0, how would you apply "balancing" (al-muqābala) after completing the square?</p>
+        
+          <div class="space-y-2">
+            <label class="flex items-center gap-2"><input type="radio" name="q11" /> Multiply each side by 2 to balance them.</label>
+            <label class="flex items-center gap-2"><input type="radio" name="q11" /> Add the same term to both sides until one side becomes a perfect square and then rearrange to isolate that square.</label>
+            <label class="flex items-center gap-2"><input type="radio" name="q11" /> Factor directly without adding or subtracting any terms.</label>
+            <label class="flex items-center gap-2"><input type="radio" name="q11" /> Immediately use the quadratic formula.</label>
+          </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="p-6 rounded border border-primary shadow-sm" style="background-color: var(--bg-color); position: relative;">
+          <div class="flex justify-between items-center mb-2">
+            <h2 class="text-lg font-semibold">Question 7</h2>
+            <span class="text-sm opacity-70">1 point</span>
+          </div>
+        
+          <p class="mb-4">To solve x² + 8x = 20 by completing the square, which of the following short procedures is correct?</p>
+        
+          <div class="space-y-2">
+            <label class="flex items-center gap-2"><input type="radio" name="q12" /> Subtract 20 from both sides, then factor as (x + 4)(x + 4) = 0.</label>
+            <label class="flex items-center gap-2"><input type="radio" name="q12" /> Subtract 20, multiply by 8, then complete the square.</label>
+            <label class="flex items-center gap-2"><input type="radio" name="q12" /> Add 16 to both sides to form (x + 4)² = 36, then take square roots.</label>
+            <label class="flex items-center gap-2"><input type="radio" name="q12" /> Use the quadratic formula immediately.</label>
+          </div>
+        </div>
+
         <!-- Submit Button -->
         <div class="flex justify-center">
-          <button
-            type="button"
-            class="px-6 py-2 rounded focus:outline-none focus:ring-2"
+          <button class="px-6 py-2 rounded focus:outline-none focus:ring-2"
             style="background-color: var(--primary-color); color: var(--bg-color);"
-            aria-label="Submit Quiz"
-          >
+            aria-label="Submit Quiz">
             Submit Quiz
           </button>
         </div>
-  
-      </div>
-    </main>
-  
-  </div>
-  
+      </section>
+    </div>
+  </main>
+</div>
