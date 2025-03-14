@@ -10,11 +10,10 @@
   />
 </head>
 <body class="h-screen overflow-y-auto bg-gray-100">
-  <!-- Container for sidebar + main content -->
-  <div class="min-h-screen flex flex-col md:flex-row">
-    
+
+  <div class="flex min-h-screen">
     <!-- Sidebar -->
-    <aside class="w-full md:w-64 bg-white shadow p-4">
+    <aside class="w-64 bg-white shadow p-4">
       <h2 class="text-lg font-bold mb-3">Algebra Lessons</h2>
       <h3 class="text-sm italic">Quadratic Equations</h3>
       <nav class="space-y-2">
@@ -49,66 +48,52 @@
     <!-- Main Content -->
     <main class="flex-1 p-6">
       <div class="max-w-3xl mx-auto bg-white p-6 rounded shadow">
-        
         <h1 class="text-2xl font-bold mb-4">
           Methods of “Completion” &amp; “Balancing,” Geometric Interpretations,
           and the Structure of Quadratic Equations
         </h1>
 
-        <!-- TWO-COLUMN LAYOUT FOR THE FIRST TWO IMAGES + TEXT -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          <!-- Column 1 -->
-          <div>
-            <h2 class="text-xl font-semibold mb-2">
-              Methods of “Completion” (al-jabr)
-            </h2>
-            <p class="mb-4">
-              <strong>Completion (al-jabr)</strong> involves adding equal terms to both sides of
-              an equation to eliminate negative or fractional parts, effectively “completing” the
-              square or root. For instance, if <code>x<sup>2</sup> + 10x = 39</code>, you might
-              add and subtract 25 to form a perfect square.
-            </p>
-            <img
-              src="lesson3.webp"
-              alt="Lesson 3 image"
-              class="block w-full h-auto rounded"
-            />
-          </div>
+        <!-- Placeholder image for Lesson 3 -->
+        <img
+          src="lesson3.webp"
+          alt="Lesson 3 image"
+          class="block mx-auto w-80 h-100 mb-4 rounded"
+        />
 
-          <!-- Column 2 -->
-          <div>
-            <h2 class="text-xl font-semibold mb-2">
-              Balancing (al-muqābala)
-            </h2>
-            <p class="mb-4">
-              <strong>Balancing (al-muqābala)</strong> means simplifying and reorganizing
-              the equation by canceling out like terms on opposite sides. For example, if an equation
-              had different terms on each side, you’d bring the like terms together to “balance”
-              it so that all unknowns appear on one side and the constants on the other.
-            </p>
-            <img
-              src="lesson32.gif"
-              alt="Lesson 3 image"
-              class="block w-full h-auto rounded"
-            />
-          </div>
-        </div>
+        <!-- LESSON 3 CONTENT -->
+        <h2 class="text-xl font-semibold mb-2">
+          Methods of “Completion” (al-jabr) and “Balancing” (al-muqābala)
+        </h2>
+        <p class="mb-4">
+          <strong>Completion (al-jabr)</strong>: Involves adding equal terms to both sides of
+          an equation to eliminate negative or fractional parts, thereby “completing” the square
+          or the root. For instance, if the equation were <code>x<sup>2</sup> + 10x = 39</code>,
+          completing the square might involve adding and subtracting 25.
+        </p>
+        <p class="mb-4">
+          <strong>Balancing (al-muqābala)</strong>: Involves simplifying and reorganizing the
+          equation by canceling out like terms on opposite sides. For example, if an equation had different
+          terms on each side, you would bring the like terms together to “balance” the equation so that
+          all unknowns appear on one side and the constants on the other.
+        </p>
 
-        <!-- Additional Text and the Third Image -->
         <h2 class="text-xl font-semibold mb-2">Geometric Interpretations</h2>
         <p class="mb-4">
           Al-Khwarizmi illustrated solutions to quadratic equations using geometric arguments.
           For instance, to solve <code>x<sup>2</sup> + 10x = 39</code>, he would represent
-          <code>x<sup>2</sup></code> as a square, then attach rectangular sections of area 10x
-          to show how “completing the square” leads to a perfect square. These geometric
-          interpretations lent intuitive and visual credibility to algebraic procedures.
+          <code>x<sup>2</sup></code> as a square in a geometric diagram, then attach rectangular
+          sections of area 10x to show how “completing the square” leads to a perfect square.
+          These geometric interpretations lent intuitive and visual credibility to algebraic procedures.
         </p>
-        <h2 class="text-xl font-semibold mb-2">
-          The Structure of Quadratic Equations
-        </h2>
+        <img
+          src="lesson32.gif"
+          alt="Lesson 3 image"
+          class="block mx-auto w-80 h-100 mb-4 rounded"
+        />
+        <h2 class="text-xl font-semibold mb-2">The Structure of Quadratic Equations</h2>
         <p class="mb-4">
-          A quadratic equation typically has the form <code>ax<sup>2</sup> + bx + c = 0</code>,
-          where a ≠ 0. In many modern textbooks, these are simply the <code>x<sup>2</sup>-term</code>,
+          A quadratic equation typically has the form <code>ax<sup>2</sup> + bx + c = 0</code>, a ≠ 0.
+          In many modern textbooks, these are simply referred to as the <code>x<sup>2</sup>-term</code>,
           the x-term, and the constant.
         </p>
 
@@ -119,29 +104,29 @@
         </p>
         <p class="mb-4">
           <strong>Completing the Square (Al-Khwarizmi's “Completion”):</strong><br />
-          1. Make the coefficient of <code>x<sup>2</sup></code> = 1 (divide if needed).<br />
-          2. Rewrite <code>x<sup>2</sup> + bx</code> so you can form a perfect square by adding
-             <code>(b/2)<sup>2</sup></code>.<br />
+          1. Make the coefficient of <code>x<sup>2</sup></code> equal to 1 (if a ≠ 1, divide the equation by a).<br />
+          2. Rewrite <code>x<sup>2</sup> + bx</code> so that you can form a perfect square by adding <code>(b/2)<sup>2</sup></code>.<br />
           3. Balance the equation by adding this value to both sides.<br />
           4. Factor the left-hand side into a perfect square <code>(x + b/2)<sup>2</sup></code>.<br />
           5. Solve by taking square roots.
         </p>
         <p class="mb-4">
-          <strong>Quadratic Formula:</strong> <code>x = [-b ± √(b² - 4ac)] / (2a)</code>
+          <strong>Quadratic Formula:</strong><br />
         </p>
 
-        <!-- Third Image (Single Column) -->
         <img
           src="lesson31.webp"
           alt="Lesson 3 image"
-          class="block mx-auto w-80 h-auto mb-4 rounded"
+          class="block mx-auto w-80 h-100 mb-4 rounded"
         />
-
         <p>
           <strong>Graphical Interpretation:</strong><br />
           Less explicitly used in Al-Khwarizmi's time but helpful today, the solutions (if real)
           are the x-intercepts of the parabola described by <code>y = ax<sup>2</sup> + bx + c</code>.
         </p>
+        <!-- /LESSON 3 CONTENT -->
+
+
 
         <!-- Next Lesson Button -->
         <div class="mt-6 flex justify-end">
@@ -154,13 +139,10 @@
           </a>
         </div>
       </div>
-      <p>
-        \n
-        \n 
-      </p>
     </main>
-
-
   </div>
+
+  <p>\n</p>
+
 </body>
 </html>

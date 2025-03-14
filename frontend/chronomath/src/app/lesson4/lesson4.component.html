@@ -10,11 +10,10 @@
   />
 </head>
 <body class="h-screen overflow-y-auto bg-gray-100">
-  <!-- Outer container: no fixed height, so content can scroll naturally -->
-  <div class="min-h-screen flex flex-col md:flex-row">
 
+  <div class="flex min-h-screen">
     <!-- Sidebar -->
-    <aside class="w-full md:w-64 bg-white shadow p-4">
+    <aside class="w-64 bg-white shadow p-4">
       <h2 class="text-lg font-bold mb-3">Algebra Lessons</h2>
       <h3 class="text-sm italic">Quadratic Equations</h3>
       <nav class="space-y-2">
@@ -48,71 +47,59 @@
 
     <!-- Main Content -->
     <main class="flex-1 p-6">
-      <!-- Content container -->
-      <div class="max-w-7xl mx-auto bg-white p-6 rounded shadow">
+      <div class="max-w-3xl mx-auto bg-white p-6 rounded shadow">
         <h1 class="text-2xl font-bold mb-4">
           How Al-Khwarizmi's Work Became the Basis for Quadratic Equations &amp; Legacy
         </h1>
 
-        <!-- Image at full width -->
-        
-
-        <div class="flex justify-center">
-          <img
+        <!-- Placeholder image for Lesson 4 -->
+        <img
           src="lesson4.webp"
           alt="Lesson 4 image"
-          class="max-w-3xl h-auto mb-4 rounded"
-         />
+          class="w-full h-auto mb-4 rounded"
+        />
 
-        </div>
+        <!-- LESSON 4 CONTENT -->
+        <h2 class="text-xl font-semibold mb-2">
+          Dissemination Through Islamic Lands and Latin Europe
+        </h2>
+        <p class="mb-4">
+          The treatise spread across the Islamic world through copies and commentaries.
+          Around the 12th century, it reached Europe via Latin translations (commonly
+          attributed to translators such as Gerard of Cremona). These translations introduced
+          the systematic treatment of equations into Western mathematics.
+        </p>
 
-        <!-- Multi-column text: 2 columns on md+ screens, 1 column on smaller screens -->
-        <div class="md:columns-2 md:gap-8 space-y-4">
-          <!-- Lesson Content -->
-          <h2 class="text-xl font-semibold">
-            Dissemination Through Islamic Lands and Latin Europe
-          </h2>
-          <p>
-            The treatise spread across the Islamic world through copies and commentaries.
-            Around the 12th century, it reached Europe via Latin translations (commonly
-            attributed to translators such as Gerard of Cremona). These translations introduced
-            the systematic treatment of equations into Western mathematics.
-          </p>
+        <h2 class="text-xl font-semibold mb-2">Influence on Later Mathematicians</h2>
+        <p class="mb-4">
+          <strong>Symbolic Notation:</strong><br />
+          While Al-Khwarizmi himself wrote in rhetorical style, his concepts of “roots,”
+          “squares,” and “numbers” were instrumental in the future development of symbolic
+          notation.
+        </p>
+        <p class="mb-4">
+          <strong>Standard Form:</strong><br />
+          The idea that any quadratic equation could be simplified to a standard form is
+          still how we teach solving quadratics today (i.e., rewriting everything as
+          <code>ax<sup>2</sup> + bx + c = 0</code>).
+        </p>
+        <p class="mb-4">
+          <strong>Completing the Square:</strong><br />
+          This technique, explicitly illustrated by Al-Khwarizmi, is taught in contemporary
+          classrooms worldwide as a standard method for deriving the quadratic formula or
+          for solving quadratics when factoring is not straightforward.
+        </p>
 
-          <h2 class="text-xl font-semibold">
-            Influence on Later Mathematicians
-          </h2>
-          <p>
-            <strong>Symbolic Notation:</strong><br />
-            While Al-Khwarizmi himself wrote in rhetorical style, his concepts of “roots,”
-            “squares,” and “numbers” were instrumental in the future development of symbolic
-            notation.
-          </p>
-          <p>
-            <strong>Standard Form:</strong><br />
-            The idea that any quadratic equation could be simplified to a standard form is
-            still how we teach solving quadratics today (i.e., rewriting everything as
-            <code>ax<sup>2</sup> + bx + c = 0</code>).
-          </p>
-          <p>
-            <strong>Completing the Square:</strong><br />
-            This technique, explicitly illustrated by Al-Khwarizmi, is taught in contemporary
-            classrooms worldwide as a standard method for deriving the quadratic formula or
-            for solving quadratics when factoring is not straightforward.
-          </p>
-
-          <h2 class="text-xl font-semibold">
-            Legacy
-          </h2>
-          <p>
-            Al-Khwarizmi's systematic procedure of “completion and balancing” outlines many of
-            the steps students learn for solving quadratic equations. His geometric demonstrations
-            still appear in textbooks today to provide an intuitive rationale for the algebraic
-            manipulations. Through the Latin West, his book influenced Renaissance mathematicians
-            and eventually became a foundational reference in the evolution of modern algebra
-            textbooks.
-          </p>
-        </div> <!-- /columns-2 -->
+        <h2 class="text-xl font-semibold mb-2">Legacy</h2>
+        <p>
+          Al-Khwarizmi's systematic procedure of “completion and balancing” outlines many of
+          the steps students learn for solving quadratic equations. His geometric demonstrations
+          still appear in textbooks today to provide an intuitive rationale for the algebraic
+          manipulations. Through the Latin West, his book influenced Renaissance mathematicians
+          and eventually became a foundational reference in the evolution of modern algebra
+          textbooks.
+        </p>
+        <!-- /LESSON 4 CONTENT -->
 
         <!-- Start Quiz Button -->
         <div class="mt-6 flex justify-end">
@@ -125,11 +112,10 @@
           </a>
         </div>
       </div>
-      <p>
-        \n
-        \n 
-      </p>
     </main>
   </div>
+
+  <p>\n</p>
+
 </body>
 </html>
