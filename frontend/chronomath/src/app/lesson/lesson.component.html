@@ -17,6 +17,10 @@
   <!-- Full-page container using Flex -->
   <div class="flex min-h-screen">
 
+<body class="h-screen overflow-y-auto bg-gray-100">
+  <!-- Outer container ensures full viewport height and scroll if content grows -->
+  <div class="min-h-screen flex flex-col md:flex-row">
+    
     <!-- Sidebar -->
     <aside
       class="w-64 shadow p-4"
@@ -80,54 +84,62 @@
         style="background-color: var(--bg-color); color: var(--text-color);"
       >
         <h1 class="text-2xl font-bold mb-4">
+    
+    <!-- Main Content -->
+    <main class="flex-1 p-6">
+      <!-- Container to limit max width, center content, and provide background -->
+      <div class="max-w-7xl mx-auto bg-white p-6 rounded shadow">
+        
+        <!-- Lesson Title -->
+        <h1 class="text-2xl font-bold mb-6">
           Introduction to Elementary Algebra and Quadratic Equations
         </h1>
-
-        <!-- Placeholder image for Lesson 1 -->
-        <img
-          src="lesson1.webp"
-          alt="Lesson 1 cover showing algebraic concepts"
-          class="block mx-auto w-80 h-100 mb-4 rounded"
-        />
-
-        <!-- LESSON 1 CONTENT -->
-        <section aria-labelledby="lesson-content">
-          <p class="mb-4">
-            In 820 CE, under the Abbasid Caliphate during the Islamic Golden Age,
-            Muhammad ibn Musa al-Khwarizmi, known more commonly as simply Al-Khwarizmi,
-            published his treatise detailing various concepts in elementary algebra
-            known as
-            <em>al-Kitāb al-Mukhtaṣar fī Ḥisāb al-Jabr wal-Muqābalah</em>
-            (<strong>الكتاب المختصر في حساب الجبر والمقابلة</strong>),
-            translated as <em>The Compendious Book on Calculation by Completion and Balancing</em>,
-            more simply known as <strong>Al-Jabr</strong> (الجبر).
-          </p>
-
-          <p class="mb-4">
-            His primary focus was detailing how to deal with everyday issues regarding inheritance,
-            commercial transactions, and the distribution of legacies, which oftentimes required
-            calculations with unknown variables. As such, his goal was to codify a clear, step by step
-            methodology for how to solve what is now known as linear and quadratic equations.
-          </p>
-
-          <p class="mb-4">
-            The treatise itself contained accounts of solving for positive roots of polynomial equations,
-            explaining what they are as an idea through more simple linear equations, up to the second
-            degree. He also introduced the process of “reducing” and “balancing” equations, which is
-            actually related to the definitions of “Al-Jabr” itself (Completion and Balancing), as well as
-            moving subtracted terms on one side of an equation to the opposite side of the equal sign,
-            also known as cancelling like terms on opposite sides of the equation.
-          </p>
-
-          <p>
-            Al-Jabr was prominently the first piece of text to teach algebra for the sake of it, and being
-            the etymological namesake of the English word derived from it (Al-Jabr into Algebra), has a
-            profound importance in relation to standardized algebra today, particularly the application of
-            solving for the unknown in a polynomial equation, specifically linear and quadratic equations.
-          </p>
-        </section>
-        <!-- /LESSON 1 CONTENT -->
-
+        
+        <!-- Two-column layout on md+ screens, single column on smaller screens -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-1 items-start">
+          
+          <!-- Column 1: Image -->
+          <div class="flex justify-center">
+            <img
+              src="lesson1.webp"
+              alt="Lesson 1 image"
+              class="block rounded w-96 h-auto"
+            />
+          </div>
+          
+          <!-- Column 2: Text Content -->
+          <div class="space-y-4">
+            <p>
+              In 820 CE, under the Abbasid Caliphate during the Islamic Golden Age,
+              Muhammad ibn Musa al-Khwarizmi (Al-Khwarizmi) published his treatise
+              detailing various concepts in elementary algebra, known as
+              <em>al-Kitāb al-Mukhtaṣar fī Ḥisāb al-Jabr wal-Muqābalah</em> (الكتاب المختصر في حساب الجبر والمقابلة),
+              translated as <em>The Compendious Book on Calculation by Completion and Balancing</em>,
+              more simply known as <strong>Al-Jabr</strong> (الجبر).
+            </p>
+            <p>
+              His primary focus was detailing how to deal with everyday issues regarding
+              inheritance, commercial transactions, and the distribution of legacies,
+              which often required calculations with unknown variables. As such, he
+              codified a clear, step-by-step methodology for solving what is now known
+              as linear and quadratic equations.
+            </p>
+            <p>
+              The treatise explained solving for positive roots of polynomial equations,
+              from simpler linear equations up to the second degree. He also introduced
+              “reducing” and “balancing” equations (the root meaning of “Al-Jabr”),
+              moving subtracted terms from one side of an equation to the other—
+              essentially what we now call canceling like terms on opposite sides.
+            </p>
+            <p>
+              Al-Jabr was the first text to teach algebra for its own sake and is the
+              etymological source of the English word “algebra.” Its importance is
+              profound for standardized algebra today, especially the application
+              of solving for unknowns in polynomial equations.
+            </p>
+          </div>
+        </div>
+        
         <!-- Next Lesson Button -->
         <div class="mt-6 flex justify-end">
           <a
@@ -142,10 +154,10 @@
             Next Lesson &rarr;
           </a>
         </div>
+        
+        
       </div>
-    </main>
-
+    </main>    
   </div>
-
 </body>
 </html>

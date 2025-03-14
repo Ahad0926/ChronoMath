@@ -10,12 +10,13 @@
   />
 </head>
 <body class="h-screen overflow-y-auto bg-gray-100">
-
-  <div class="flex min-h-screen">
+  <!-- Outer container: no fixed height, so page can grow & scroll -->
+  <div class="min-h-screen flex flex-col md:flex-row">
+    
     <!-- Sidebar -->
-    <aside class="w-64 bg-white shadow p-4">
+    <aside class="w-full md:w-64 bg-white shadow p-4">
       <h2 class="text-lg font-bold mb-3">Algebra Lessons</h2>
-      <h3 class="text-sm italic">Quadratic Equations</h3>
+      <h3 class="text-sm italic mb-3">Quadratic Equations</h3>
       <nav class="space-y-2">
         <a
           href="/lesson"
@@ -47,63 +48,71 @@
 
     <!-- Main Content -->
     <main class="flex-1 p-6">
-      <div class="max-w-3xl mx-auto bg-white p-6 rounded shadow">
+      <!-- Content container with max width, centered, and white background -->
+      <div class="max-w-7xl mx-auto bg-white p-6 rounded shadow">
         <h1 class="text-2xl font-bold mb-4">
           Defining Basic Elements &amp; Six Standard Forms of Equations
         </h1>
 
-        <!-- Placeholder image for Lesson 2 -->
-        <img
-          src="lesson2.webp"
-          alt="Lesson 2 image"
-          class="block mx-auto w-80 h-100 mb-4 rounded"
-        />
+        <!-- Two-column layout on md+ screens, single column on smaller screens -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+          
+          <!-- Column 2: Text Content -->
+          <div class="space-y-4">
+            <h2 class="text-xl font-semibold">Defining the Basic Elements</h2>
+            <p>
+              Al-Khwarizmi classified the components of an equation into three types:
+            </p>
+            <ul class="list-disc list-inside mb-4">
+              <li>
+                <strong>“Roots” (shay’ in Arabic)</strong>: The unknown quantity,
+                corresponding to what we call <em>x</em>.
+              </li>
+              <li>
+                <strong>“Squares” (mal in Arabic)</strong>: The square of the unknown (<em>x<sup>2</sup></em>).
+              </li>
+              <li>
+                <strong>“Numbers”</strong>: Constant terms.
+              </li>
+            </ul>
+            <p>
+              By consistently referring to these three components, he set a precedent for
+              the symbolic structure of algebraic equations, though he himself mostly used
+              rhetorical algebra (writing out phrases in words rather than symbols).
+            </p>
 
-        <!-- LESSON 2 CONTENT -->
-        <h2 class="text-xl font-semibold mb-2">Defining the Basic Elements</h2>
-        <p class="mb-4">
-          Al-Khwarizmi classified the components of an equation into three types:
-        </p>
-        <ul class="list-disc list-inside mb-4">
-          <li>
-            <strong>“Roots” (shay’ in Arabic)</strong>: The unknown quantity,
-            corresponding to what we call <em>x</em>.
-          </li>
-          <li>
-            <strong>“Squares” (mal in Arabic)</strong>: The square of the unknown (<em>x<sup>2</sup></em>).
-          </li>
-          <li>
-            <strong>“Numbers”</strong>: Constant terms.
-          </li>
-        </ul>
-        <p class="mb-4">
-          By consistently referring to these three components, he set a precedent for
-          the symbolic structure of algebraic equations, though he himself mostly used
-          rhetorical algebra (writing out phrases in words rather than symbols).
-        </p>
+            <h2 class="text-xl font-semibold">Six Standard Forms of Equations</h2>
+            <p>
+              Al-Khwarizmi categorized quadratic (and simpler) equations into six types.
+              The idea was that any solvable equation could be reduced to one of these forms:
+            </p>
+            <ul class="list-disc list-inside mb-4">
+              <li><code>x<sup>2</sup> = ax</code></li>
+              <li><code>x<sup>2</sup> = b</code></li>
+              <li><code>x<sup>2</sup> + ax = b</code></li>
+              <li><code>x<sup>2</sup> + b = ax</code></li>
+              <li><code>ax + b = x<sup>2</sup></code></li>
+              <li><code>x<sup>2</sup> + ax + b = 0</code></li>
+            </ul>
+            <p>
+              In modern notation, some of these forms overlap (we often rewrite them in
+              the single form <code>x<sup>2</sup> + px + q = 0</code>), but Al-Khwarizmi’s systematic
+              classification was revolutionary in standardization.
+            </p>
+          </div>
 
-        <h2 class="text-xl font-semibold mb-2">Six Standard Forms of Equations</h2>
-        <p class="mb-4">
-          Al-Khwarizmi categorized quadratic (and simpler) equations into six types.
-          The idea was that any solvable equation could be reduced to one of these forms:
-        </p>
-        <ul class="list-disc list-inside mb-4">
-          <li><code>x<sup>2</sup> = ax</code></li>
-          <li><code>x<sup>2</sup> = b</code></li>
-          <li><code>x<sup>2</sup> + ax = b</code></li>
-          <li><code>x<sup>2</sup> + b = ax</code></li>
-          <li><code>ax + b = x<sup>2</sup></code></li>
-          <li><code>x<sup>2</sup> + ax + b = 0</code></li>
-        </ul>
-        <p>
-          In modern notation, some of these forms overlap (we often rewrite them in
-          the single form <code>x<sup>2</sup> + px + q = 0</code>), but Al-Khwarizmi’s systematic
-          classification was revolutionary in standardization.
-        </p>
-        <!-- /LESSON 2 CONTENT -->
+                    <!-- Column 1: Image -->
+                    <div class="flex justify-center p-6 mt-20">
+                      <img
+                        src="lesson2.webp"
+                        alt="Lesson 2 image"
+                        class="rounded w-full h-auto"
+                      />
+                    </div>
+        </div>
 
         <!-- Next Lesson Button -->
-        <div class="mt-6 flex justify-end">
+        <div class="mt-0 flex justify-end">
           <a
             href="/lesson3"
             class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700
@@ -112,11 +121,13 @@
             Next Lesson &rarr;
           </a>
         </div>
+
+        <p>
+          \n
+          \n
+        </p>
       </div>
     </main>
   </div>
-
-  <p>\n</p>
-
 </body>
 </html>
