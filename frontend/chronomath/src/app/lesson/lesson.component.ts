@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
+import { ThemeService } from '../services/theme.service';
 
 @Component({
   selector: 'app-lesson',
-  imports: [],
   templateUrl: './lesson.component.html',
-  styleUrl: './lesson.component.css'
+  styleUrls: ['./lesson.component.css']
 })
 export class LessonComponent {
-
+  constructor(public themeService: ThemeService) {}
 }
