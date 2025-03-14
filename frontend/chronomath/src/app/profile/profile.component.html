@@ -1,95 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Profile Page</title>
-  <!-- Tailwind CSS (CDN) -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.7/dist/tailwind.min.css"
-    rel="stylesheet"
-  />
-</head>
-<body class="bg-gray-100">
+<!-- Parent container with theme variables -->
+<div class="flex min-h-screen overflow-hidden" style="background-color: var(--bg-color); color: var(--text-color);">
 
-  <div class="min-h-screen p-6">
-    <div class="max-w-7xl mx-auto">
-      <!-- Page Header / Navigation (Optional) -->
-      <header class="flex items-center justify-between mb-6">
-        <h1 class="text-2xl font-bold text-gray-800">Profile</h1>
-        <!-- Example "Log out" or "Settings" button (optional) -->
-      </header>
+  <div class="w-full max-w-7xl mx-auto p-6">
 
-      <!-- Main Content -->
-      <div class="flex flex-col md:flex-row gap-6">
+    <!-- Page Header -->
+    <header class="flex items-center justify-between mb-6">
+      <h1 class="text-2xl font-bold" style="color: var(--text-color);" aria-label="Profile Page">Profile</h1>
+    </header>
 
-        <!-- Left Panel: User Info / Settings -->
-        <div class="md:w-1/3 bg-white p-6 rounded-md shadow">
-          <!-- User Avatar + Name -->
-          <div class="flex items-center space-x-4">
-            <!-- Replace the src with the user’s avatar or a default image -->
-            <div>
-              <h2 class="text-xl font-semibold text-gray-800">Taylor Smith</h2>
-              <p class="text-sm text-gray-500">Student / Enthusiast</p>
-            </div>
-          </div>
+    <div class="flex flex-col md:flex-row gap-6">
 
-          <!-- User Settings Section -->
-          <div class="mt-6">
-            <h3 class="text-lg font-medium text-gray-800">User Settings</h3>
-            <p class="mt-2 text-sm text-gray-600">
-              Update your personal information, change your password, and manage other settings.
+      <!-- Left Panel: User Info -->
+      <div class="md:w-1/3 p-6 rounded-md shadow border border-[var(--secondary-color)] bg-[var(--bg-color)]">
+
+        <!-- User Info -->
+        <div class="flex items-center space-x-4">
+          <div>
+            <h2 class="text-xl font-semibold" style="color: var(--text-color);" aria-label="User Name">
+              {{ userName }}
+            </h2>
+            <p class="text-sm" style="color: var(--text-color);" aria-label="User Email">
+              {{ userEmail }}
             </p>
-            <!-- Forgot Password Button -->
-            <button
-              class="mt-4 px-4 py-2 bg-blue-600 text-white text-sm font-medium
-                     rounded-md hover:bg-blue-700 focus:outline-none
-                     focus:ring-2 focus:ring-blue-600"
-              (click)="onForgotPassword()"
-            >
-              Update password
-            </button>
           </div>
         </div>
 
-        <!-- Right Panel: Additional Info/Boxes -->
-        <div class="md:w-2/3 flex flex-col gap-6">
+        <!-- User Settings -->
+        <div class="mt-6">
+          <h3 class="text-lg font-medium" style="color: var(--text-color);">User Settings</h3>
+          <p class="mt-2 text-sm" style="color: var(--text-color);">
+            Update your personal information, change your password, and manage settings.
+          </p>
 
-          <!-- Score/Progress Overview -->
-          <div class="bg-white p-6 rounded-md shadow">
-            <h3 class="text-lg font-medium text-gray-800">Score/Progress Overview</h3>
-            <p class="mt-2 text-sm text-gray-600">
-              Show user’s recent progress, scores, or achievements here.
-            </p>
-            <!-- Example progress bar (just a placeholder) -->
-            <div class="mt-4">
-              <div class="text-sm mb-1 text-gray-700">Overall Progress</div>
-              <div class="w-full bg-gray-200 rounded-full h-2">
-                <div class="bg-blue-600 h-2 rounded-full w-3/5"></div>
-              </div>
-              <div class="mt-2 text-sm text-gray-500">60% complete</div>
-            </div>
-          </div>
-
-          <!-- Personal Notebook -->
-          <div class="bg-white p-6 rounded-md shadow">
-            <h3 class="text-lg font-medium text-gray-800">Personal Notebook</h3>
-            <p class="mt-2 text-sm text-gray-600">
-              Let users store notes, reminders, or personal to-dos.
-            </p>
-            <!-- Example text area or notes list -->
-            <div class="mt-4">
-              <textarea
-                class="w-full h-24 p-2 border border-gray-300 rounded-md
-                       focus:outline-none focus:ring-1 focus:ring-blue-500"
-                placeholder="Write your notes here..."
-              ></textarea>
-            </div>
-          </div>
-
+          <button
+            type="button"
+            aria-label="Update Password"
+            class="mt-4 px-4 py-2 text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]"
+            style="background-color: var(--primary-color); color: var(--bg-color);"
+            (click)="onForgotPassword()"
+          >
+            Update Password
+          </button>
         </div>
+      </div>
+
+      <!-- Right Panel -->
+      <div class="md:w-2/3 flex flex-col gap-6">
+
+        <!-- Progress Overview -->
+        <div class="p-6 rounded-md shadow border border-[var(--secondary-color)] bg-[var(--bg-color)]">
+          <h3 class="text-lg font-medium" style="color: var(--text-color);">Progress Overview</h3>
+          <p class="mt-2 text-sm" style="color: var(--text-color);">Your learning progress and achievements.</p>
+
+          <div class="mt-4">
+            <div class="text-sm mb-1" style="color: var(--text-color);">Overall Progress</div>
+            <div class="w-full bg-[var(--secondary-color)] bg-opacity-20 rounded-full h-2">
+              <div class="h-2 rounded-full" style="width: 60%; background-color: var(--primary-color);" aria-label="Overall Progress Bar"></div>
+            </div>
+            <div class="mt-2 text-sm" style="color: var(--text-color);">60% complete</div>
+          </div>
+        </div>
+
+        <!-- Personal Notebook -->
+        <div class="p-6 rounded-md shadow border border-[var(--secondary-color)] bg-[var(--bg-color)]">
+          <h3 class="text-lg font-medium" style="color: var(--text-color);">Personal Notebook</h3>
+          <p class="mt-2 text-sm" style="color: var(--text-color);">
+            Store personal notes, reminders, or to-dos here.
+          </p>
+
+          <div class="mt-4">
+            <textarea
+              class="w-full h-24 p-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-[var(--primary-color)]"
+              placeholder="Write your notes here..."
+              style="background-color: var(--bg-color); color: var(--text-color); border-color: var(--secondary-color);"
+              aria-label="Personal Notes"
+            ></textarea>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
-
-</body>
-</html>
+</div>

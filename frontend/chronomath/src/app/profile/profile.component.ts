@@ -1,18 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-profile',
-  imports: [],
+  standalone: true,
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.css'
 })
-export class ProfileComponent {
-  constructor() { }
+export class ProfileComponent implements OnInit {
+  userEmail: string = '';
+  userName: string = '';
 
-  // Trigger your password reset logic here
+  constructor(private userService: UserService) {}
+
+  ngOnInit(): void {
+    // Fetch user data from localStorage or userService
+    this.userEmail = localStorage.getItem('userEmail') || '';
+    this.userName = localStorage.getItem('userName') || 'Unknown';
+  }
+
   onForgotPassword(): void {
-    // e.g., navigate to a password reset page, open a modal, etc.
     console.log('Forgot password clicked!');
   }
 }
-

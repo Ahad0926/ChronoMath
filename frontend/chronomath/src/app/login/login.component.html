@@ -1,29 +1,52 @@
 <!-- Parent flex container, full viewport height -->
-<div class="flex min-h-screen overflow-hidden bg-white">
+<div 
+  class="flex min-h-screen overflow-hidden" 
+  style="background-color: var(--bg-color); color: var(--text-color);"
+  role="main"
+  aria-label="Login Page"
+>
 
   <!-- Left side (login form) -->
   <div class="flex-1 flex items-center justify-center px-6 py-12">
     <!-- Inner wrapper with max width -->
     <div class="w-full max-w-md">
+
       <!-- Heading & subtext -->
-      <h2 class="text-2xl font-bold tracking-tight text-gray-900">
+      <h2 
+        class="text-2xl font-bold tracking-tight" 
+        style="color: var(--text-color);"
+        aria-label="Sign in heading"
+      >
         Sign in to your account
       </h2>
-      <p class="mt-1 text-sm text-gray-500">
+
+      <p class="mt-1 text-sm" style="color: var(--secondary-color);" aria-label="Sign up prompt">
         Don’t have an account?
         <a
-          href="/signup"
-          class="ml-1 font-medium text-indigo-600 hover:text-indigo-500"
+          routerLink="/signup"
+          class="ml-1 font-medium"
+          style="color: var(--primary-color);"
+          aria-label="Sign up link"
         >
           Sign up
         </a>
       </p>
 
       <!-- Login form -->
-      <form class="mt-8 space-y-6" (ngSubmit)="onSubmit()" #loginForm="ngForm">
+      <form 
+        class="mt-8 space-y-6" 
+        (ngSubmit)="onSubmit()" 
+        #loginForm="ngForm"
+        aria-label="Login Form"
+      >
+
         <!-- Email Field -->
         <div>
-          <label for="email" class="block text-sm font-medium text-gray-700">
+          <label 
+            for="email" 
+            class="block text-sm font-medium" 
+            style="color: var(--text-color);"
+          >
             Email address
           </label>
           <div class="mt-1">
@@ -33,17 +56,26 @@
               name="email"
               [(ngModel)]="email"
               required
-              class="block w-full px-4 py-2 text-sm text-gray-900 placeholder-gray-400
-                     border border-gray-300 rounded-lg focus:outline-none
-                     focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
-              placeholder="Enter your email"
+              aria-required="true"
+              aria-label="Email address input"
+              class="block w-full px-4 py-2 text-sm rounded-lg 
+                     placeholder-gray-400 border
+                     focus:outline-none focus:ring-1
+                     focus:ring-[var(--primary-color)] 
+                     border-[var(--secondary-color)] 
+                     text-[var(--text-color)] 
+                     bg-[var(--bg-color)]"
             />
           </div>
         </div>
 
         <!-- Password Field -->
         <div>
-          <label for="password" class="block text-sm font-medium text-gray-700">
+          <label 
+            for="password" 
+            class="block text-sm font-medium" 
+            style="color: var(--text-color);"
+          >
             Password
           </label>
           <div class="mt-1">
@@ -53,10 +85,15 @@
               name="password"
               [(ngModel)]="password"
               required
-              class="block w-full px-4 py-2 text-sm text-gray-900 placeholder-gray-400
-                     border border-gray-300 rounded-lg focus:outline-none
-                     focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
-              placeholder="Enter your password"
+              aria-required="true"
+              aria-label="Password input"
+              class="block w-full px-4 py-2 text-sm rounded-lg
+                     placeholder-gray-400
+                     border 
+                     text-[var(--text-color)] 
+                     bg-[var(--bg-color)]
+                     border-[var(--secondary-color)]
+                     focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]"
             />
           </div>
         </div>
@@ -68,17 +105,28 @@
               id="remember-me"
               name="remember-me"
               type="checkbox"
-              class="h-4 w-4 text-indigo-600 focus:ring-indigo-500
-                     border-gray-300 rounded"
+              aria-label="Remember me checkbox"
+              class="h-4 w-4 rounded"
+              style="
+                color: var(--primary-color);
+                border-color: var(--secondary-color);
+              "
             />
-            <label for="remember-me" class="ml-2 block text-sm text-gray-900">
+            <label 
+              for="remember-me" 
+              class="ml-2 block text-sm" 
+              style="color: var(--text-color);"
+            >
               Remember me
             </label>
           </div>
+
           <div class="text-sm">
             <a
               (click)="onForgotPassword()"
-              class="font-medium text-indigo-600 hover:text-indigo-500 cursor-pointer"
+              class="font-medium cursor-pointer"
+              style="color: var(--primary-color);"
+              aria-label="Forgot password link"
             >
               Forgot password?
             </a>
@@ -89,10 +137,14 @@
         <div>
           <button
             type="submit"
-            class="flex w-full justify-center rounded-md border border-transparent
-                   bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm
-                   hover:bg-indigo-700 focus:outline-none focus:ring-2
-                   focus:ring-indigo-500 focus:ring-offset-2"
+            aria-label="Login button"
+            class="flex w-full justify-center rounded-md border border-transparent py-2 px-4 text-sm font-medium shadow-sm
+                   hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2"
+            style="
+              background-color: var(--primary-color);
+              color: var(--bg-color);
+              border-color: var(--primary-color);
+            "
           >
             Login
           </button>
@@ -100,20 +152,24 @@
       </form>
 
       <!-- "Or continue with" separator -->
-      <div class="mt-6 flex items-center">
-        <div class="flex-grow border-t border-gray-300"></div>
-        <span class="mx-2 text-gray-400">Or continue with</span>
-        <div class="flex-grow border-t border-gray-300"></div>
+      <div class="mt-6 flex items-center" aria-hidden="true">
+        <div class="flex-grow border-t" style="border-color: var(--secondary-color);"></div>
+        <span class="mx-2" style="color: var(--secondary-color);">Or continue with</span>
+        <div class="flex-grow border-t" style="border-color: var(--secondary-color);"></div>
       </div>
 
       <!-- Google Button (single column, w-full) -->
       <div class="mt-6">
         <button
           type="button"
-          class="w-full py-2 bg-white border border-gray-300 text-gray-700 font-semibold
-                 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2
-                 focus:ring-indigo-600 focus:ring-offset-2
-                 flex items-center justify-center gap-2"
+          aria-label="Login with Google button"
+          class="w-full py-2 border rounded-md flex items-center justify-center gap-2
+                 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2"
+          style="
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            border-color: var(--secondary-color);
+          "
         >
           <!-- Google icon -->
           <svg
@@ -123,6 +179,7 @@
             fill="currentColor"
             class="bi bi-google"
             viewBox="0 0 16 16"
+            aria-hidden="true"
           >
             <path d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 
               4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 
@@ -145,7 +202,7 @@
     <img
       class="h-full w-full object-cover"
       src="loginImage.png"
-      alt="Office desk or relevant scene"
+      alt="Office desk with notebooks and laptop"
     />
   </div>
 </div>
