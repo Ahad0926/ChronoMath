@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
 import { UserService } from '../services/user.service';
+import { ThemeService } from '../services/theme.service';
 
 @Component({
   selector: 'app-navbar',
@@ -13,8 +14,10 @@ import { UserService } from '../services/user.service';
 })
 export class NavbarComponent implements OnInit {
   isLoggedIn = false;
+  showThemeDropdown = false;
 
-  constructor(private UserService: UserService, private router: Router) {}
+  constructor(private UserService: UserService, private router: Router, private themeService: ThemeService) {}
+
 
   ngOnInit(): void {
     // Whenever UserService updates "isLoggedIn$", we update our local isLoggedIn
@@ -36,5 +39,14 @@ export class NavbarComponent implements OnInit {
       console.log('NavbarComponent: User logged out');
       this.router.navigate(['/']);
     }).catch(error => console.error('NavbarComponent: Logout error', error));
+  }
+
+  toggleThemeDropdown(): void {
+    this.showThemeDropdown = !this.showThemeDropdown;
+  }
+
+  setTheme(theme: string): void {
+    this.themeService.applyTheme(theme);
+    this.showThemeDropdown = false;
   }
 }
