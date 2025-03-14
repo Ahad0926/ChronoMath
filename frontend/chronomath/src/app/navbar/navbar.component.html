@@ -1,5 +1,6 @@
 <nav class="bg-bg text-text shadow-md fixed top-0 w-full h-16 z-50">
   <div class="max-w-7xl mx-auto px-4 flex justify-between h-full items-center">
+
     <!-- Left Side (Logo + Title) -->
     <a routerLink="/home" class="flex items-center space-x-3">
       <img src="logoT.png" class="h-10" alt="Chronomath Logo" />
@@ -23,31 +24,31 @@
         </div>
       </div>
 
-      <!-- If NOT logged in, show Login + Signup -->
+      <!-- If NOT logged in -->
       <ng-container *ngIf="!isLoggedIn; else loggedInTemplate">
-        <a routerLink="/login" class="text-text hover:text-primary">
-          Login
-        </a>
-        <a
-          routerLink="/signup"
-          class="bg-primary text-white px-4 py-2 rounded-md hover:bg-secondary transition"
-        >
-          Signup
-        </a>
+        <a routerLink="/login" class="text-text hover:text-primary">Login</a>
+        <a routerLink="/signup" class="bg-primary text-white px-4 py-2 rounded-md hover:bg-secondary transition">Signup</a>
       </ng-container>
 
-      <!-- If logged in, show Explore + Logout -->
+      <!-- If logged in -->
       <ng-template #loggedInTemplate>
-        <a routerLink="/timeline" class="text-text hover:text-primary">
-          Explore
-        </a>
-        <a
-          (click)="logout()"
-          class="bg-primary text-white px-4 py-2 rounded-md hover:bg-secondary transition"
-        >
-          Logout
-        </a>
+
+        <!-- Explore link -->
+        <a routerLink="/timeline" class="text-text hover:text-primary">Explore</a>
+
+        <!-- User Dropdown -->
+        <div class="relative inline-block text-left">
+          <button (click)="toggleUserDropdown()" class="text-text hover:text-primary">
+            {{ userName }}
+          </button>
+          <div *ngIf="showUserDropdown" class="absolute right-0 mt-2 w-40 bg-bg shadow-lg rounded-md z-50 border border-secondary">
+            <button (click)="goToProfile()" class="block px-4 py-2 w-full text-left hover:bg-secondary hover:text-white">Profile</button>
+            <button (click)="logout()" class="block px-4 py-2 w-full text-left hover:bg-secondary hover:text-white">Logout</button>
+          </div>
+        </div>
+
       </ng-template>
+
     </div>
   </div>
 </nav>
