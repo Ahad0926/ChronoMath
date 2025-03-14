@@ -15,14 +15,25 @@
       <p>{{ description }}</p>
     </div>
 
-    <!-- Start Lesson Button -->
-    <div class="flex justify-start">
+    <!-- Action Buttons -->
+    <div class="flex justify-start mt-4">
+
+      <!-- Show "Start Lesson" only for Islamic Golden Age -->
       <button
+        *ngIf="title === 'Islamic Golden Age'; else comingSoon"
         (click)="startLesson()"
-        class="mt-4 px-5 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition"
+        class="px-5 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition"
       >
         Start Lesson
       </button>
+
+      <!-- Show "Coming Soon" otherwise -->
+      <ng-template #comingSoon>
+        <span class="px-5 py-2 bg-gray-400 text-white font-medium rounded-lg cursor-not-allowed">
+          Coming Soon
+        </span>
+      </ng-template>
+
     </div>
 
   </div>

@@ -7,7 +7,7 @@
     <div class="max-w-4xl mx-auto space-y-8">
       <!-- Quiz Header -->
       <header class="mb-6">
-        <h1 class="text-3xl font-bold" style="color: var(--text-color)">Islamic Golden Age Quiz</h1>
+        <h1 class="text-3xl font-bold" style="color: var(--text-color);">Islamic Golden Age Quiz</h1>
         <p class="mt-2 text-sm opacity-80">Test your knowledge on quadratic equations and Al-Khwarizmi’s methods.</p>
       </header>
 
@@ -16,45 +16,37 @@
 
         <!-- Question 1 -->
         <div class="p-6 rounded border border-primary shadow-sm" style="background-color: var(--bg-color); position: relative;">
-          <!-- Title with "1 point" moved to top right -->
           <div class="flex justify-between items-center mb-2">
             <h2 class="text-lg font-semibold">Question 1</h2>
             <span class="text-sm opacity-70">1 point</span>
           </div>
-        
-          <!-- Question prompt -->
           <p class="mb-4">Which of the following is the standard form of a quadratic equation?</p>
-        
-          <!-- 2x2 Grid of buttons -->
           <div class="grid grid-cols-2 gap-4">
             <button
               class="w-full px-4 py-3 rounded border border-primary shadow-sm focus:outline-none focus:ring-2 hover:opacity-90 transition"
-              style="background-color: var(--secondary-color); color: var(--text-color);"
-              aria-label="ax + b = 0"
+              [ngClass]="{'ring-2 ring-primary': userAnswers['q1'] === 'ax+b=0'}"
+              (click)="selectAnswer('q1', 'ax+b=0')"
             >
               ax + b = 0
             </button>
-        
             <button
               class="w-full px-4 py-3 rounded border border-primary shadow-sm focus:outline-none focus:ring-2 hover:opacity-90 transition"
-              style="background-color: var(--secondary-color); color: var(--text-color);"
-              aria-label="ax^2 + bx + c = 0"
+              [ngClass]="{'ring-2 ring-primary': userAnswers['q1'] === 'ax^2+bx+c=0'}"
+              (click)="selectAnswer('q1', 'ax^2+bx+c=0')"
             >
               ax² + bx + c = 0
             </button>
-        
             <button
               class="w-full px-4 py-3 rounded border border-primary shadow-sm focus:outline-none focus:ring-2 hover:opacity-90 transition"
-              style="background-color: var(--secondary-color); color: var(--text-color);"
-              aria-label="ax^3 + bx = 0"
+              [ngClass]="{'ring-2 ring-primary': userAnswers['q1'] === 'ax^3+bx=0'}"
+              (click)="selectAnswer('q1', 'ax^3+bx=0')"
             >
               ax³ + bx = 0
             </button>
-        
             <button
               class="w-full px-4 py-3 rounded border border-primary shadow-sm focus:outline-none focus:ring-2 hover:opacity-90 transition"
-              style="background-color: var(--secondary-color); color: var(--text-color);"
-              aria-label="a + b = x^2"
+              [ngClass]="{'ring-2 ring-primary': userAnswers['q1'] === 'a+b=x^2'}"
+              (click)="selectAnswer('q1', 'a+b=x^2')"
             >
               a + b = x²
             </button>
@@ -63,74 +55,53 @@
 
         <!-- Question 2 -->
         <div class="p-6 rounded border border-primary shadow-sm" style="background-color: var(--bg-color); position: relative;">
-          <!-- Title with "1 point" in the top right -->
           <div class="flex justify-between items-center mb-2">
             <h2 class="text-lg font-semibold">Question 2</h2>
             <span class="text-sm opacity-70">1 point</span>
           </div>
-        
-          <!-- Question prompt -->
           <p class="mb-4">When solving a quadratic by completing the square, which step typically comes first?</p>
-        
-          <!-- Answer options -->
           <div class="space-y-2">
             <label class="flex items-center gap-2">
-              <input type="radio" name="q2" /> Take the square root of both sides
+              <input type="radio" name="q2" (change)="selectAnswer('q2', 'Take the square root of both sides')" /> Take the square root of both sides
             </label>
             <label class="flex items-center gap-2">
-              <input type="radio" name="q2" /> Write the equation in vertex form
+              <input type="radio" name="q2" (change)="selectAnswer('q2', 'Write the equation in vertex form')" /> Write the equation in vertex form
             </label>
             <label class="flex items-center gap-2">
-              <input type="radio" name="q2" /> Divide by the leading coefficient (if a ≠ 1) and isolate x² + bx on one side
+              <input type="radio" name="q2" (change)="selectAnswer('q2', 'Divide by the leading coefficient (if a ≠ 1) and isolate x^2+bx on one side')" /> Divide by the leading coefficient (if a ≠ 1) and isolate x² + bx on one side
             </label>
             <label class="flex items-center gap-2">
-              <input type="radio" name="q2" /> Multiply everything by -1
+              <input type="radio" name="q2" (change)="selectAnswer('q2', 'Multiply everything by -1')" /> Multiply everything by -1
             </label>
           </div>
         </div>
 
         <!-- Question 3 -->
         <div class="p-6 rounded border border-primary shadow-sm" style="background-color: var(--bg-color); position: relative;">
-          <!-- Title with "1 point" in the top right -->
           <div class="flex justify-between items-center mb-2">
             <h2 class="text-lg font-semibold">Question 3</h2>
             <span class="text-sm opacity-70">1 point</span>
           </div>
-        
-          <!-- Question prompt -->
           <p class="mb-4">Given the quadratic equation x² + 6x + 8 = 0, which of the following is a correct factorization?</p>
-        
-          <!-- 2x2 Grid of buttons -->
           <div class="grid grid-cols-2 gap-4">
-            <button
-              class="w-full px-4 py-3 rounded border border-primary shadow-sm focus:outline-none focus:ring-2 hover:opacity-90 transition"
-              style="background-color: var(--secondary-color); color: var(--text-color);"
-              aria-label="(x - 2)(x - 4)"
-            >
+            <button class="w-full px-4 py-3 rounded border border-primary shadow-sm focus:outline-none focus:ring-2 hover:opacity-90 transition"
+              [ngClass]="{'ring-2 ring-primary': userAnswers['q3'] === '(x - 2)(x - 4)'}"
+              (click)="selectAnswer('q3', '(x - 2)(x - 4)')">
               (x - 2)(x - 4)
             </button>
-          
-            <button
-              class="w-full px-4 py-3 rounded border border-primary shadow-sm focus:outline-none focus:ring-2 hover:opacity-90 transition"
-              style="background-color: var(--secondary-color); color: var(--text-color);"
-              aria-label="(x + 2)(x + 4)"
-            >
+            <button class="w-full px-4 py-3 rounded border border-primary shadow-sm focus:outline-none focus:ring-2 hover:opacity-90 transition"
+              [ngClass]="{'ring-2 ring-primary': userAnswers['q3'] === '(x + 2)(x + 4)'}"
+              (click)="selectAnswer('q3', '(x + 2)(x + 4)')">
               (x + 2)(x + 4)
             </button>
-          
-            <button
-              class="w-full px-4 py-3 rounded border border-primary shadow-sm focus:outline-none focus:ring-2 hover:opacity-90 transition"
-              style="background-color: var(--secondary-color); color: var(--text-color);"
-              aria-label="(x + 3)(x + 2)"
-            >
+            <button class="w-full px-4 py-3 rounded border border-primary shadow-sm focus:outline-none focus:ring-2 hover:opacity-90 transition"
+              [ngClass]="{'ring-2 ring-primary': userAnswers['q3'] === '(x + 3)(x + 2)'}"
+              (click)="selectAnswer('q3', '(x + 3)(x + 2)')">
               (x + 3)(x + 2)
             </button>
-          
-            <button
-              class="w-full px-4 py-3 rounded border border-primary shadow-sm focus:outline-none focus:ring-2 hover:opacity-90 transition"
-              style="background-color: var(--secondary-color); color: var(--text-color);"
-              aria-label="Cannot be factored using integers"
-            >
+            <button class="w-full px-4 py-3 rounded border border-primary shadow-sm focus:outline-none focus:ring-2 hover:opacity-90 transition"
+              [ngClass]="{'ring-2 ring-primary': userAnswers['q3'] === 'Cannot be factored using integers'}"
+              (click)="selectAnswer('q3', 'Cannot be factored using integers')">
               Cannot be factored using integers
             </button>
           </div>
@@ -146,13 +117,28 @@
           <p class="mb-4">According to Al-Khwarizmi’s original approach, "completion" (al-jabr) in solving x² + 10x = 39 means</p>
         
           <div class="space-y-2">
-            <label class="flex items-center gap-2"><input type="radio" name="q4" /> Bringing all x² terms to one side.</label>
-            <label class="flex items-center gap-2"><input type="radio" name="q4" /> Adding enough to both sides so that the left side becomes a perfect square.</label>
-            <label class="flex items-center gap-2"><input type="radio" name="q4" /> Subtracting 39 from both sides to get x² + 10x - 39 = 0.</label>
-            <label class="flex items-center gap-2"><input type="radio" name="q4" /> Factoring out common terms from both sides.</label>
+            <label class="flex items-center gap-2">
+              <input type="radio" name="q4" (change)="selectAnswer('q4', 'Bringing all x² terms to one side.')" [checked]="userAnswers['q4'] === 'Bringing all x² terms to one side.'" />
+              Bringing all x² terms to one side.
+            </label>
+          
+            <label class="flex items-center gap-2">
+              <input type="radio" name="q4" (change)="selectAnswer('q4', 'Adding enough to both sides so that the left side becomes a perfect square.')" [checked]="userAnswers['q4'] === 'Adding enough to both sides so that the left side becomes a perfect square.'" />
+              Adding enough to both sides so that the left side becomes a perfect square.
+            </label>
+          
+            <label class="flex items-center gap-2">
+              <input type="radio" name="q4" (change)="selectAnswer('q4', 'Subtracting 39 from both sides to get x² + 10x - 39 = 0.')" [checked]="userAnswers['q4'] === 'Subtracting 39 from both sides to get x² + 10x - 39 = 0.'" />
+              Subtracting 39 from both sides to get x² + 10x - 39 = 0.
+            </label>
+          
+            <label class="flex items-center gap-2">
+              <input type="radio" name="q4" (change)="selectAnswer('q4', 'Factoring out common terms from both sides.')" [checked]="userAnswers['q4'] === 'Factoring out common terms from both sides.'" />
+              Factoring out common terms from both sides.
+            </label>
           </div>
         </div>
-
+        
         <!-- Question 5 -->
         <div class="p-6 rounded border border-primary shadow-sm" style="background-color: var(--bg-color); position: relative;">
           <div class="flex justify-between items-center mb-2">
@@ -163,13 +149,28 @@
           <p class="mb-4">If the discriminant of a quadratic equation ax² + bx + c = 0 is negative (b² - 4ac &lt; 0), the equation has</p>
         
           <div class="space-y-2">
-            <label class="flex items-center gap-2"><input type="radio" name="q5" /> Two distinct real roots</label>
-            <label class="flex items-center gap-2"><input type="radio" name="q5" /> One real root (with multiplicity 2)</label>
-            <label class="flex items-center gap-2"><input type="radio" name="q5" /> No real roots, but two complex roots.</label>
-            <label class="flex items-center gap-2"><input type="radio" name="q5" /> Infinitely many real roots</label>
+            <label class="flex items-center gap-2">
+              <input type="radio" name="q5" (change)="selectAnswer('q5', 'Two distinct real roots')" [checked]="userAnswers['q5'] === 'Two distinct real roots'" />
+              Two distinct real roots
+            </label>
+          
+            <label class="flex items-center gap-2">
+              <input type="radio" name="q5" (change)="selectAnswer('q5', 'One real root (with multiplicity 2)')" [checked]="userAnswers['q5'] === 'One real root (with multiplicity 2)'" />
+              One real root (with multiplicity 2)
+            </label>
+          
+            <label class="flex items-center gap-2">
+              <input type="radio" name="q5" (change)="selectAnswer('q5', 'No real roots, but two complex roots.')" [checked]="userAnswers['q5'] === 'No real roots, but two complex roots.'" />
+              No real roots, but two complex roots.
+            </label>
+          
+            <label class="flex items-center gap-2">
+              <input type="radio" name="q5" (change)="selectAnswer('q5', 'Infinitely many real roots')" [checked]="userAnswers['q5'] === 'Infinitely many real roots'" />
+              Infinitely many real roots
+            </label>
           </div>
         </div>
-
+        
         <!-- Question 6 -->
         <div class="p-6 rounded border border-primary shadow-sm" style="background-color: var(--bg-color); position: relative;">
           <div class="flex justify-between items-center mb-2">
@@ -180,13 +181,28 @@
           <p class="mb-4">In the equation x² + 10x + 9 = 0, how would you apply "balancing" (al-muqābala) after completing the square?</p>
         
           <div class="space-y-2">
-            <label class="flex items-center gap-2"><input type="radio" name="q11" /> Multiply each side by 2 to balance them.</label>
-            <label class="flex items-center gap-2"><input type="radio" name="q11" /> Add the same term to both sides until one side becomes a perfect square and then rearrange to isolate that square.</label>
-            <label class="flex items-center gap-2"><input type="radio" name="q11" /> Factor directly without adding or subtracting any terms.</label>
-            <label class="flex items-center gap-2"><input type="radio" name="q11" /> Immediately use the quadratic formula.</label>
+            <label class="flex items-center gap-2">
+              <input type="radio" name="q6" (change)="selectAnswer('q6', 'Multiply each side by 2 to balance them.')" [checked]="userAnswers['q6'] === 'Multiply each side by 2 to balance them.'" />
+              Multiply each side by 2 to balance them.
+            </label>
+          
+            <label class="flex items-center gap-2">
+              <input type="radio" name="q6" (change)="selectAnswer('q6', 'Add the same term to both sides until one side becomes a perfect square and then rearrange to isolate that square.')" [checked]="userAnswers['q6'] === 'Add the same term to both sides until one side becomes a perfect square and then rearrange to isolate that square.'" />
+              Add the same term to both sides until one side becomes a perfect square and then rearrange to isolate that square.
+            </label>
+          
+            <label class="flex items-center gap-2">
+              <input type="radio" name="q6" (change)="selectAnswer('q6', 'Factor directly without adding or subtracting any terms.')" [checked]="userAnswers['q6'] === 'Factor directly without adding or subtracting any terms.'" />
+              Factor directly without adding or subtracting any terms.
+            </label>
+          
+            <label class="flex items-center gap-2">
+              <input type="radio" name="q6" (change)="selectAnswer('q6', 'Immediately use the quadratic formula.')" [checked]="userAnswers['q6'] === 'Immediately use the quadratic formula.'" />
+              Immediately use the quadratic formula.
+            </label>
           </div>
         </div>
-
+        
         <!-- Question 7 -->
         <div class="p-6 rounded border border-primary shadow-sm" style="background-color: var(--bg-color); position: relative;">
           <div class="flex justify-between items-center mb-2">
@@ -197,22 +213,69 @@
           <p class="mb-4">To solve x² + 8x = 20 by completing the square, which of the following short procedures is correct?</p>
         
           <div class="space-y-2">
-            <label class="flex items-center gap-2"><input type="radio" name="q12" /> Subtract 20 from both sides, then factor as (x + 4)(x + 4) = 0.</label>
-            <label class="flex items-center gap-2"><input type="radio" name="q12" /> Subtract 20, multiply by 8, then complete the square.</label>
-            <label class="flex items-center gap-2"><input type="radio" name="q12" /> Add 16 to both sides to form (x + 4)² = 36, then take square roots.</label>
-            <label class="flex items-center gap-2"><input type="radio" name="q12" /> Use the quadratic formula immediately.</label>
+            <label class="flex items-center gap-2">
+              <input type="radio" name="q7" (change)="selectAnswer('q7', 'Subtract 20 from both sides, then factor as (x + 4)(x + 4) = 0.')" [checked]="userAnswers['q7'] === 'Subtract 20 from both sides, then factor as (x + 4)(x + 4) = 0.'" />
+              Subtract 20 from both sides, then factor as (x + 4)(x + 4) = 0.
+            </label>
+          
+            <label class="flex items-center gap-2">
+              <input type="radio" name="q7" (change)="selectAnswer('q7', 'Subtract 20, multiply by 8, then complete the square.')" [checked]="userAnswers['q7'] === 'Subtract 20, multiply by 8, then complete the square.'" />
+              Subtract 20, multiply by 8, then complete the square.
+            </label>
+          
+            <label class="flex items-center gap-2">
+              <input type="radio" name="q7" (change)="selectAnswer('q7', 'Add 16 to both sides to form (x+4)^2=36, then take square roots.')" [checked]="userAnswers['q7'] === 'Add 16 to both sides to form (x+4)^2=36, then take square roots.'" />
+              Add 16 to both sides to form (x+4)² = 36, then take square roots.
+            </label>
+          
+            <label class="flex items-center gap-2">
+              <input type="radio" name="q7" (change)="selectAnswer('q7', 'Use the quadratic formula immediately.')" [checked]="userAnswers['q7'] === 'Use the quadratic formula immediately.'" />
+              Use the quadratic formula immediately.
+            </label>
           </div>
         </div>
 
+
         <!-- Submit Button -->
         <div class="flex justify-center">
-          <button class="px-6 py-2 rounded focus:outline-none focus:ring-2"
-            style="background-color: var(--primary-color); color: var(--bg-color);"
-            aria-label="Submit Quiz">
+          <button (click)="submitQuiz()" class="px-6 py-2 rounded focus:outline-none focus:ring-2"
+            style="background-color: var(--primary-color); color: var(--bg-color);">
             Submit Quiz
           </button>
         </div>
       </section>
+    </div>
+
+    <!-- Modal for quiz result -->
+    <div *ngIf="showModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+      <div class="bg-bg p-8 rounded-lg max-w-md w-full border border-primary shadow-lg">
+        <h2 class="text-2xl font-bold mb-4 text-center" style="color: var(--text-color);">Quiz Completed!</h2>
+
+        <p class="text-center mb-6" style="color: var(--text-color);">You scored {{ score }}/7</p>
+      
+        <div *ngIf="incorrectAnswers.length > 0" class="mb-6">
+          <h3 class="font-semibold mb-2 text-lg" style="color: var(--primary-color);">Incorrect Answers</h3>
+          <ul class="space-y-2 text-sm">
+            <li *ngFor="let item of incorrectAnswers" class="p-2 border rounded"
+                style="border-color: var(--secondary-color); color: var(--text-color);">
+              <p><strong>Question:</strong> {{ item.question }}</p>
+              <p><strong>Your Answer:</strong> {{ item.selected }}</p>
+              <p><strong>Correct Answer:</strong> {{ item.correct }}</p>
+            </li>
+          </ul>
+        </div>
+      
+        <div class="flex justify-between">
+          <button (click)="retryQuiz()" class="px-4 py-2 rounded bg-secondary hover:bg-primary text-white transition">
+            Retry Quiz
+          </button>
+        
+          <!-- Show Complete Lesson only if score is 70% or more (5/7 or higher) -->
+          <button *ngIf="score >= 5" (click)="completeLesson()" class="px-4 py-2 rounded bg-primary hover:bg-secondary text-white transition">
+            Complete Lesson
+          </button>
+        </div>
+      </div>
     </div>
   </main>
 </div>
