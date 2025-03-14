@@ -40,7 +40,7 @@ closeModal() {
   nodes = [
     {
       title: 'Ancient Greece',
-      description: 'Euclidean Elements: Foundation of modern geometry.',
+      description: 'Travel back to Ancient Greece and explore how Euclid’s Elements shaped the foundations of geometry, logic, and proof that we still rely on today.',
       positionX: 100,
       positionY: 150,
       status: 'completed',
@@ -49,16 +49,17 @@ closeModal() {
     },
     {
       title: 'Islamic Golden Age',
-      description: 'Development of Algebra.',
+      description: 'Step into the Islamic Golden Age and see how Al-Khwarizmi laid the groundwork for algebra. Learn how his simple, practical methods for solving equations changed the way we think about math—shaping ideas that are still used today!',
       positionX: 300,
       positionY: 250,
       status: 'in-progress',
       color: 'bg-yellow-300',
       icon: 'heroCalculator',
+
     },
     {
       title: 'Present Day',
-      description: 'Algorithms, cryptography, machine learning.',
+      description: 'See how modern math solves real-world problems today—from cryptography and coding to predicting the future with data and algorithms.',
       positionX: 500,
       positionY: 350,
       status: 'locked',
