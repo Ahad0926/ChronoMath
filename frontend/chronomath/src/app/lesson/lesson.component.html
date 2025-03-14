@@ -3,44 +3,70 @@
 <head>
   <meta charset="UTF-8" />
   <title>Lesson 1: Introduction to Elementary Algebra</title>
-  <!-- Tailwind CSS (CDN) -->
   <link
     href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.7/dist/tailwind.min.css"
     rel="stylesheet"
   />
 </head>
-<body class="h-screen overflow-y-auto bg-gray-100">
+
+<body
+  class="h-screen overflow-y-auto"
+  style="background-color: var(--bg-color); color: var(--text-color);"
+>
 
   <!-- Full-page container using Flex -->
   <div class="flex min-h-screen">
 
     <!-- Sidebar -->
-    <aside class="w-64 bg-white shadow p-4">
-      <h2 class="text-lg font-bold mb-3">Algebra Lessons</h2>
-      <h3 class="text-sm italic">Quadratic Equations</h3>
-      <nav class="space-y-2">
+    <aside
+      class="w-64 shadow p-4"
+      style="background-color: var(--bg-color); color: var(--text-color);"
+      aria-label="Lesson Navigation Sidebar"
+    >
+      <h2
+        class="text-lg font-bold mb-3"
+        aria-label="Section title Algebra Lessons"
+      >
+        Algebra Lessons
+      </h2>
+      <h3
+        class="text-sm italic"
+        aria-label="Lesson Series Quadratic Equations"
+      >
+        Quadratic Equations
+      </h3>
+
+      <nav class="space-y-2" aria-label="Lessons Navigation">
         <!-- Active link for Lesson 1 -->
         <a
           href="/lesson"
-          class="block px-3 py-2 rounded font-medium bg-blue-600 text-white"
+          class="block px-3 py-2 rounded font-medium"
+          style="background-color: var(--primary-color); color: var(--bg-color);"
+          aria-current="page"
         >
           Lesson 1: Introduction
         </a>
+
         <a
           href="/lesson2"
-          class="block px-3 py-2 rounded hover:bg-blue-50 text-gray-700 font-medium"
+          class="block px-3 py-2 rounded font-medium hover:opacity-80"
+          style="color: var(--text-color);"
         >
           Lesson 2: Basic Elements &amp; Forms
         </a>
+
         <a
           href="/lesson3"
-          class="block px-3 py-2 rounded hover:bg-blue-50 text-gray-700 font-medium"
+          class="block px-3 py-2 rounded font-medium hover:opacity-80"
+          style="color: var(--text-color);"
         >
           Lesson 3: Completion &amp; Balancing
         </a>
+
         <a
           href="/lesson4"
-          class="block px-3 py-2 rounded hover:bg-blue-50 text-gray-700 font-medium"
+          class="block px-3 py-2 rounded font-medium hover:opacity-80"
+          style="color: var(--text-color);"
         >
           Lesson 4: Influence &amp; Legacy
         </a>
@@ -48,8 +74,11 @@
     </aside>
 
     <!-- Main Content Area -->
-    <main class="flex-1 p-6">
-      <div class="max-w-3xl mx-auto bg-white p-6 rounded shadow">
+    <main class="flex-1 p-6" aria-label="Main Lesson Content">
+      <div
+        class="max-w-3xl mx-auto p-6 rounded shadow"
+        style="background-color: var(--bg-color); color: var(--text-color);"
+      >
         <h1 class="text-2xl font-bold mb-4">
           Introduction to Elementary Algebra and Quadratic Equations
         </h1>
@@ -57,52 +86,58 @@
         <!-- Placeholder image for Lesson 1 -->
         <img
           src="lesson1.webp"
-          alt="Lesson 1 image"
+          alt="Lesson 1 cover showing algebraic concepts"
           class="block mx-auto w-80 h-100 mb-4 rounded"
         />
 
         <!-- LESSON 1 CONTENT -->
-        <p class="mb-4">
-          In 820 CE, under the Abbasid Caliphate during the Islamic Golden Age,
-          Muhammad ibn Musa al-Khwarizmi, known more commonly as simply Al-Khwarizmi,
-          published his treatise detailing various concepts in elementary algebra
-          known as
-          <em>al-Kitāb al-Mukhtaṣar fī Ḥisāb al-Jabr wal-Muqābalah</em>
-          (<strong>الكتاب المختصر في حساب الجبر والمقابلة</strong>),
-          translated as <em>The Compendious Book on Calculation by Completion and Balancing</em>,
-          more simply known as <strong>Al-Jabr</strong> (الجبر).
-        </p>
+        <section aria-labelledby="lesson-content">
+          <p class="mb-4">
+            In 820 CE, under the Abbasid Caliphate during the Islamic Golden Age,
+            Muhammad ibn Musa al-Khwarizmi, known more commonly as simply Al-Khwarizmi,
+            published his treatise detailing various concepts in elementary algebra
+            known as
+            <em>al-Kitāb al-Mukhtaṣar fī Ḥisāb al-Jabr wal-Muqābalah</em>
+            (<strong>الكتاب المختصر في حساب الجبر والمقابلة</strong>),
+            translated as <em>The Compendious Book on Calculation by Completion and Balancing</em>,
+            more simply known as <strong>Al-Jabr</strong> (الجبر).
+          </p>
 
-        <p class="mb-4">
-          His primary focus was detailing how to deal with everyday issues regarding inheritance,
-          commercial transactions, and the distribution of legacies, which oftentimes required
-          calculations with unknown variables. As such, his goal was to codify a clear, step by step
-          methodology for how to solve what is now known as linear and quadratic equations.
-        </p>
+          <p class="mb-4">
+            His primary focus was detailing how to deal with everyday issues regarding inheritance,
+            commercial transactions, and the distribution of legacies, which oftentimes required
+            calculations with unknown variables. As such, his goal was to codify a clear, step by step
+            methodology for how to solve what is now known as linear and quadratic equations.
+          </p>
 
-        <p class="mb-4">
-          The treatise itself contained accounts of solving for positive roots of polynomial equations,
-          explaining what they are as an idea through more simple linear equations, up to the second
-          degree. He also introduced the process of “reducing” and “balancing” equations, which is
-          actually related to the definitions of “Al-Jabr” itself (Completion and Balancing), as well as
-          moving subtracted terms on one side of an equation to the opposite side of the equal sign,
-          also known as cancelling like terms on opposite sides of the equation.
-        </p>
+          <p class="mb-4">
+            The treatise itself contained accounts of solving for positive roots of polynomial equations,
+            explaining what they are as an idea through more simple linear equations, up to the second
+            degree. He also introduced the process of “reducing” and “balancing” equations, which is
+            actually related to the definitions of “Al-Jabr” itself (Completion and Balancing), as well as
+            moving subtracted terms on one side of an equation to the opposite side of the equal sign,
+            also known as cancelling like terms on opposite sides of the equation.
+          </p>
 
-        <p>
-          Al-Jabr was prominently the first piece of text to teach algebra for the sake of it, and being
-          the etymological namesake of the English word derived from it (Al-Jabr into Algebra), has a
-          profound importance in relation to standardized algebra today, particularly the application of
-          solving for the unknown in a polynomial equation, specifically linear and quadratic equations.
-        </p>
+          <p>
+            Al-Jabr was prominently the first piece of text to teach algebra for the sake of it, and being
+            the etymological namesake of the English word derived from it (Al-Jabr into Algebra), has a
+            profound importance in relation to standardized algebra today, particularly the application of
+            solving for the unknown in a polynomial equation, specifically linear and quadratic equations.
+          </p>
+        </section>
         <!-- /LESSON 1 CONTENT -->
 
         <!-- Next Lesson Button -->
         <div class="mt-6 flex justify-end">
           <a
             href="/lesson2"
-            class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700
-                   focus:outline-none focus:ring-2 focus:ring-blue-600"
+            class="px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-offset-2"
+            style="
+              background-color: var(--primary-color);
+              color: var(--bg-color);
+            "
+            aria-label="Next Lesson: Lesson 2 Basic Elements and Forms"
           >
             Next Lesson &rarr;
           </a>
@@ -112,8 +147,5 @@
 
   </div>
 
-  <p>
-    \n
-  </p>
 </body>
 </html>
