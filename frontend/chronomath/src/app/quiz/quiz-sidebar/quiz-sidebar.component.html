@@ -1,0 +1,80 @@
+<aside
+  class="flex flex-col gap-6 h-screen p-6 overflow-y-auto pb-20"
+  aria-label="Quiz sidebar tools"
+  style="background-color: var(--bg-color); color: var(--text-color); border-right: 1px solid var(--secondary-color);"
+>
+  <!-- Quadratic Formula Reference -->
+  <section class="flex flex-col gap-4" aria-labelledby="formula-label">
+    <h2 id="formula-label" class="text-lg font-semibold" style="color: var(--text-color);">Key Formulas</h2>
+
+    <!-- Quadratic Formula -->
+    <div
+      class="flex flex-col gap-2 p-4 border rounded shadow-sm text-sm"
+      style="background-color: var(--bg-color); color: var(--text-color); border-color: var(--secondary-color);"
+    >
+      <h3 class="font-medium text-sm">Quadratic Formula</h3>
+      <p class="text-center text-base font-semibold">
+        x = <span style="font-size: 1.25rem;">(-b ± √(b² - 4ac)) / 2a</span>
+      </p>
+    </div>
+
+    <!-- Discriminant Meaning -->
+    <div
+      class="flex flex-col gap-2 p-4 border rounded shadow-sm text-sm"
+      style="background-color: var(--bg-color); color: var(--text-color); border-color: var(--secondary-color);"
+    >
+      <h3 class="font-medium text-sm">Discriminant (Δ = b² - 4ac)</h3>
+      <ul class="list-disc pl-4 text-xs leading-5">
+        <li>Δ > 0 → 2 Real Roots</li>
+        <li>Δ = 0 → 1 Real Root</li>
+        <li>Δ < 0 → Complex Roots</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Diagram Section -->
+  <section class="flex flex-col gap-4" aria-labelledby="diagram-label">
+    <h2 id="diagram-label" class="text-lg font-semibold" style="color: var(--text-color);">Visual Aids</h2>
+
+    <!-- Parabola Graph -->
+    <div
+      class="flex flex-col gap-2 p-4 border rounded shadow-sm text-sm"
+      style="background-color: var(--bg-color); color: var(--text-color); border-color: var(--secondary-color);"
+    >
+      <h3 class="font-medium text-sm">Graph of y = ax² + bx + c</h3>
+      <svg width="100%" height="100" viewBox="0 0 200 100" aria-hidden="true">
+        <line x1="0" y1="50" x2="200" y2="50" stroke="var(--primary-color)" stroke-width="1" />
+        <line x1="100" y1="0" x2="100" y2="100" stroke="var(--primary-color)" stroke-width="1" />
+        <path d="M 0 100 Q 100 0 200 100" fill="none" stroke="var(--secondary-color)" stroke-width="2" />
+      </svg>
+    </div>
+
+    <!-- Completing the Square Illustration -->
+    <div
+      class="flex flex-col gap-2 p-4 border rounded shadow-sm text-sm"
+      style="background-color: var(--bg-color); color: var(--text-color); border-color: var(--secondary-color);"
+    >
+      <h3 class="font-medium text-sm">Completing the Square</h3>
+      <p class="text-xs">x² + bx → (x + b/2)² - (b/2)²</p>
+    </div>
+  </section>
+
+  <!-- Al-Khwarizmi's Method Summary -->
+  <section aria-labelledby="al-khwarizmi-label" class="flex flex-col gap-4">
+    <h2 id="al-khwarizmi-label" class="text-lg font-semibold" style="color: var(--text-color);">Al-Khwarizmi’s Method</h2>
+
+    <div
+      class="flex flex-col gap-2 p-4 border rounded shadow-sm text-sm"
+      style="background-color: var(--bg-color); color: var(--text-color); border-color: var(--secondary-color);"
+    >
+      <p class="text-xs leading-5">
+        <strong>Al-Jabr (Completion):</strong><br />
+        Add terms to complete a square on one side of the equation.
+      </p>
+      <p class="text-xs leading-5">
+        <strong>Al-Muqabala (Balancing):</strong><br />
+        Subtract equal terms from both sides to simplify.
+      </p>
+    </div>
+  </section>
+</aside>
