@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lesson 2: Defining Basic Elements &amp; Six Standard Forms</title>
+  <!-- Tailwind CSS (CDN) -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.7/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body class="h-screen overflow-y-auto bg-gray-100">
+
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white shadow p-4">
+      <h2 class="text-lg font-bold mb-3">Algebra Lessons</h2>
+      <nav class="space-y-2">
+        <a
+          href="/lesson"
+          class="block px-3 py-2 rounded hover:bg-blue-50 text-gray-700 font-medium"
+        >
+          Lesson 1: Introduction
+        </a>
+        <!-- Active link for Lesson 2 -->
+        <a
+          href="/lesson2"
+          class="block px-3 py-2 rounded font-medium bg-blue-600 text-white"
+        >
+          Lesson 2: Basic Elements &amp; Forms
+        </a>
+        <a
+          href="/lesson3"
+          class="block px-3 py-2 rounded hover:bg-blue-50 text-gray-700 font-medium"
+        >
+          Lesson 3: Completion &amp; Balancing
+        </a>
+        <a
+          href="/lesson4"
+          class="block px-3 py-2 rounded hover:bg-blue-50 text-gray-700 font-medium"
+        >
+          Lesson 4: Influence &amp; Legacy
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-6">
+      <div class="max-w-3xl mx-auto bg-white p-6 rounded shadow">
+        <h1 class="text-2xl font-bold mb-4">
+          Defining Basic Elements &amp; Six Standard Forms of Equations
+        </h1>
+
+        <!-- Placeholder image for Lesson 2 -->
+        <img
+          src="lesson2.jpg"
+          alt="Lesson 2 image"
+          class="w-full h-auto mb-4 rounded"
+        />
+
+        <!-- LESSON 2 CONTENT -->
+        <h2 class="text-xl font-semibold mb-2">Defining the Basic Elements</h2>
+        <p class="mb-4">
+          Al-Khwarizmi classified the components of an equation into three types:
+        </p>
+        <ul class="list-disc list-inside mb-4">
+          <li>
+            <strong>“Roots” (shay’ in Arabic)</strong>: The unknown quantity,
+            corresponding to what we call <em>x</em>.
+          </li>
+          <li>
+            <strong>“Squares” (mal in Arabic)</strong>: The square of the unknown
+            (<em>x^2</em>).
+          </li>
+          <li>
+            <strong>“Numbers”</strong>: Constant terms.
+          </li>
+        </ul>
+        <p class="mb-4">
+          By consistently referring to these three components, he set a precedent for
+          the symbolic structure of algebraic equations, though he himself mostly used
+          rhetorical algebra (writing out phrases in words rather than symbols).
+        </p>
+
+        <h2 class="text-xl font-semibold mb-2">Six Standard Forms of Equations</h2>
+        <p class="mb-4">
+          Al-Khwarizmi categorized quadratic (and simpler) equations into six types.
+          The idea was that any solvable equation could be reduced to one of these forms:
+        </p>
+        <ul class="list-disc list-inside mb-4">
+          <li><code>x^2 = ax</code></li>
+          <li><code>x^2 = b</code></li>
+          <li><code>x^2 + ax = b</code></li>
+          <li><code>x^2 + b = ax</code></li>
+          <li><code>ax + b = x^2</code></li>
+          <li><code>x^2 + ax + b = 0</code></li>
+        </ul>
+        <p>
+          In modern notation, some of these forms overlap (we often rewrite them in
+          the single form <code>x^2 + px + q = 0</code>), but Al-Khwarizmi’s systematic
+          classification was revolutionary in standardization.
+        </p>
+        <!-- /LESSON 2 CONTENT -->
+
+        <!-- Next Lesson Button -->
+        <div class="mt-6 flex justify-end">
+          <a
+            href="/lesson3"
+            class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700
+                   focus:outline-none focus:ring-2 focus:ring-blue-600"
+          >
+            Next Lesson &rarr;
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+    <p>
+    \n
+  </p>
+
+</body>
+</html>
