@@ -28,7 +28,6 @@ export class NavbarComponent implements OnInit {
       this.isLoggedIn = status;
       if (status) {
         this.userName = localStorage.getItem('userName') || 'User';
-        console.log(`NavbarComponent detected login: Name = ${this.userName}`);
       }
     });
   }
