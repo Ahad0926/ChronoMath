@@ -1,4 +1,4 @@
-from flask import Blueprint, jsonify, request, session
+from flask import Blueprint, jsonify, request
 from configs.firebase_setup import db, auth
 from google.cloud.firestore_v1 import FieldFilter
 
@@ -18,6 +18,14 @@ def copy_document(source, destination):
         subcollections = source.document(doc.id).collections()
         for subcollection in subcollections:
             copy_document(subcollection, destination_doc_ref.collection(subcollection.id))
+
+def get_user_data(user):
+    return jsonify({
+        'token': user['idToken'], # Firebase session token
+        'name': db.collection("Users").document(user["localId"]).get().to_dict()['name'],
+        'email': db.collection("Users").document(user["localId"]).get().to_dict()['email'],
+        'uuid': user["localId"]
+    })
 
 @auth_bp.route('/register', methods=["POST"])
 def register():
@@ -51,12 +59,7 @@ def register():
         user_lesson_collection = user_data.collection("Courses")
         copy_document(template, user_lesson_collection)
 
-        # Create session
-        session['token'] = user['idToken']
-        session['uuid'] = user["localId"]
-        session['email'] = email
-
-        return jsonify({"Success": "User created"}), 200
+        return get_user_data(user), 200
     except Exception as e:
         return jsonify({"Error": str(e)}), 400
     
@@ -73,32 +76,10 @@ def login():
         if not user:
             return jsonify({"Error": "Invalid credentials"}), 400
 
-        # Create session
-        session['token'] = user['idToken']
-        session['uuid'] = user["localId"]
-        session['email'] = email
-
-        name = db.collection("Users").document(session['uuid']).get().to_dict()['name']
-
-        return jsonify({
-            "Success": "User logged in",
-            "token": user['idToken'],
-            "email": email,
-            "name": name}), 200
-
-
+        return get_user_data(user), 200
     except Exception as e:
         return jsonify({"Error": str(e)}), 400
-    
-@auth_bp.route('/logout', methods=["POST"])
-def logout():
-    try:
-        # Clear session
-        session.clear()
-        return jsonify({"Success": "User logged out"}), 200
-    except Exception as e:
-        return jsonify({"Error": str(e)}), 400
-    
+
 @auth_bp.route('/forgot-password', methods=["POST"])
 def forgot_password():
     try:
@@ -111,12 +92,3 @@ def forgot_password():
         return jsonify({"Success": "Password reset email sent"}), 200
     except Exception as e:
         return jsonify({"Error": str(e)}), 400
-
-@auth_bp.route('/isloggedin', methods=["GET"])
-def is_logged_in():
-    if 'token' in session:
-        print("Yes")
-        return jsonify({"logged_in": True, "email": session['email']}), 200
-    else:
-        print("No")
-        return jsonify({"logged_in": False}), 200

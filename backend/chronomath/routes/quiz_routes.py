@@ -1,12 +1,16 @@
 from configs.firebase_setup import db
-from flask import Blueprint, jsonify, request, session
+from flask import Blueprint, jsonify, request
 
 quiz_bp = Blueprint("quiz", __name__)
 
 @quiz_bp.route('/<string:course_id>/getall', methods=["GET"])
 def get_all_quizzes(course_id):
     try:
-        user_ref = db.collection("Users").document(session.get("uuid"))
+        # Get uuid from request data
+        data = request.get_json()
+        uuid = data["uuid"]
+
+        user_ref = db.collection("Users").document(uuid)
         quizzes = user_ref.collection("Courses").document(course_id).collection("Questions").get()
         quiz_list = []
         for quiz in quizzes:
@@ -20,7 +24,11 @@ def get_all_quizzes(course_id):
 @quiz_bp.route('/<string:course_id>/<string:quiz_id>', methods=["GET"])
 def get_quiz(course_id, quiz_id):
     try:
-        user_ref = db.collection("Users").document(session.get("uuid"))
+        # Get uuid from request data
+        data = request.get_json()
+        uuid = data["uuid"]
+
+        user_ref = db.collection("Users").document(uuid)
         quiz = user_ref.collection("Courses").document(course_id).collection("Questions").document(quiz_id).get()
 
         return jsonify(quiz.to_dict()), 200
@@ -30,7 +38,11 @@ def get_quiz(course_id, quiz_id):
 @quiz_bp.route('/<string:course_id>/<string:quiz_id>/update', methods=["POST"])
 def update_quiz_status(course_id, quiz_id):
     try:
-        user_ref = db.collection("Users").document(session.get("uuid"))
+        # Get uuid from request data
+        data = request.get_json()
+        uuid = data["uuid"]
+
+        user_ref = db.collection("Users").document(uuid)
         data = request.get_json()
 
         # Add points to the user if the quiz was completed

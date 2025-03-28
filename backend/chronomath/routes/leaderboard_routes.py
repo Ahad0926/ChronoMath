@@ -1,5 +1,5 @@
 from configs.firebase_setup import db
-from flask import Blueprint, jsonify, session
+from flask import Blueprint, jsonify
 from google.cloud import firestore
 
 leaderboard_bp = Blueprint("leaderboard", __name__)

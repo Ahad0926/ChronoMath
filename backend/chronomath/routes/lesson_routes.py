@@ -1,12 +1,16 @@
 from configs.firebase_setup import db
-from flask import Blueprint, jsonify, request, session
+from flask import Blueprint, jsonify, request
 
 lesson_bp = Blueprint("lesson", __name__)
 
 @lesson_bp.route('/<string:course_id>/getall', methods=["GET"])
 def get_all_lessons(course_id):
     try:
-        user_ref = db.collection("Users").document(session.get("uuid"))
+        # Get uuid from request data
+        data = request.get_json()
+        uuid = data["uuid"]
+
+        user_ref = db.collection("Users").document(uuid)
         lessons = user_ref.collection("Courses").document(course_id).collection("Lessons").get()
         lesson_list = []
         for lesson in lessons:
@@ -19,7 +23,11 @@ def get_all_lessons(course_id):
 @lesson_bp.route('/<string:course_id>/<string:lesson_id>', methods=["GET"])
 def get_lesson(course_id, lesson_id):
     try:
-        user_ref = db.collection("Users").document(session.get("uuid"))
+        # Get uuid from request data
+        data = request.get_json()
+        uuid = data["uuid"]
+
+        user_ref = db.collection("Users").document(uuid)
         lesson = user_ref.collection("Courses").document(course_id).collection("Lessons").document(lesson_id).get()
 
         return jsonify(lesson.to_dict()), 200
@@ -29,7 +37,11 @@ def get_lesson(course_id, lesson_id):
 @lesson_bp.route('/<string:course_id>/<string:lesson_id>/update', methods=["POST"])
 def update_lesson_status(course_id, lesson_id):
     try:
-        user_ref = db.collection("Users").document(session.get("uuid"))
+        # Get uuid from request data
+        data = request.get_json()
+        uuid = data["uuid"]
+
+        user_ref = db.collection("Users").document(uuid)
         data = request.get_json()
 
         # Add points to the user if the lesson was completed
