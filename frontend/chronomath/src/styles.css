@@ -16,7 +16,7 @@ app-root {
 }
 
 router-outlet + * {
-  margin-top: 4rem; /* Adjust based on navbar height */
+  margin-top: 4rem;
 }
 
 :root {
@@ -32,7 +32,7 @@ router-outlet + * {
   --text-color: #1f2937;
   --primary-color: #1e3a8a;
   --secondary-color: #60a5fa;
-  --canvas-color: #e0f2fe; /* light blue */
+  --canvas-color: #e0f2fe;
 }
 
 /* DARK */
@@ -41,34 +41,34 @@ router-outlet + * {
   --text-color: #f9fafb;
   --primary-color: #2563eb;
   --secondary-color: #4f46e5;
-  --canvas-color: #1f2937; /* deep navy */
+  --canvas-color: #1f2937;
 }
 
 /* DEUTERANOPIA */
 .theme-deuteranopia {
-  --bg-color: #f5f5dc;
-  --text-color: #333333;
-  --primary-color: #2e7d32;
-  --secondary-color: #1565c0;
-  --canvas-color: #d8f3dc; /* soft green */
+  --bg-color: #eceff1;
+  --text-color: #212121;
+  --primary-color: #1e88e5;
+  --secondary-color: #ffb300;
+  --canvas-color: #f9eac8;
 }
 
 /* PROTANOPIA */
 .theme-protanopia {
   --bg-color: #fdf6e3;
   --text-color: #000000;
-  --primary-color: #e69f00;
+  --primary-color: #2da0cd;
   --secondary-color: #56b4e9;
-  --canvas-color: #ffe9c9; /* pastel yellow */
+  --canvas-color: #dcf9f7;
 }
 
 /* TRITANOPIA */
 .theme-tritanopia {
-  --bg-color: #eceff1;
-  --text-color: #212121;
-  --primary-color: #1e88e5;
-  --secondary-color: #ffb300;
-  --canvas-color: #dcedc8; /* minty green */
+  --bg-color: #f5f5dc;
+  --text-color: #333333;
+  --primary-color: #66004d;
+  --secondary-color: 	#009999;
+  --canvas-color: #d8f3dc;
 }
 
 .timeline-canvas {
