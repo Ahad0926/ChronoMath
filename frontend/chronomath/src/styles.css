@@ -32,6 +32,7 @@ router-outlet + * {
   --text-color: #1f2937;
   --primary-color: #1e3a8a;
   --secondary-color: #60a5fa;
+  --canvas-color: #e0f2fe; /* light blue */
 }
 
 /* DARK */
@@ -40,6 +41,7 @@ router-outlet + * {
   --text-color: #f9fafb;
   --primary-color: #2563eb;
   --secondary-color: #4f46e5;
+  --canvas-color: #1f2937; /* deep navy */
 }
 
 /* DEUTERANOPIA */
@@ -48,6 +50,7 @@ router-outlet + * {
   --text-color: #333333;
   --primary-color: #2e7d32;
   --secondary-color: #1565c0;
+  --canvas-color: #d8f3dc; /* soft green */
 }
 
 /* PROTANOPIA */
@@ -56,6 +59,7 @@ router-outlet + * {
   --text-color: #000000;
   --primary-color: #e69f00;
   --secondary-color: #56b4e9;
+  --canvas-color: #ffe9c9; /* pastel yellow */
 }
 
 /* TRITANOPIA */
@@ -64,4 +68,10 @@ router-outlet + * {
   --text-color: #212121;
   --primary-color: #1e88e5;
   --secondary-color: #ffb300;
+  --canvas-color: #dcedc8; /* minty green */
+}
+
+.timeline-canvas {
+  background-color: var(--canvas-color);
+  transition: background-color 0.3s ease;
 }

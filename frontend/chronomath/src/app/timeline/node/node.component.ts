@@ -35,5 +35,14 @@ export class NodeComponent {
   handleClick() {
     this.nodeClick.emit();
   }
+
+  get combinedStyle() {
+    return {
+      backgroundColor: 'var(--bg-color)',
+      color: 'var(--text-color)',
+      borderColor: 'var(--accent-color)',
+      ...this.positionStyle  // valid here
+    };
+  }
   
 }

@@ -1,27 +1,49 @@
 <div class="flex h-screen">
-  <!-- Sidebar Component -->
   <app-sidebar></app-sidebar>
 
-  <!-- Main Timeline Area -->
-  <div class="flex-grow bg-gray-200 relative overflow-hidden select-none">
-    <!-- Parent Container (captures events) -->
+  <div class="flex-grow bg-gray-100 relative overflow-hidden select-none">
     <div class="w-full h-full relative" #timelineParent>
-      <!-- The element panzoom transforms -->
-      <div #timelineCanvas class="absolute top-0 left-0 w-full h-full">
-        <app-node
-          *ngFor="let node of nodes"
-          [title]="node.title"
-          [description]="node.description"
-          [positionX]="node.positionX"
-          [positionY]="node.positionY"
-          [color]="node.color"
-          [icon]="node.icon"
-          (click)="openModal(node.title, node.description)">
-        </app-node>
-      </div>
-    </div>
+<div #timelineCanvas class="absolute top-0 left-0 w-full h-full overflow-visible">
+  <div
+    class="min-w-[3000px] min-h-[2000px]"
+    style="background-color: var(--canvas-color); transition: background-color 0.3s ease;"
+  >
+    <!-- Arrows -->
+    <svg class="absolute w-full h-full pointer-events-none z-0" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="5" orient="auto">
+          <path d="M0,0 L10,5 L0,10 Z" fill="#4CAF50"/>
+        </marker>
+      </defs>
+      <ng-container *ngFor="let conn of connections">
+        <line
+          [attr.x1]="getNodeCenterX(conn.from)"
+          [attr.y1]="getNodeCenterY(conn.from)"
+          [attr.x2]="getNodeCenterX(conn.to)"
+          [attr.y2]="getNodeCenterY(conn.to)"
+          stroke="#4CAF50"
+          stroke-width="2"
+          marker-end="url(#arrow)"
+        />
+      </ng-container>
+    </svg>
 
-    <!-- 🟦 Move Modal Outside Panzoom Canvas -->
+    <!-- Nodes -->
+    <app-node
+      *ngFor="let node of nodes"
+      [title]="node.title"
+      [description]="node.description"
+      [positionX]="node.positionX"
+      [positionY]="node.positionY"
+      [color]="node.color"
+      [icon]="node.icon"
+      (click)="openModal(node.title, node.description)">
+    </app-node>
+  </div>
+</div>
+
+
+    <!-- Modal -->
     <app-details
       *ngIf="showModal"
       [title]="selectedNodeTitle"

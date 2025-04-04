@@ -11,6 +11,7 @@ import { QuizComponent } from './quiz/quiz.component';
 import { Lesson2Component } from './lesson2/lesson2.component';
 import { Lesson3Component } from './lesson3/lesson3.component';
 import { Lesson4Component } from './lesson4/lesson4.component';
+import { PolypadTestComponent } from './polypad-test/polypad-test.component';
 
 
 export const routes: Routes = [
@@ -25,6 +26,8 @@ export const routes: Routes = [
     { path: 'lesson2', component: Lesson2Component, canActivate: [AuthGuard] },
     { path: 'lesson3', component: Lesson3Component, canActivate: [AuthGuard] },
     { path: 'lesson4', component: Lesson4Component, canActivate: [AuthGuard] },
+    { path: 'poly', component: PolypadTestComponent, canActivate: [AuthGuard] },
+
 
   ];
   

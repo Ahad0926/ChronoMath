@@ -1,15 +1,23 @@
 <div
-  class="absolute w-48 p-3 rounded-lg shadow-lg border transition-transform duration-200 cursor-pointer"
-  [ngClass]="nodeClasses"
-  [ngStyle]="positionStyle"
+  class="absolute transition-transform duration-200 transform hover:scale-105 focus:scale-105 select-none"
+  [ngClass]="color"
+  [ngStyle]="{
+    top: positionY + 'px',
+    left: positionX + 'px',
+    backgroundColor: 'var(--bg-color)',
+    color: 'var(--text-color)',
+    border: '2px solid var(--accent-color)'
+  }"
   role="button"
   tabindex="0"
   [attr.aria-label]="title + ' - ' + description"
   (click)="handleClick()"
 >
-  <div class="flex items-center space-x-2">
-    <ng-icon [name]="icon" class="w-6 h-6 text-gray-800"></ng-icon>
-    <h3 class="font-bold text-sm truncate">{{ title }}</h3>
+  <div class="p-4 rounded-lg shadow-md w-48 bg-opacity-90">
+    <div class="flex items-center space-x-3 mb-1">
+      <ng-icon [name]="icon" class="w-6 h-6 text-[var(--primary-color)]"></ng-icon>
+      <h3 class="font-bold text-md truncate" [title]="title">{{ title }}</h3>
+    </div>
+    <p class="text-sm text-[var(--text-color)] opacity-80 truncate" [title]="description">{{ description }}</p>
   </div>
-  <p class="text-xs text-gray-700 truncate">{{ description }}</p>
 </div>
