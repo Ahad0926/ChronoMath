@@ -51,7 +51,9 @@ def register():
             "email": email,
             "name": name,
             "points": 0,
-            "theme": "light"
+            "theme": "light",
+            "recents": [],
+            "favorites": []
         })
         
         # Add Collections from template to user
