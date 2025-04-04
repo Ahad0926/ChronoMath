@@ -5,7 +5,7 @@ import os
 
 # Initialize Flask app
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["http://localhost:4200", "https://chronomath.duckdns.org"], supports_credentials=True)
 app.secret_key = os.getenv("FLASK_SECRET_KEY")
 
 # Populate database
