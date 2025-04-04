@@ -34,6 +34,8 @@ export class LoginComponent {
           localStorage.setItem('authToken', response.token);
           localStorage.setItem('userEmail', this.email);
           localStorage.setItem('userName', response.name);
+          localStorage.setItem('uuid', response.uuid);
+
   
           // Mark as logged in
           this.UserService.setLoggedIn(true);

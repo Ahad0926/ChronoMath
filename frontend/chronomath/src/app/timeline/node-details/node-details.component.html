@@ -1,11 +1,15 @@
 <div class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-  <div class="bg-white rounded-lg shadow-lg p-6 max-w-md w-full relative flex flex-col justify-between h-[400px]">
+  <div
+    class="rounded-lg shadow-lg p-6 max-w-md w-full relative flex flex-col justify-between h-[400px]"
+    style="background-color: var(--bg-color); color: var(--text-color);"
+  >
 
     <!-- Close Button -->
     <button 
       (click)="onClose()" 
       aria-label="Close Modal" 
-      class="absolute top-2 right-2 text-xl">
+      class="absolute top-2 right-2 text-xl text-[var(--text-color)] hover:opacity-70 transition"
+    >
       &times;
     </button>
 
@@ -16,23 +20,42 @@
     </div>
 
     <!-- Action Buttons -->
-    <div class="flex justify-start mt-4">
+    <div class="flex justify-between items-center mt-4">
 
-      <!-- Show "Start Lesson" only for Islamic Golden Age -->
-      <button
-        *ngIf="title === 'Islamic Golden Age'; else comingSoon"
-        (click)="startLesson()"
-        class="px-5 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition"
-      >
-        Start Lesson
-      </button>
+      <!-- Left: Start or Coming Soon -->
+      <div>
+        <button
+          (click)="addToFavorites()"
+          class="px-5 py-2 font-medium rounded-lg transition"
+          [ngStyle]="{
+            'background-color': isFavorited ? 'var(--primary-color)' : 'var(--secondary-color)',
+            'color': 'white'
+          }"
+        >
+          {{ isFavorited ? 'Unfavourite' : 'Favourite' }}
+        </button>
+      </div>
 
-      <!-- Show "Coming Soon" otherwise -->
-      <ng-template #comingSoon>
-        <span class="px-5 py-2 bg-gray-400 text-white font-medium rounded-lg cursor-not-allowed">
-          Coming Soon
-        </span>
-      </ng-template>
+      <!-- Right: Favourite Toggle -->
+      <div>
+        <button
+          *ngIf="title === 'Islamic Golden Age'; else comingSoon"
+          (click)="startLesson()"
+          class="px-5 py-2 font-medium rounded-lg transition"
+          [ngStyle]="{ 'background-color': 'var(--primary-color)', 'color': 'white' }"
+        >
+          Start Lesson
+        </button>
+
+        <ng-template #comingSoon>
+          <span
+            class="px-5 py-2 font-medium rounded-lg cursor-not-allowed"
+            style="background-color: var(--secondary-color); color: white; opacity: 0.6;"
+          >
+            Coming Soon
+          </span>
+        </ng-template>
+      </div>
 
     </div>
 

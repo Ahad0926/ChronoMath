@@ -33,10 +33,10 @@ export class NavbarComponent implements OnInit {
   }
 
   logout(): void {
-    this.UserService.logout().then(() => {
-      console.log('NavbarComponent: User logged out');
-      this.router.navigate(['/']);
-    }).catch(error => console.error('NavbarComponent: Logout error', error));
+    this.UserService.logout();
+    this.router.navigate(['/']).then(() => {
+      window.location.reload(); // Force full reload after navigation
+    });
   }
 
   toggleThemeDropdown(): void {

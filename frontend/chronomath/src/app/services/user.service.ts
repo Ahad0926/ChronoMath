@@ -25,29 +25,19 @@ export class UserService {
   
       const userEmail = localStorage.getItem('userEmail');
       const userName = localStorage.getItem('userName');
-      const authToken = localStorage.getItem('authToken');
-      console.log(`User details:\n Email = ${userEmail}\n Name = ${userName}\n authToken = ${authToken}`);
+      const uuid = localStorage.getItem('uuid');
+      console.log(`User details:\n Email = ${userEmail}\n Name = ${userName}\n uuid = ${uuid}`);
     } else {
       this.loggedInSubject.next(false);
       console.log('checkLoginStatus: User is NOT logged in.');
     }
   }
   
-  logout(): Promise<void> {
-    return fetch('http://localhost:4769/auth/logout', { method: 'POST' })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Logout failed');
-        }
+  logout(): void {
   
         localStorage.removeItem('authToken');
         localStorage.removeItem('userEmail');
         localStorage.removeItem('userName');
-  
-        this.loggedInSubject.next(false);
-  
-        console.log('User has logged out. isLoggedIn = false');
-      });
   }
   
   setLoggedIn(value: boolean): void {

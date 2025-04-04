@@ -30,44 +30,39 @@ export class TimelineComponent implements AfterViewInit {
   }
 
   nodes = [
-    // Parents (above Islamic Golden Age)
+    {
+      id: 'islamic',
+      title: 'Islamic Golden Age',
+      description: 'Al-Khwarizmi’s algebraic methods.',
+      positionX: 400, positionY: 210,
+      color: 'bg-yellow-300', icon: 'heroCalculator'
+    },
     {
       id: 'egypt',
       title: 'Ancient Egypt (3000 BCE)',
       description: 'Basic geometry for land measurement and pyramids.',
-      positionX: 400, positionY: 100,
+      positionX: 535, positionY: 400,
       color: 'bg-blue-300', icon: 'heroLandmark'
     },
     {
       id: 'greece',
       title: 'Ancient Greece (300 BCE)',
       description: 'Euclid’s Elements: Foundation of modern geometry.',
-      positionX: 600, positionY: 100,
+      positionX: 850, positionY: 330,
       color: 'bg-blue-300', icon: 'heroScale'
     },
-  
-    // Center Node
-    {
-      id: 'islamic',
-      title: 'Islamic Golden Age',
-      description: 'Al-Khwarizmi’s algebraic methods.',
-      positionX: 500, positionY: 300, // Centered
-      color: 'bg-yellow-300', icon: 'heroCalculator'
-    },
-  
-    // Children (below Islamic Golden Age)
     {
       id: 'pythagorean',
       title: 'The Pythagorean Theorem',
       description: 'Proof and applications in triangles.',
-      positionX: 400, positionY: 500,
+      positionX: 900, positionY: 510,
       color: 'bg-yellow-300', icon: 'heroPythagoras'
     },
     {
       id: 'descartes',
       title: 'Renaissance Europe (1600 CE)',
       description: 'Descartes invents Analytical Geometry.',
-      positionX: 600, positionY: 500,
+      positionX: 450, positionY: 600,
       color: 'bg-blue-300', icon: 'heroPenTool'
     }
   ];
@@ -75,7 +70,8 @@ export class TimelineComponent implements AfterViewInit {
 
   connections = [
     { from: 'egypt', to: 'islamic' },
-    { from: 'greece', to: 'islamic' },
+    { from: 'greece', to: 'descartes' },
+    { from: 'greece', to: 'pythagorean' },
     { from: 'islamic', to: 'pythagorean' },
     { from: 'islamic', to: 'descartes' }
   ];

@@ -99,10 +99,9 @@ def get_recents():
     except Exception as e:
         return jsonify({"Error": str(e)}), 400
     
-@user_bp.route('/getfavorites', methods=["GET"])
+@user_bp.route('/getfavorites', methods=["POST"])  # ← changed to POST
 def get_favorites():
     try:
-        # Get uuid from request data
         data = request.get_json()
         uuid = data["uuid"]
 
@@ -111,6 +110,7 @@ def get_favorites():
         return jsonify({"favorites": favorites}), 200
     except Exception as e:
         return jsonify({"Error": str(e)}), 400
+
     
 @user_bp.route('/deletefavorite', methods=["POST"])
 def delete_favorite():
