@@ -63,7 +63,7 @@ export class SidebarComponent implements OnInit {
     }
 
     const payload = { uuid };
-    const url = 'http://127.0.0.1:4769/lesson/IslamicGoldenAge/getall';
+    const url = 'https://chronoapi.duckdns.org/lesson/IslamicGoldenAge/getall';
 
     this.http.post<any[]>(url, payload).subscribe(
       (lessons) => {
@@ -107,7 +107,7 @@ export class SidebarComponent implements OnInit {
 
     const payload = { uuid };
 
-    this.http.post<any>('http://127.0.0.1:4769/user/getfavorites', payload).subscribe({
+    this.http.post<any>('https://chronoapi.duckdns.org/user/getfavorites', payload).subscribe({
       next: (response) => {
         const favoriteIds: string[] = response.favorites || [];
 

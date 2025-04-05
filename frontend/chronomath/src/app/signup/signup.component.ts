@@ -22,7 +22,7 @@ export class SignupComponent {
 
   onSubmit() {
     // Make a POST request to your Flask register endpoint
-    this.http.post('http://localhost:4769/auth/register', this.signupData)
+    this.http.post('https://chronoapi.duckdns.org/auth/register', this.signupData)
       .subscribe({
         next: (response: any) => {
           console.log('Registration successful:', response);

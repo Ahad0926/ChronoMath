@@ -25,7 +25,7 @@ export class LoginComponent {
       password: this.password
     };
   
-    this.http.post('http://localhost:4769/auth/login', loginData)
+    this.http.post('https://chronoapi.duckdns.org/auth/login', loginData)
       .subscribe({
         next: (response: any) => {
           console.log('Login successful:', response);
@@ -55,7 +55,7 @@ export class LoginComponent {
     // Use the same "email" model from your login form
     const forgotData = { email: this.email };
 
-    this.http.post('http://localhost:4769/auth/forgot-password', forgotData)
+    this.http.post('https://chronoapi.duckdns.org/auth/forgot-password', forgotData)
       .subscribe({
         next: (res: any) => {
           console.log('Password reset email sent:', res);

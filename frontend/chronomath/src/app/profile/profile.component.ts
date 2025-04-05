@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../services/user.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-profile',
@@ -11,7 +12,7 @@ export class ProfileComponent implements OnInit {
   userEmail: string = '';
   userName: string = '';
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService, private http: HttpClient) {}
 
   ngOnInit(): void {
     // Fetch user data from localStorage or userService
@@ -19,7 +20,17 @@ export class ProfileComponent implements OnInit {
     this.userName = localStorage.getItem('userName') || 'Unknown';
   }
 
-  onForgotPassword(): void {
-    console.log('Forgot password clicked!');
+  onForgotPassword() {
+    this.http.post('https://chronoapi.duckdns.org/auth/forgot-password', this.userEmail)
+      .subscribe({
+        next: (res: any) => {
+          console.log('Password reset email sent:', res);
+          alert('Password reset email sent. Please check your inbox.');
+        },
+        error: (err) => {
+          console.error('Password reset failed:', err);
+          alert('Could not send password reset email. Please try again later.');
+        }
+      });
   }
 }
